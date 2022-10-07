@@ -1,7 +1,10 @@
 import React from 'react';
 import {FaBars } from 'react-icons/fa';
-import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu,NavItem,NavLinks} from './NavbarElements';
-
+import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu,NavItem,NavLinks,NavBtn, NavBtnLink} from './NavbarElements';
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap');
+</style>
 const Navbar = () => {
   return (
     //put fragments instead of divs
@@ -42,9 +45,14 @@ const Navbar = () => {
                   </NavLinks>
                 </NavItem>
                </NavMenu>
+               
         </NavbarContainer>
       </Nav>
     </>
   )
 }
 export default Navbar;
+
+// <NavBtn>
+//<NavBtnLink to="/login">Login</NavBtnLink>
+//</NavBtn> 

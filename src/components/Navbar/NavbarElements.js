@@ -2,6 +2,11 @@
 import styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkScroll } from 'react-scroll'
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap');
+</style>
 
 
 export const Nav = styled.nav`
@@ -22,7 +27,8 @@ export const Nav = styled.nav`
 `
 
 export const NavbarContainer = styled.div`
-
+  align-items: left;
+  margin-left: 1px;
   display: flex;
   justify-content: space-between;
   height: 80px;
@@ -33,14 +39,14 @@ export const NavbarContainer = styled.div`
 `
 
 export const NavLogo = styled(LinkR)` 
-    font-family: 'Poppins',cursive;
-
+    font-family: 'Poppins',sans-serif;
+   text-align: left;
   color: #000;
   justify-self: flex-start;
   cursor: pointer;
   font-size:2.5rem;
   display: flex;
-  align-items: left;
+  align-items: flex-start;
   margin-left: 0.5px;
   font-weight: bold;
   text-decoration: none;
@@ -80,15 +86,53 @@ export const NavItem = styled.li`
 `
 
 export const NavLinks = styled(LinkScroll)`
+  font-family: 'Open Sans', sans-serif;
+  font-weight: regular;
+  font-size: x-large;
   color: #000;
   display: flex;
-  align-items: center;
+  //align-items: right;
   text-decoration: none;
-  padding: 0 1rem;
-  height:100%;
+  //text-align: right;
+  padding: 0 1.6rem;
+  height:150%;
+  //margin-right: 6px;
+  //position: absolute right;
   cursor: pointer;
+  //align-self: flex-end;
 
   &.active {
     border-bottom: 3px solid #01bf71;
   }
+`;
+
+export const NavBtn = styled.nav`
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 768px){
+    display:none;
+  }
 `
+
+export const NavBtnLink = styled(LinkR)`
+  border-radius:50px;
+  background: #01bf71;
+  white-space: nowrap;
+  padding: 10px 22px;
+  color: #010606;
+  font-size: 16px;
+  outline:none;
+  border:none;
+  cursor:pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: #010606;
+  }
+
+`
+
