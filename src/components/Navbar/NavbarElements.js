@@ -31,25 +31,18 @@ export const NavbarContainer = styled.div`
   margin-left: 1px;
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 120px;
   z-index: 1;
   width: 100%;
   padding: 0 24 px;
-  max-width: 1100px;
+  max-width: 1200px;
 `
 
 export const NavLogo = styled(LinkR)` 
-    font-family: 'Poppins',sans-serif;
-   text-align: left;
-  color: #000;
-  justify-self: flex-start;
-  cursor: pointer;
-  font-size:2.5rem;
-  display: flex;
-  align-items: flex-start;
-  margin-left: 0.5px;
-  font-weight: bold;
-  text-decoration: none;
+   height: 800px;
+   width: 800px;
+   align-items: flex-start;
+
 `;
 
 export const MobileIcon = styled.div`
