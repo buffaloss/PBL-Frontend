@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 import Link from 'next/link';
+import LoginPage from './LoginPage';
+import App from './LoginPage';
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap');
@@ -128,9 +130,11 @@ const Navbar = () => {
                  <Link href="/contact">Contact</Link>
                  </NavItem>
 
-                 <LoginItem>
-                 <Link href="/login">Login</Link>
-                 </LoginItem>
+                <LoginItem>
+                  <App>
+                  </App>
+                </LoginItem>
+                 
 
                  <LoginIcon>
                   <img src="/login.png" width = "30" height = "25" />
