@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import React, { useEffect, useRef } from "react";
-import Link from 'next/link';
 
 export const BtnWrapper = styled.div`
  margin-top: 100px;
@@ -35,20 +33,3 @@ export const MainButton = styled.div`
  };
 `
 
-
-
- const LearnButton = () => {
-    return (
-  
-      <>
-       <BtnWrapper>
-            <MainButton to = "Learn more" >
-            <Link href="/about">
-              Learn more 
-              </Link>
-            </MainButton>
-        </BtnWrapper>
-      </>
-    )
-  }
-  export default LearnButton;
