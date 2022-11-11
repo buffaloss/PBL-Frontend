@@ -18,8 +18,8 @@ function Collabsible() {
       <div className=" accordion-1">
         <Container>
           <Row>
-            <Col className=" ml-auto" md="12">
-              <div className=" accordion my-3" id="accordionExample">
+            <Col className=" ml-auto" xxl="4">
+              {/* <div className=" accordion my-3" id="accordionExample"> */}
                 <Card>
                   <CardHeader
                     id="headingOne"
@@ -60,6 +60,8 @@ function Collabsible() {
                     </CardBody>
                   </Collapse>
                 </Card>
+              </Col>
+              <Col className=" ml-auto" xxl="4">
                 <Card>
                   <CardHeader
                     id="headingTwo"
@@ -97,6 +99,8 @@ function Collabsible() {
                     </CardBody>
                   </Collapse>
                 </Card>
+                </Col>
+                <Col className=" ml-auto" xxl="4">
                 <Card>
                   <CardHeader
                     id="headingThree"
@@ -131,6 +135,8 @@ function Collabsible() {
                     </CardBody>
                   </Collapse>
                 </Card>
+                </Col>
+                <Col className=" ml-auto" xxl="4">
                 <Card>
                   <CardHeader
                     id="headingFour"
@@ -165,6 +171,8 @@ function Collabsible() {
                     </CardBody>
                   </Collapse>
                 </Card>
+                </Col>
+                <Col className=" ml-auto" xxl="4">
                 <Card>
                   <CardHeader
                     id="headingFifth"
@@ -199,6 +207,8 @@ function Collabsible() {
                     </CardBody>
                   </Collapse>
                 </Card>
+                </Col>
+                <Col className=" ml-auto" xxl="4">
                 <Card>
                   <CardHeader
                     id="headingSixth"
@@ -233,8 +243,9 @@ function Collabsible() {
                     </CardBody>
                   </Collapse>
                 </Card>
-              </div>
-            </Col>
+                </Col>
+              {/* </div> */}
+  
           </Row>
         </Container>
       </div>
