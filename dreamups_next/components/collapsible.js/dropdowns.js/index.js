@@ -211,8 +211,8 @@ function Collabsible() {
                 <Col className=" ml-auto" xxl="4">
                 <Card>
                   <CardHeader
-                    id="headingFifth"
-                    aria-expanded={openedCollapse === "collapseFifth"}
+                    id="headingSixth"
+                    aria-expanded={openedCollapse === "collapseSixth"}
                   >
                     <h5 className=" mb-0 text-center">  Internships <br/>
                         Discover how startups are <br/>
@@ -221,9 +221,9 @@ function Collabsible() {
                       <Button
                         onClick={() =>
                           setOpenedCollapse(
-                            openedCollapse === "collapseFifth"
+                            openedCollapse === "collapseSixth"
                               ? ""
-                              : "collapseFifth"
+                              : "collapseSixth"
                           )
                         }
                         className=" w-100 text-primary text-left"
@@ -233,10 +233,10 @@ function Collabsible() {
                     </h5>
                   </CardHeader>
                   <Collapse
-                    isOpen={openedCollapse === "collapseFifth"}
-                    aria-labelledby="headingFifth"
+                    isOpen={openedCollapse === "collapseSixth"}
+                    aria-labelledby="headingSixth"
                     data-parent="#accordionExample"
-                    id="collapseFifth"
+                    id="collapseSixth"
                   >
                     <CardBody className=" opacity-8">
                       Starships <img src = "/iconfinder_arrow_next_right_4829869.png"/> <br/>
