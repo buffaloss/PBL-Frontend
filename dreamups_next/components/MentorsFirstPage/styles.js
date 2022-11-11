@@ -10,6 +10,7 @@ export const Main = styled.div`
  flex-direction: column;
  padding: 5 5 px;
  margin-left: 60px; 
+ background-color: white;
 `;
 
 export const MainHeading = styled.h1`
