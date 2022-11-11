@@ -1,23 +1,30 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
+import { CardWrapper } from './styles';
 
 const MentorCard = () => {
     return (
-  
-      <>
-       <Card style={{ width: '18rem' }}>
+
+      <CardWrapper>
+      <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src="mentor_icon.svg" />
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+        <Card.Title>Yan Budman</Card.Title>
+        <Card.Text>  
+          Marketing Manager
         </Card.Text>
-        <Button variant="primary">View more</Button>
+        <Card.Text>
+          Indigogo
+        </Card.Text>
+        <Card.Text>
+          Over 10 years experience with crowdfunding platforms Yan can help you list yout startups on global platforms.
+        </Card.Text>
+        <Button variant="primary">View More</Button>
       </Card.Body>
     </Card>
-      </>
-    )
-  }
+    </CardWrapper>
+
+  );
+}
+  
   export default MentorCard;
