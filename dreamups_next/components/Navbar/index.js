@@ -24,7 +24,9 @@ const Navbar = () => {
       <Nav>
         <NavbarContainer>
           <NavLogo>
+          <Link href="/">
             <img src="/dreamup_logo.png" width="350" height="70" alt="Dreamup" />
+          </Link>
           </NavLogo>
           <NavMenu>
 

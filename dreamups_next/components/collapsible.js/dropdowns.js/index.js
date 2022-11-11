@@ -25,7 +25,10 @@ function Collabsible() {
                     id="headingOne"
                     aria-expanded={openedCollapse === "collapseOne"}
                   >
-                    <h5 className=" mb-0">
+                    <h5 className=" mb-0 text-center " >Accelerators and Schools<br/>
+                        Learn about scalable <br/>
+                        startups and build something<br/>
+                        people love<br/>
                       <Button
                         onClick={() =>
                           setOpenedCollapse(
@@ -34,13 +37,11 @@ function Collabsible() {
                               : "collapseOne"
                           )
                         }
-                        className=" w-100 text-primary text-left"
-                        color="link"
+                        className=" w-100 text-primary text-left #d41750"
+                        color = "#d41750"
+                        
                       >
-                        Accelerators and Schools<br/>
-                        Learn about scalable <br/>
-                        startups and build something<br/>
-                        people love<br/>
+                       
                         view all the programs<br/>{" "}
                       </Button>
                     </h5>
@@ -64,7 +65,9 @@ function Collabsible() {
                     id="headingTwo"
                     aria-expanded={openedCollapse === "collapseTwo"}
                   >
-                    <h5 className=" mb-0">
+                    <h5 className=" mb-0 text-center"> Events <br/>
+                        Get inspired, find a co-founder <br/>
+                        and potential investors <br/>
                       <Button
                         onClick={() =>
                           setOpenedCollapse(
@@ -74,11 +77,9 @@ function Collabsible() {
                           )
                         }
                         className=" w-100 text-primary text-left collapsed"
-                        color="link"
+                        color="#d41750"
                       >
-                        Events <br/>
-                        Get inspired, find a co-founder <br/>
-                        and potential investors <br/> {" "}
+                        view all events {" "}
                       </Button>
                     </h5>
                   </CardHeader>
@@ -101,7 +102,9 @@ function Collabsible() {
                     id="headingThree"
                     aria-expanded={openedCollapse === "collapseThree"}
                   >
-                    <h5 className=" mb-0">
+                    <h5 className=" mb-0 text-center"> Smart capital <br/>
+                        Access first capitalfor your startup and connect <br/>
+                        with investors <br/>
                       <Button
                         onClick={() =>
                           setOpenedCollapse(
@@ -111,11 +114,9 @@ function Collabsible() {
                           )
                         }
                         className=" w-100 text-primary text-left collapsed"
-                        color="link"
+                        color="#fff"
                       >
-                        Smart capital <br/>
-                        Access first capitalfor your startup and connect <br/>
-                        with investors <br/> {" "}
+                         Learn more{" "}
                       </Button>
                     </h5>
                   </CardHeader>
@@ -135,7 +136,9 @@ function Collabsible() {
                     id="headingFour"
                     aria-expanded={openedCollapse === "collapseFour"}
                   >
-                    <h5 className=" mb-0">
+                    <h5 className=" mb-0 text-center"> Education <br/>
+                        Learn and get inspired from  <br/>
+                        founders and experts <br/>
                       <Button
                         onClick={() =>
                           setOpenedCollapse(
@@ -145,11 +148,8 @@ function Collabsible() {
                           )
                         }
                         className=" w-100 text-primary text-left"
-                        color="link"
-                      >
-                        Education <br/>
-                        Learn and get inspired from  <br/>
-                        founders and experts <br/> {" "}
+                        color="#fff"
+                      > view all the programs {" "}
                       </Button>
                     </h5>
                   </CardHeader>
@@ -170,7 +170,10 @@ function Collabsible() {
                     id="headingFifth"
                     aria-expanded={openedCollapse === "collapseFifth"}
                   >
-                    <h5 className=" mb-0">
+                    <h5 className=" mb-0 text-center"> Product Management <br/>
+                        Switch your entire company to <br/>
+                        a product building mindset or <br/>
+                        become a product manager <br/> 
                       <Button
                         onClick={() =>
                           setOpenedCollapse(
@@ -180,12 +183,8 @@ function Collabsible() {
                           )
                         }
                         className=" w-100 text-primary text-left"
-                        color="link"
-                      >
-                        Product Management <br/>
-                        Switch your entire company to <br/>
-                        a product building mindset or <br/>
-                        become a product manager <br/> {" "}
+                        color=""
+                      >Product School{" "}
                       </Button>
                     </h5>
                   </CardHeader>
@@ -205,7 +204,10 @@ function Collabsible() {
                     id="headingFifth"
                     aria-expanded={openedCollapse === "collapseFifth"}
                   >
-                    <h5 className=" mb-0">
+                    <h5 className=" mb-0 text-center">  Internships <br/>
+                        Discover how startups are <br/>
+                        build from the inside, find an <br/>
+                        internship in a startup <br/>
                       <Button
                         onClick={() =>
                           setOpenedCollapse(
@@ -215,12 +217,8 @@ function Collabsible() {
                           )
                         }
                         className=" w-100 text-primary text-left"
-                        color="link"
-                      >
-                        Internships <br/>
-                        Discover how startups are <br/>
-                        build from the inside, find an <br/>
-                        internship in a startup <br/> {" "}
+                        color=""
+                      > Starships{" "}
                       </Button>
                     </h5>
                   </CardHeader>
