@@ -1,16 +1,14 @@
-import MentorCard from '../components/MentorCard'
 import MainLayout from '../layouts/MainLayout'
-import MentorsText from '../components/MentorsText'
 import MentorsFirstPage from '../components/MentorsFirstPage'
+import MentorExplanation from '../components/MentorExplanation'
 
-
-export default function About() {
+export default function Mentors() {
   return (
     <MainLayout>
-  
-        <MentorsText/>
 
-      <MentorCard/>
+      <MentorsFirstPage/>
+      <MentorExplanation/>
+
     </MainLayout>
 
   )
