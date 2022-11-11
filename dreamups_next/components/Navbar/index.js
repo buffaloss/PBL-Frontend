@@ -19,13 +19,12 @@ import {
 
 const Navbar = () => {
   return (
-
-    <>
+  
       <Nav>
         <NavbarContainer>
           <NavLogo>
           <Link href="/">
-            <img src="/dreamup_logo.png" width="350" height="70" alt="Dreamup" />
+            <img src="/dreamup_logo.png" style={{ width: 190 }} alt="Dreamup" />
           </Link>
           </NavLogo>
           <NavMenu>
@@ -59,8 +58,6 @@ const Navbar = () => {
           </NavMenu>
         </NavbarContainer>
       </Nav>
-
-    </>
   )
 }
 export default Navbar;

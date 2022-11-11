@@ -2,8 +2,8 @@
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
-  height: 180px;
-  margin-top: 0px; //no margin top;
+  height: 100px
+  top: 0;
   display: flex;
   justify-content: left; //put the content(our container of Navrbar to the left)
   align-items:center;
@@ -20,15 +20,12 @@ export const Nav = styled.nav`
 
 export const NavbarContainer = styled.div`
   align-items: center;
-  margin-left: 60px;
-  margin-right: 30px;
   display: flex;
   justify-content: space-between;
   height: 100px;
   z-index: 1;
   width: 100%;
-  padding: 0 30 px;
-  max-width: 1700px;;
+  padding: 0 70px;
   background: #ffffff;
  
 `

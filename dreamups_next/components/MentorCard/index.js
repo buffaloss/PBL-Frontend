@@ -19,7 +19,7 @@ const MentorCard = () => {
         <Card.Text>
           Over 10 years experience with crowdfunding platforms Yan can help you list yout startups on global platforms.
         </Card.Text>
-        <Button variant="primary">View More</Button>
+        <Button style={{ backgroundColor : 'red' }} variant="primary">View More</Button>
       </Card.Body>
     </Card>
     </CardWrapper>

@@ -13,7 +13,7 @@ export default function Home() {
 
       <MainImg></MainImg>
     </MainLayout>
-    <Collabsible>
+      <Collabsible>
 
       </Collabsible></>
 
