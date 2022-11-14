@@ -1,30 +1,127 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import { CardWrapper } from './styles';
+import Link from 'next/link';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col'
+import { CardWrapper, MentorImg, MentorName, MentorFunction, MentorCompany, MentorText, MainButton, BtnWrapper, BtnText } from './styles';
 
 const MentorCard = () => {
-    return (
+  return (
+    
+    <Container>
+      <Row>
+      <CardWrapper>
+        <MentorImg>
+          <img src="/mentor_icon.svg" width="100%" height="100%" alt="Mentor Image" />
+        </MentorImg>
+        <MentorName>
+          Yan Budman
+        </MentorName>
+        <MentorFunction>
+          Marketing manager
+        </MentorFunction>
+        <MentorCompany>
+          Indigogo
+        </MentorCompany>
+        <MentorText>
+          Over 10 years of experience with crowdfunding platforms. Yan can help you list your startups on global platforms.
+        </MentorText>
+        <BtnWrapper>
+          <MainButton to="View more" >
+            <Link href="/mentor">
+              <BtnText>
+                View more
+              </BtnText>
+            </Link>
+          </MainButton>
+        </BtnWrapper>
+      </CardWrapper>
 
       <CardWrapper>
-      <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="mentor_icon.svg" />
-      <Card.Body>
-        <Card.Title>Yan Budman</Card.Title>
-        <Card.Text>  
-          Marketing Manager
-        </Card.Text>
-        <Card.Text>
+        <MentorImg>
+          <img src="/mentor_icon.svg" width="100%" height="100%" alt="Mentor Image" />
+        </MentorImg>
+        <MentorName>
+          Yan Budman
+        </MentorName>
+        <MentorFunction>
+          Marketing manager
+        </MentorFunction>
+        <MentorCompany>
           Indigogo
-        </Card.Text>
-        <Card.Text>
-          Over 10 years experience with crowdfunding platforms Yan can help you list yout startups on global platforms.
-        </Card.Text>
-        <Button style={{ backgroundColor : 'red' }} variant="primary">View More</Button>
-      </Card.Body>
-    </Card>
-    </CardWrapper>
+        </MentorCompany>
+        <MentorText>
+          Over 10 years of experience with crowdfunding platforms. Yan can help you list your startups on global platforms.
+        </MentorText>
+        <BtnWrapper>
+          <MainButton to="View more" >
+            <Link href="/mentor">
+              <BtnText>
+                View more
+              </BtnText>
+            </Link>
+          </MainButton>
+        </BtnWrapper>
+      </CardWrapper>
+
+      <CardWrapper>
+        <MentorImg>
+          <img src="/mentor_icon.svg" width="100%" height="100%" alt="Mentor Image" />
+        </MentorImg>
+        <MentorName>
+          Yan Budman
+        </MentorName>
+        <MentorFunction>
+          Marketing manager
+        </MentorFunction>
+        <MentorCompany>
+          Indigogo
+        </MentorCompany>
+        <MentorText>
+          Over 10 years of experience with crowdfunding platforms. Yan can help you list your startups on global platforms.
+        </MentorText>
+        <BtnWrapper>
+          <MainButton to="View more" >
+            <Link href="/mentor">
+              <BtnText>
+                View more
+              </BtnText>
+            </Link>
+          </MainButton>
+        </BtnWrapper>
+      </CardWrapper>
+
+      <CardWrapper>
+        <MentorImg>
+          <img src="/mentor_icon.svg" width="100%" height="100%" alt="Mentor Image" />
+        </MentorImg>
+        <MentorName>
+          Yan Budman
+        </MentorName>
+        <MentorFunction>
+          Marketing manager
+        </MentorFunction>
+        <MentorCompany>
+          Indigogo
+        </MentorCompany>
+        <MentorText>
+          Over 10 years of experience with crowdfunding platforms. Yan can help you list your startups on global platforms.
+        </MentorText>
+        <BtnWrapper>
+          <MainButton to="View more" >
+            <Link href="/mentor">
+              <BtnText>
+                View more
+              </BtnText>
+            </Link>
+          </MainButton>
+        </BtnWrapper>
+      </CardWrapper>
+
+      </Row>
+      </Container>
+    
 
   );
 }
-  
-  export default MentorCard;
+
+export default MentorCard;
