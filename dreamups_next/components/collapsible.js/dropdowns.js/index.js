@@ -24,8 +24,8 @@ function Collabsible() {
                   <CardHeader
                     id="headingOne"
                     aria-expanded={openedCollapse === "collapseOne"}
-                  >
-                    <h5 className=" mb-0 text-center " >Accelerators and Schools<br/>
+                  ><h3 className = "mb-0 text-center">Accelerators and Schools</h3>
+                    <h6 className=" mb-0 text-center " >
                         Learn about scalable <br/>
                         startups and build something<br/>
                         people love<br/>
@@ -44,7 +44,7 @@ function Collabsible() {
                        
                         view all the programs<br/>{" "}
                       </Button>
-                    </h5>
+                    </h6>
                   </CardHeader>
                   <Collapse
                     isOpen={openedCollapse === "collapseOne"}
@@ -66,8 +66,8 @@ function Collabsible() {
                   <CardHeader
                     id="headingTwo"
                     aria-expanded={openedCollapse === "collapseTwo"}
-                  >
-                    <h5 className=" mb-0 text-center"> Events <br/>
+                  > <h3 className = "mb-0 text-center">Events</h3>
+                    <h6 className=" mb-0 text-center"> 
                         Get inspired, find a co-founder <br/>
                         and potential investors <br/>
                       <Button
@@ -83,7 +83,7 @@ function Collabsible() {
                       >
                         view all events {" "}
                       </Button>
-                    </h5>
+                    </h6>
                   </CardHeader>
                   <Collapse
                     isOpen={openedCollapse === "collapseTwo"}
@@ -105,8 +105,8 @@ function Collabsible() {
                   <CardHeader
                     id="headingThree"
                     aria-expanded={openedCollapse === "collapseThree"}
-                  >
-                    <h5 className=" mb-0 text-center"> Smart capital <br/>
+                  > <h3 className ="mb-0 text-center">Smart capital</h3>
+                    <h6 className=" mb-0 text-center"> 
                         Access first capitalfor your startup and connect <br/>
                         with investors <br/>
                       <Button
@@ -122,7 +122,7 @@ function Collabsible() {
                       >
                          Learn more{" "}
                       </Button>
-                    </h5>
+                    </h6>
                   </CardHeader>
                   <Collapse
                     isOpen={openedCollapse === "collapseThree"}
@@ -141,8 +141,8 @@ function Collabsible() {
                   <CardHeader
                     id="headingFour"
                     aria-expanded={openedCollapse === "collapseFour"}
-                  >
-                    <h5 className=" mb-0 text-center"> Education <br/>
+                  > <h3 className = "mb-0 text-center">Education</h3>
+                    <h6 className=" mb-0 text-center"> 
                         Learn and get inspired from  <br/>
                         founders and experts <br/>
                       <Button
@@ -157,7 +157,7 @@ function Collabsible() {
                         color="#fff"
                       > view all the programs {" "}
                       </Button>
-                    </h5>
+                    </h6>
                   </CardHeader>
                   <Collapse
                     isOpen={openedCollapse === "collapseFour"}
@@ -177,8 +177,8 @@ function Collabsible() {
                   <CardHeader
                     id="headingFifth"
                     aria-expanded={openedCollapse === "collapseFifth"}
-                  >
-                    <h5 className=" mb-0 text-center"> Product Management <br/>
+                  > <h3 className = "mb-0 text-center">Product Management</h3>
+                    <h6 className=" mb-0 text-center">
                         Switch your entire company to <br/>
                         a product building mindset or <br/>
                         become a product manager <br/> 
@@ -194,7 +194,7 @@ function Collabsible() {
                         color=""
                       >Product School{" "}
                       </Button>
-                    </h5>
+                    </h6>
                   </CardHeader>
                   <Collapse
                     isOpen={openedCollapse === "collapseFifth"}
@@ -213,8 +213,8 @@ function Collabsible() {
                   <CardHeader
                     id="headingSixth"
                     aria-expanded={openedCollapse === "collapseSixth"}
-                  >
-                    <h5 className=" mb-0 text-center">  Internships <br/>
+                  > <h3 className=" mb-0 text-center">Internships</h3>
+                    <h6 className=" mb-0 text-center"> 
                         Discover how startups are <br/>
                         build from the inside, find an <br/>
                         internship in a startup <br/>
@@ -230,7 +230,7 @@ function Collabsible() {
                         color=""
                       > Starships{" "}
                       </Button>
-                    </h5>
+                    </h6>
                   </CardHeader>
                   <Collapse
                     isOpen={openedCollapse === "collapseSixth"}
