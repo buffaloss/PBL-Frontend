@@ -20,11 +20,11 @@ function Collabsible() {
           <Row>
             <Col className=" ml-auto" xxl="4">
               {/* <div className=" accordion my-3" id="accordionExample"> */}
-                <Card>
+                <Card className="mb-4">
                   <CardHeader
                     id="headingOne"
                     aria-expanded={openedCollapse === "collapseOne"}
-                  ><h3 className = "mb-0 text-center">Accelerators and Schools</h3>
+                  ><h3 className = "mb-2 text-center">Accelerators and Schools</h3>
                     <h6 className=" mb-0 text-center " >
                         Learn about scalable <br/>
                         startups and build something<br/>
@@ -66,8 +66,8 @@ function Collabsible() {
                   <CardHeader
                     id="headingTwo"
                     aria-expanded={openedCollapse === "collapseTwo"}
-                  > <h3 className = "mb-0 text-center">Events</h3>
-                    <h6 className=" mb-0 text-center"> 
+                  > <h3 className = "mb-3 text-center">Events</h3>
+                    <h6 className=" mb-2 text-center"> 
                         Get inspired, find a co-founder <br/>
                         and potential investors <br/>
                       <Button
@@ -105,8 +105,8 @@ function Collabsible() {
                   <CardHeader
                     id="headingThree"
                     aria-expanded={openedCollapse === "collapseThree"}
-                  > <h3 className ="mb-0 text-center">Smart capital</h3>
-                    <h6 className=" mb-0 text-center"> 
+                  > <h3 className ="mb-3 text-center">Smart capital</h3>
+                    <h6 className=" mb-2 text-center"> 
                         Access first capitalfor your startup and connect <br/>
                         with investors <br/>
                       <Button
@@ -141,8 +141,8 @@ function Collabsible() {
                   <CardHeader
                     id="headingFour"
                     aria-expanded={openedCollapse === "collapseFour"}
-                  > <h3 className = "mb-0 text-center">Education</h3>
-                    <h6 className=" mb-0 text-center"> 
+                  > <h3 className = "mb-3 text-center">Education</h3>
+                    <h6 className=" mb-2 text-center"> 
                         Learn and get inspired from  <br/>
                         founders and experts <br/>
                       <Button
@@ -177,7 +177,7 @@ function Collabsible() {
                   <CardHeader
                     id="headingFifth"
                     aria-expanded={openedCollapse === "collapseFifth"}
-                  > <h3 className = "mb-0 text-center">Product Management</h3>
+                  > <h3 className = "mb-2 text-center">Product Management</h3>
                     <h6 className=" mb-0 text-center">
                         Switch your entire company to <br/>
                         a product building mindset or <br/>
@@ -209,12 +209,12 @@ function Collabsible() {
                 </Card>
                 </Col>
                 <Col className=" ml-auto" xxl="4">
-                <Card>
+                <Card className="mb-2">
                   <CardHeader
                     id="headingSixth"
                     aria-expanded={openedCollapse === "collapseSixth"}
                   > <h3 className=" mb-0 text-center">Internships</h3>
-                    <h6 className=" mb-0 text-center"> 
+                    <h6 className=" mt-0 text-center"> 
                         Discover how startups are <br/>
                         build from the inside, find an <br/>
                         internship in a startup <br/>
