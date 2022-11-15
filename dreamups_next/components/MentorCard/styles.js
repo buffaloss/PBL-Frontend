@@ -2,15 +2,16 @@ import styled from "styled-components";
 
 export const CardWrapper = styled.div`
  margin: 15px 15px 15px 15px;
- height: 550px;
+ height: 570px;
  width: 300px;
- background-color: #D8D8D8;
+ background-color: #E0E0E0;
 `;
 
 export const MentorImg = styled.p`
  align-items: center;
  position: relative;
-
+ margin-left: -12px;
+ margin-right: -12px;
 `;
 
 export const MentorName = styled.div`
@@ -48,9 +49,7 @@ export const BtnWrapper = styled.div`
  display: flex;
  flex-direction: column;
  align-items: center;
- padding-top: 10px;
-
- 
+ padding-top: 10px; 
 `;
 
 export const MainButton = styled.div`

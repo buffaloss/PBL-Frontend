@@ -19,45 +19,52 @@ import {
 
 const Navbar = () => {
   return (
-  
-      <Nav>
-        <NavbarContainer>
-          <NavLogo>
+
+    <Nav>
+      <NavbarContainer>
+        <NavLogo>
           <Link href="/">
             <img src="/dreamup_logo.png" style={{ width: 190 }} alt="Dreamup" />
           </Link>
-          </NavLogo>
-          <NavMenu>
+        </NavLogo>
+        <NavMenu>
 
+          <Link href="/about">
             <NavItem>
-              <Link href="/about">About</Link>
+              About
             </NavItem>
+          </Link>
 
+          <Link href="/products">
             <NavItem>
-              <Link href="/products">Products</Link>
+              Products
             </NavItem>
+          </Link>
+          
+            <Link href="/mentors">
+              <NavItem>
+              Mentors
+              </NavItem>
+              </Link>
+         
+            <Link href="/contact">
+              <NavItem>
+              Contact
+              </NavItem>
+              </Link>
+      
+          <LoginItem>
+            <App>
+            </App>
+          </LoginItem>
 
-            <NavItem>
-              <Link href="/mentors">Mentors</Link>
-            </NavItem>
+          <LoginIcon>
+            <img src="/login.png" width="30" height="25" />
+          </LoginIcon>
 
-            <NavItem>
-              <Link href="/contact">Contact</Link>
-            </NavItem>
-
-            <LoginItem>
-              <App>
-              </App>
-            </LoginItem>
-
-
-            <LoginIcon>
-              <img src="/login.png" width="30" height="25" />
-            </LoginIcon>
-
-          </NavMenu>
-        </NavbarContainer>
-      </Nav>
+        </NavMenu>
+      </NavbarContainer>
+    </Nav>
   )
 }
 export default Navbar;
