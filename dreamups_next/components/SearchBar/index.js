@@ -15,8 +15,8 @@ const SearchBar = () => {
             fullWidth
             color="primary"
             size="lg"
-            placeholder="Search..."
-            contentRight={<img src= "/search_icon.svg" alt ="search icon"></img>}
+            placeholder="Search"
+            contentRight={<img src= "/search_icon.svg" alt ="search icon" ></img>}
           />
           </SearchWrapper>
         </div>

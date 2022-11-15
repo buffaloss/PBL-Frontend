@@ -2,6 +2,7 @@ import { Main, Text, CloseIcon, OptionsText } from "./styles"
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Link from "next/link";
 
 const Hashtag = () => {
     return (
@@ -26,18 +27,20 @@ const Hashtag = () => {
                     </Col>
 
                     <Col xs={{ order: 'third' }}>
+                        <Link href="">
                             <OptionsText>
                                 View All
                             </OptionsText>
+                        </Link>
                     </Col>
 
 
                     <Col xs={{ order: 'last' }}>
-                       
+                        <Link href="">
                             <OptionsText>
                                 New
                             </OptionsText>
-                       
+                        </Link>
                     </Col>
 
                 </Row>

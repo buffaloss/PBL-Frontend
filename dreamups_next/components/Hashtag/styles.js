@@ -16,7 +16,7 @@ export const Main = styled.div`
  background-color: #E0E0E0;
 `;
 
-export const Text = styled.p`
+export const Text = styled.div`
  font-family: 'Poppins', sans-serif;
  text-align: center;
  align-items: center;
@@ -26,7 +26,6 @@ export const Text = styled.p`
 
 export const CloseIcon = styled.div`
  align-items: right;
-
 `;
 
 export const OptionsText = styled.p`
