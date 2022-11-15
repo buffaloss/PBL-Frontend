@@ -12,7 +12,7 @@ import {
 } from "reactstrap";
 
 function Collabsible() {
-  const [openedCollapse, setOpenedCollapse] = React.useState("collapseOne");
+  const [openedCollapse, setOpenedCollapse] = React.useState("");
   return (
     <>
       <div className=" accordion-1">
