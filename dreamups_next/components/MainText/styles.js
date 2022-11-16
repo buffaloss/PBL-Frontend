@@ -1,7 +1,8 @@
 import styled from "styled-components"
 
+
 export const Main = styled.div`
- margin-top: 30px;
+ margin-top: 75px;
  z-index: 3;
  height: 400px;
  max-width: 800px;
@@ -14,7 +15,7 @@ export const Main = styled.div`
 `;
 
 export const MainHeading = styled.h1`
- font-family: 'Poppins',sans-serif;
+ font-family: 'Open Sans',sans-serif;
  color: #000;
  height: 600px;
  font-size: 70px;
@@ -29,7 +30,7 @@ export const MainHeading = styled.h1`
 `;
 
 export const WelcomeText = styled.p`
- font-family: 'Poppins',sans-serif;
+ font-family: 'Open Sans',sans-serif;
  margin-top: 5 px;
  color: #000;
  font-size: 40px;

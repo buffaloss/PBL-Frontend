@@ -1,12 +1,18 @@
 import Link from 'next/link';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col'
+import Col from 'react-bootstrap/Col';
+import Head from 'next/head';
 import { CardWrapper, MentorImg, MentorName, MentorFunction, MentorCompany, MentorText, MainButton, BtnWrapper, BtnText } from './styles';
 
 const MentorCard = () => {
   return (
-    
+    <>
+    <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet" />
+      </Head>
     <Container>
       <Row>
       <CardWrapper>
@@ -230,7 +236,7 @@ const MentorCard = () => {
 
       </Row>
       </Container>
-    
+    </>
 
   );
 }

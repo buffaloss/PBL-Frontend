@@ -17,7 +17,7 @@ export const Main = styled.div`
 `;
 
 export const Text = styled.div`
- font-family: 'Poppins', sans-serif;
+ font-family: 'Open Sans', sans-serif;
  text-align: center;
  align-items: center;
  padding: 3px 0;
@@ -29,7 +29,7 @@ export const CloseIcon = styled.div`
 `;
 
 export const OptionsText = styled.p`
- font-family: 'Poppins',sans-serif;
+ font-family: 'Open Sans',sans-serif;
  color: #ED1E79;
  font-size: 25px;
  padding-right: 0px;

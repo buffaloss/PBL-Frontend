@@ -33,7 +33,7 @@ export const MainHeading = styled.h1`
 `;
 
 export const Text = styled.p`
- font-family: 'Poppins',sans-serif;
+ font-family: 'Open Sans',sans-serif;
  color: #ED1E79;
  font-size: 30px;
  padding-right: 0px;

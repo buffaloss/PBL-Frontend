@@ -17,7 +17,7 @@ export const TextContainer = styled.div`
 `;
 
 export const MainHeading = styled.h1`
- font-family: 'Poppins',sans-serif;
+ font-family: 'Open Sans',sans-serif;
  color: #888888;
  font-size: 250px;
  font-weight: normal;
@@ -34,7 +34,7 @@ export const MainHeading = styled.h1`
 `;
 
 export const Text1 = styled.p`
- font-family: 'Poppins',sans-serif;
+ font-family: 'Open Sans',sans-serif;
  color: #888888;
  font-size: 50px;
  padding-right: 0px;
@@ -50,7 +50,7 @@ export const Text1 = styled.p`
 `;
 
 export const Text2 = styled.p`
- font-family: 'Poppins',sans-serif;
+ font-family: 'Open Sans',sans-serif;
  color: #888888;
  font-size: 50px;
  padding-right: 0px;
@@ -82,7 +82,7 @@ export const Text3 = styled.p`
 
 
 export const Text4 = styled.p`
- font-family: 'Poppins',sans-serif;
+ font-family: 'Open Sans',sans-serif;
  color: #000;
  font-size: 25px;
  padding-right: 0px;

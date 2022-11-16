@@ -28,7 +28,7 @@ export const MainHeading = styled.h1`
 `;
 
 export const WelcomeText = styled.p`
- font-family: 'Poppins',sans-serif;
+ font-family: 'Open Sans',sans-serif;
  color: #000;
  font-size: 35px;
  max-width: 800px;

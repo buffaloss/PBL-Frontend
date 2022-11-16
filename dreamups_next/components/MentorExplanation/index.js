@@ -2,11 +2,17 @@ import { Main, TextContainer, MainHeading, Text1, Text2, Text3, Text4, Number, A
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Head from 'next/head';
 
 const MentorExplanation = () => {
     return (
 
         <>
+            <Head>
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+                <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet" />
+            </Head>
             <Main>
                 <Container fluid style={{ paddingLeft: 0, paddingRight: 0, marginLeft: 0, marginRight: 0 }}>
                     <Row style={{ marginLeft: 0, marginRight: 0 }}>
