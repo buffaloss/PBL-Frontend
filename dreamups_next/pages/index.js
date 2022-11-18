@@ -3,6 +3,8 @@ import LearnButton from '../components/LearnButton'
 import MainImg from '../components/MainImg'
 import MainLayout from '../layouts/MainLayout'
 import Collabsible from '../components/collapsible.js/dropdowns.js'
+import Example from '../components/carousel.js'
+import MentorExpert from '../components/Experts.js'
 
 export default function Home() {
   return (
@@ -15,7 +17,19 @@ export default function Home() {
     </MainLayout>
       <Collabsible>
 
-      </Collabsible></>
+      </Collabsible>
+
+      <Example>
+        
+      </Example>
+      
+      
+      <MentorExpert>
+
+      </MentorExpert>
+    
+    
+    </>
 
   )
 }
