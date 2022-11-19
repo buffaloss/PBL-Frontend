@@ -5,6 +5,8 @@ import MainLayout from '../layouts/MainLayout'
 import Collabsible from '../components/collapsible.js/dropdowns.js'
 import Example from '../components/carousel.js'
 import MentorExpert from '../components/Experts.js'
+import EventsCarousel from '../components/EventsCarousel'
+import { Container } from '@nextui-org/react'
 
 export default function Home() {
   return (
@@ -19,16 +21,20 @@ export default function Home() {
 
       </Collabsible>
 
-      <Example>
-        
-      </Example>
-      
-      
+      <Container>
+      <EventsCarousel/>
+      </Container>
+
+      {/* <Example>
+
+      </Example> */}
+
+
       <MentorExpert>
 
       </MentorExpert>
-    
-    
+
+
     </>
 
   )

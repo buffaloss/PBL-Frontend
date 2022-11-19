@@ -7,7 +7,7 @@ import { CardWrapper, MentorImg, MentorName, MentorFunction, MentorCompany, Ment
 
 const MentorExpert = () => {
     return (
-        <>
+        <div style={{ marginTop: 150 }}>
         <Head>
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -126,7 +126,7 @@ const MentorExpert = () => {
           </CardWrapper>
             </Row>
         </Container>
-        </>
+        </div>
 
 
     );
