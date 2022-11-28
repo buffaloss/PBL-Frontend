@@ -10,3 +10,4 @@ export const SearchWrapper = styled.div`
  padding-top: 10px;
  margin-bottom: 25px;
 `;
+
