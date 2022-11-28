@@ -8,7 +8,7 @@ import MentorExpert from '../components/Experts.js'
 import EventsCarousel from '../components/EventsCarousel'
 import { Container } from '@nextui-org/react'
 import { getHomePageMentors } from '../services/mentors.service'
-import { useState,useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Home() {
 
@@ -17,7 +17,8 @@ export default function Home() {
   const getData = () => {
 
     getHomePageMentors().then((res) => {
-      if(res?.data && res?.data?.length > 0){
+      console.log("res data", res?.data);
+      if (res?.data && res?.data?.length > 0) {
         setMentors(res?.data);
       }
     })
@@ -25,7 +26,7 @@ export default function Home() {
 
   useEffect(() => {
     getData()
-  },[])
+  }, [])
 
   return (
     <><MainLayout>
@@ -40,7 +41,7 @@ export default function Home() {
       </Collabsible>
 
       <Container>
-      <EventsCarousel/>
+        <EventsCarousel />
       </Container>
 
       {/* <Example>
@@ -49,9 +50,9 @@ export default function Home() {
 
 
       {
-        mentors?.length > 0 && <MentorExpert mentors={mentors}/>
+        mentors?.length > 0 && <MentorExpert mentors={mentors} />
       }
-      
+
 
 
     </>

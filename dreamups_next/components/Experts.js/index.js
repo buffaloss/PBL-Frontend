@@ -6,6 +6,10 @@ import Head from 'next/head';
 import { CardWrapper, MentorImg, MentorName, MentorFunction, MentorCompany, MentorText, MainButton, BtnWrapper, BtnText } from './styles';
 
 
+// const splitText = (string) => {
+//   return string.
+// }
+
 const MentorExpert = ({ mentors }) => {
 
   console.log(mentors)
@@ -20,7 +24,7 @@ const MentorExpert = ({ mentors }) => {
         <h2>Experts and mentors</h2>
         <h5>Connect with world class experts and mentors</h5>
         <Row>
-          
+
           {
             mentors?.map((mentor, index) => {
               return (
@@ -29,16 +33,16 @@ const MentorExpert = ({ mentors }) => {
                     <img src="/mentor_icon.svg" width="100%" height="100%" alt="Mentor Image" />
                   </MentorImg>
                   <MentorName>
-                    { mentor?.firstName }  { mentor?.lastName }
+                    {mentor?.firstName}  {mentor?.lastName}
                   </MentorName>
                   <MentorFunction>
-                    Marketing manager
+                    {mentor?.job}
                   </MentorFunction>
                   <MentorCompany>
-                    Indigogo
+                    {mentor?.company}
                   </MentorCompany>
                   <MentorText>
-                    Over 10 years of experience with crowdfunding platforms. Yan can help you list your startups on global platforms.
+                    {mentor?.bio}
                   </MentorText>
                   <BtnWrapper>
                     <MainButton to="View more" >
@@ -53,9 +57,9 @@ const MentorExpert = ({ mentors }) => {
               )
             })
           }
-          
-          
-      
+
+
+
         </Row>
       </Container>
     </div>
