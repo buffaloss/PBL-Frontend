@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 import Link from 'next/link';
-import LoginPage from '../LoginPage';
-import App from '../LoginPage';
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap');
-</style>
+import Login from '../LoginPage';
+import Register from "../RegisterPage";
+// <style>
+//   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+//   @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap');
+// </style>
 import {
   Nav,
   NavbarContainer,
@@ -17,7 +17,13 @@ import {
   LoginIcon
 } from './styles';
 
+import { useSession, signOut } from "next-auth/react"
+
+
 const Navbar = () => {
+
+  const { data: session, status } = useSession()
+
   return (
 
     <Nav>
@@ -40,27 +46,35 @@ const Navbar = () => {
               Products
             </NavItem>
           </Link>
-          
+
             <Link href="/mentors">
               <NavItem>
               Mentors
               </NavItem>
               </Link>
-         
+
             <Link href="/contact">
               <NavItem>
               Contact
               </NavItem>
               </Link>
-      
-          <LoginItem>
-            <App>
-            </App>
-          </LoginItem>
 
-          <LoginIcon>
-            <img src="/login.png" width="30" height="25" />
-          </LoginIcon>
+          {status !== "authenticated" &&
+              <>
+                <LoginItem>
+                  <Login/>
+                </LoginItem>
+                <LoginItem>
+                  <Register/>
+                </LoginItem>
+              </>
+          }
+
+          {status === "authenticated" &&
+              <LoginIcon onClick={() => signOut()}>
+                <img src="/login.png" width="30" height="25"/>
+              </LoginIcon>
+          }
 
         </NavMenu>
       </NavbarContainer>
