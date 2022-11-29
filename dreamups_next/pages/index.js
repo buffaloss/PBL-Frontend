@@ -6,55 +6,56 @@ import Collabsible from '../components/collapsible.js/dropdowns.js'
 import Example from '../components/carousel.js'
 import MentorExpert from '../components/Experts.js'
 import EventsCarousel from '../components/EventsCarousel'
-import {Container} from '@nextui-org/react'
-import {getHomePageMentors} from '../services/mentors.service'
-import {useState, useEffect} from 'react'
+import { Container } from '@nextui-org/react'
+import { getHomePageMentors } from '../services/mentors.service'
+import { useState, useEffect } from 'react'
 
 export default function Home() {
 
-    const [mentors, setMentors] = useState([]);
+  const [mentors, setMentors] = useState([]);
 
-    const getData = () => {
+  const getData = () => {
 
-        getHomePageMentors().then((res) => {
-            console.log(res)
-            if (res?.data && res?.data?.length > 0) {
-                setMentors(res?.data);
-            }
-        })
-    }
+    getHomePageMentors().then((res) => {
+      console.log("res data", res?.data);
+      if (res?.data && res?.data?.length > 0) {
+        setMentors(res?.data);
+      }
+    })
+  }
 
-    useEffect(() => {
-        getData()
-    }, [])
+  useEffect(() => {
+    getData()
+  }, [])
 
-    return (
-        <><MainLayout>
-            <MainText></MainText>
+  return (
+    <><MainLayout>
+      <MainText></MainText>
 
-            <LearnButton></LearnButton>
+      <LearnButton></LearnButton>
 
-            <MainImg></MainImg>
-        </MainLayout>
-            <Collabsible>
+      <MainImg></MainImg>
+    </MainLayout>
+      <Collabsible>
 
-            </Collabsible>
+      </Collabsible>
 
-            <Container>
-                <EventsCarousel/>
-            </Container>
+      <Container>
+        <EventsCarousel />
+      </Container>
 
-            {/* <Example>
+      {/* <Example>
 
       </Example> */}
 
 
-            {
-                mentors?.length > 0 && <MentorExpert mentors={mentors}/>
-            }
+      {
+        mentors?.length > 0 && <MentorExpert mentors={mentors} />
+      }
 
 
-        </>
 
-    )
+    </>
+
+  )
 }

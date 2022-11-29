@@ -17,14 +17,16 @@ function Collabsible() {
     <>
       <div className=" accordion-1">
         <Container>
+      
+          <div className="collapsible">
           <Row>
             <Col className=" ml-auto" xxl="4">
               {/* <div className=" accordion my-3" id="accordionExample"> */}
                 <Card className="mb-4">
-                  <CardHeader
+                  <CardHeader className="cardheader"
                     id="headingOne"
                     aria-expanded={openedCollapse === "collapseOne"}
-                  ><h3 className = "mb-2 text-center">Accelerators and Schools</h3>
+                  ><h3 className = "mb-0 text-center">Accelerators and Schools</h3>
                     <h6 className=" mb-0 text-center " >
                         Learn about scalable <br/>
                         startups and build something<br/>
@@ -37,8 +39,8 @@ function Collabsible() {
                               : "collapseOne"
                           )
                         }
-                        className=" w-100 text-primary text-left #d41750"
-                        color = "#d41750"
+                        className=" w-100 text-primary text-left"
+                        color=""
                         
                       >
                        
@@ -63,7 +65,7 @@ function Collabsible() {
               </Col>
               <Col className=" ml-auto" xxl="4">
                 <Card>
-                  <CardHeader
+                  <CardHeader className="cardheader"
                     id="headingTwo"
                     aria-expanded={openedCollapse === "collapseTwo"}
                   > <h3 className = "mb-3 text-center">Events</h3>
@@ -102,7 +104,7 @@ function Collabsible() {
                 </Col>
                 <Col className=" ml-auto" xxl="4">
                 <Card>
-                  <CardHeader
+                  <CardHeader className="cardheader"
                     id="headingThree"
                     aria-expanded={openedCollapse === "collapseThree"}
                   > <h3 className ="mb-3 text-center">Smart capital</h3>
@@ -138,7 +140,7 @@ function Collabsible() {
                 </Col>
                 <Col className=" ml-auto" xxl="4">
                 <Card>
-                  <CardHeader
+                  <CardHeader className="cardheader"
                     id="headingFour"
                     aria-expanded={openedCollapse === "collapseFour"}
                   > <h3 className = "mb-3 text-center">Education</h3>
@@ -174,7 +176,7 @@ function Collabsible() {
                 </Col>
                 <Col className=" ml-auto" xxl="4">
                 <Card>
-                  <CardHeader
+                  <CardHeader className="cardheader"
                     id="headingFifth"
                     aria-expanded={openedCollapse === "collapseFifth"}
                   > <h3 className = "mb-2 text-center">Product Management</h3>
@@ -210,7 +212,7 @@ function Collabsible() {
                 </Col>
                 <Col className=" ml-auto" xxl="4">
                 <Card className="mb-2">
-                  <CardHeader
+                  <CardHeader className="cardheader"
                     id="headingSixth"
                     aria-expanded={openedCollapse === "collapseSixth"}
                   > <h3 className=" mb-0 text-center">Internships</h3>
@@ -247,6 +249,7 @@ function Collabsible() {
               {/* </div> */}
   
           </Row>
+      </div>
         </Container>
       </div>
     </>
