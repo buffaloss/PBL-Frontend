@@ -3,10 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Login from '../LoginPage';
 import Register from "../RegisterPage";
-// <style>
-//   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-//   @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap');
-// </style>
+
 import {
   Nav,
   NavbarContainer,

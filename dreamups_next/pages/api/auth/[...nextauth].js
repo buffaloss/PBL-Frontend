@@ -19,7 +19,6 @@ export default NextAuth({
                         email: credentials?.username ?? ''
                     });
 
-                    console.log("server response",response)
                     if (response.data) {
                         return response.data;
                     } else {
@@ -65,7 +64,6 @@ export default NextAuth({
         // async redirect({ url, baseUrl }) { return baseUrl },
         async session({ session,user, token }) {
             const response = await getAuthenticatedUser(String(token?.accessToken));
-             console.log("user",response)
             if(token && response?.data) {
                 session.accessToken = token.accessToken;
                 // @ts-ignore

@@ -9,6 +9,7 @@ import EventsCarousel from '../components/EventsCarousel'
 import { Container } from '@nextui-org/react'
 import { getHomePageMentors } from '../services/mentors.service'
 import { useState, useEffect } from 'react'
+import Head from "next/head";
 
 export default function Home() {
 
@@ -29,7 +30,14 @@ export default function Home() {
   }, [])
 
   return (
-    <><MainLayout>
+    <>
+      <Head>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap');
+        </style>
+      </Head>
+      <MainLayout>
       <MainText></MainText>
 
       <LearnButton></LearnButton>
