@@ -30,11 +30,11 @@ export default function Home() {
 
   return (
     <><MainLayout>
-      <MainText></MainText>
+      <MainText/>
 
-      <LearnButton></LearnButton>
+      <LearnButton/>
 
-      <MainImg></MainImg>
+      <MainImg/>
     </MainLayout>
       <Collabsible>
 

@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+export const MainContainer = styled.p`
+ display:flex;
+ align-items: center;
+ align-content:right;
+ width:100%;
+`;
 export const MentorImg = styled.p`
  align-items: left;
  position: relative;
@@ -7,8 +13,8 @@ export const MentorImg = styled.p`
 `;
 
 export const TextContainer = styled.div`
- margin-top:75px;
- margin-left: 0px;
+ margin-top:0px;
+ margin-left:40px;
 `;
 
 export const MentorName = styled.div`
@@ -44,15 +50,19 @@ export const MentorLocation = styled.div`
  font-size: 20px;
  color: black;
  text-align: left;
+ align-items: left;
  margin-top: 20px;
- margin-left:-200px;
+`;
+ 
+export const LocationIcon = styled.div`
+
 `;
 
 export const ExpertiseContainer = styled.div`
  background-color: #E0E0E0;
- width: 550px;
- height: 400px;
- margin-left: 250px;
+ width: 500px;
+ height: 500px;
+ margin-right:60px;
  margin-top: 50px;
  overflow: hidden;
 `;
@@ -67,12 +77,15 @@ export const DomainExpertiseText = styled.text`
 `;
 
 export const MentorTag = styled.div`
- width: 150px;
  height: 40px;
+ display: inline-flex;
  border-radius: 25px;
  align-items: center;
  background-color: white;
  margin-left: 25px;
+ margin-top: 15px;
+ padding-right: 15px;
+ padding-left: 15px;
 `;
 
 export const TagName = styled.div`

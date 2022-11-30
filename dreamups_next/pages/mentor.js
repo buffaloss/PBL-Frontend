@@ -10,13 +10,12 @@ export default function Mentor() {
   return (
     <MainLayout>
       <MentorIntro />
-      
         <Row>
           <Col xxl='6'>
             <AskAQuestion />
           </Col>
-          <Col xxl='6'>
-            <AskedQuestions></AskedQuestions>
+          <Col xxl='5'>
+            <AskedQuestions/>
           </Col>
         </Row>
       
