@@ -7,10 +7,11 @@ import MentorCard from '../components/MentorCard'
 import Hashtag from '../components/Hashtag'
 import LoadMoreButton from '../components/LoadMoreButton'
 import {getAllMentors} from "../services/mentors.service";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 export default function Mentors() {
 
+    const [tags, setTags] = useState([]);
 
     const getData = () => {
         getAllMentors().then((res) => {
@@ -23,16 +24,23 @@ export default function Mentors() {
 
     useEffect(() => {
         getData();
-    },[])
+    },[]);
 
-  return (
+    const removeTag = (tag) => {
+        const localTagsArray = tags?.filter(item => item !== tag);
+        setTags(localTagsArray);
+
+    }
+
+
+    return (
     <MainLayout>
 
       <MentorsFirstPage />
       <MentorExplanation />
       <Topics/>
-      <SearchBar/>
-      <Hashtag/>
+      <SearchBar propsTags={tags} onTagsChange={(tags) => setTags(tags)}/>
+      <Hashtag onRemoveTag={(tag) => removeTag(tag)} tags={tags}/>
       <MentorCard/>
       <LoadMoreButton/>
 
