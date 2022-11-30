@@ -45,6 +45,7 @@ const EventsCarousel = () => {
                             slidesPerView={2.3}
                             onSlideChange={() => console.log('slide change')}
                             ref={swiperRef}
+                            loop={true}
                             >
                             <SwiperSlide>
                                 <EventCard>
@@ -60,7 +61,7 @@ const EventsCarousel = () => {
                                 <EventCard></EventCard>
                             </SwiperSlide>
                             <SwiperSlide>Slide 4</SwiperSlide>
-                            
+
                         </Swiper>
                     </EventsSlider>
                 </Col>
@@ -68,8 +69,8 @@ const EventsCarousel = () => {
         </EventsCarouselWrapper>
     )
 
-    
-            
+
+
 }
 
 export default EventsCarousel;
