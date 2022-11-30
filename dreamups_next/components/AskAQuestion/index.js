@@ -23,7 +23,7 @@ const AskAQuestion = () => {
                                 clearable
                                 bordered
                                 fullWidth
-                                color="#FFFFFF"
+                                color="#ED1E79"
                                 size="lg"
                                 placeholder="First name"
                             />
@@ -35,7 +35,7 @@ const AskAQuestion = () => {
                                 clearable
                                 bordered
                                 fullWidth
-                                color="primary"
+                                color="#ED1E79"
                                 size="lg"
                                 placeholder="Last name"
                             />
@@ -49,7 +49,7 @@ const AskAQuestion = () => {
                             clearable
                             bordered
                             fullWidth
-                            color="primary"
+                            color="#ED1E79"
                             size="lg"
                             placeholder="Email"
                         />
@@ -62,7 +62,7 @@ const AskAQuestion = () => {
                             bordered
                             fullWidth
                             resize="none"
-                            color="primary"
+                            color="#ED1E79"
                             size="lg"
                             placeholder="Message"
                         />

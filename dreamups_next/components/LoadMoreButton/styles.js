@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const BtnWrapper = styled.div`
  margin-top: 100px;
- margin-left: 850px;
  max-width: 140px;
  display: flex;
  flex-direction: column;

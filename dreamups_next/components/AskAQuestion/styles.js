@@ -124,4 +124,4 @@ export const MainButton = styled.div`
     transition: all 0.2s ease-in-out;
     background: ${({primary}) => (primary ? '#ED1E79' : '#e0126c' )};
  };
-`
+`;

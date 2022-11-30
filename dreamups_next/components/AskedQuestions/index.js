@@ -58,10 +58,6 @@ const AskedQuestions = () => {
                 </MainButton>
             </BtnWrapper>
         </Container>
-
-
     );
-
 }
-
 export default AskedQuestions;

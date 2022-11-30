@@ -6,14 +6,15 @@ export const Main = styled.div`
  margin-bottom: 50px;
  z-index: 3;
  height: 35px;
- width: 110px;
  flex-basis: auto;
  position: left;
- display: flex;
+ display: inline-flex;
  flex-direction: column;
- padding: 8 24 px;
+ padding-right: 10px;
+ padding-left: 10px;
  margin-left: 60px; 
  background-color: #E0E0E0;
+
 `;
 
 export const Text = styled.div`
