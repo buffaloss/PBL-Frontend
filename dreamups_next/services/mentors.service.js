@@ -14,3 +14,20 @@ export const getAllMentors = async () => {
         return res;
     }).catch(e => console.log(e))
 }
+
+
+export const searchMentors = async (tagsArray) => {
+
+    return axios.post(`${API_URL}/mentors/search`,tagsArray).then((res) => {
+        return res;
+    }).catch(e => console.log(e))
+}
+
+
+
+export const searchQueryMentors = async (tagsArray) => {
+
+    return axios.post(`${API_URL}/mentors/search?tag=${tagsArray.join(',')}`,tagsArray).then((res) => {
+        return res;
+    }).catch(e => console.log(e))
+}

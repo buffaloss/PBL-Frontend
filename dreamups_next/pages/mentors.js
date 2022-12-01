@@ -8,6 +8,7 @@ import Hashtag from '../components/Hashtag'
 import LoadMoreButton from '../components/LoadMoreButton'
 import {getAllMentors} from "../services/mentors.service";
 import {useEffect, useState} from "react";
+import {searchMentors} from "../services/mentors.service";
 
 export default function Mentors() {
 
@@ -32,6 +33,18 @@ export default function Mentors() {
 
     }
 
+
+    const search = () => {
+        searchMentors(tags).then((res) => {
+            console.log(res)
+        })
+    }
+
+    useEffect(() => {
+
+        search();
+
+    },[tags])
 
     return (
     <MainLayout>
