@@ -5,11 +5,15 @@ import Col from 'react-bootstrap/Col'
 import { MainContainer, MentorImg, TextContainer, MentorLocation, LocationIcon, MentorName, MentorFunction, MentorCompany, MentorText, ExpertiseContainer, DomainExpertiseText, MentorTag, TagName, MentorSocial } from './styles';
 
 
-const MentorIntro = () => {
+const MentorIntro = ({mentors}) => {
+    console.log(mentors)
     return (
 
         <>
-            <MainContainer>
+        {
+            mentors?.map((mentor, index) => {
+              return (
+                <MainContainer key ={index}>
                 <Col xxl='3'>
                     <MentorImg>
                         <img src="/mentor_icon.svg" width="500" alt="Mentor Image" />
@@ -17,18 +21,18 @@ const MentorIntro = () => {
                 </Col>
                 <Col xxl='3'>
                     <TextContainer>
-                        <MentorName>
-                            Yan Budman
-                        </MentorName>
-                        <MentorFunction>
-                            Marketing manager
-                        </MentorFunction>
-                        <MentorCompany>
-                            Indigogo
-                        </MentorCompany>
-                        <MentorText>
-                            Over 10 years of experience with crowdfunding platforms. Yan can help you list your startups on global platforms.
-                        </MentorText>
+                    <MentorName>
+                    {mentor?.firstName}  {mentor?.lastName}
+                  </MentorName>
+                  <MentorFunction>
+                    {mentor?.job}
+                  </MentorFunction>
+                  <MentorCompany>
+                    {mentor?.company}
+                  </MentorCompany>
+                  <MentorText>
+                    {mentor?.bio}
+                  </MentorText>
                         <Row>
                             <Col xxl='2'>
                                 <LocationIcon>
@@ -86,6 +90,11 @@ const MentorIntro = () => {
                     </Link>
                 </MentorSocial>
             </MainContainer>
+              )
+          })
+          }
+
+           
         </>
 
 

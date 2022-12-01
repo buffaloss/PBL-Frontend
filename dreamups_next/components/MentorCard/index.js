@@ -5,7 +5,8 @@ import Col from 'react-bootstrap/Col';
 import Head from 'next/head';
 import { CardWrapper, MentorImg, MentorName, MentorFunction, MentorCompany, MentorText, MainButton, BtnWrapper, BtnText } from './styles';
 
-const MentorCard = () => {
+const MentorCard = ({mentors}) => {
+  console.log(mentors)
   return (
     <>
     <Head>
@@ -15,226 +16,43 @@ const MentorCard = () => {
       </Head>
     <Container>
       <Row>
-      <CardWrapper>
-        <MentorImg>
-          <img src="/mentor_icon.svg" width="100%" height="100%" alt="Mentor Image" />
-        </MentorImg>
-        <MentorName>
-          Yan Budman
-        </MentorName>
-        <MentorFunction>
-          Marketing manager
-        </MentorFunction>
-        <MentorCompany>
-          Indigogo
-        </MentorCompany>
-        <MentorText>
-          Over 10 years of experience with crowdfunding platforms. Yan can help you list your startups on global platforms.
-        </MentorText>
-        <BtnWrapper>
-          <MainButton to="View more" >
-            <Link href="/mentor">
-              <BtnText>
-                View more
-              </BtnText>
-            </Link>
-          </MainButton>
-        </BtnWrapper>
-      </CardWrapper>
+      {
+            mentors?.map((mentor, index) => {
+              return (
+                <CardWrapper key={index}>
+                  <MentorImg>
+                    <img src="/mentor_icon.svg" width="100%" height="100%" alt="Mentor Image" />
+                  </MentorImg>
+                  <MentorName>
+                    {mentor?.firstName}  {mentor?.lastName}
+                  </MentorName>
+                  <MentorFunction>
+                    {mentor?.job}
+                  </MentorFunction>
+                  <MentorCompany>
+                    {mentor?.company}
+                  </MentorCompany>
+                  <MentorText>
+                    {mentor?.bio}
+                  </MentorText>
+                  <BtnWrapper>
+                    <MainButton to="View more" >
+                      <Link href="/mentor">
+                        <BtnText>
+                          View more
+                        </BtnText>
+                      </Link>
+                    </MainButton>
+                  </BtnWrapper>
+                </CardWrapper>
+              )
+          })
+          }
 
-      <CardWrapper>
-        <MentorImg>
-          <img src="/mentor_icon.svg" width="100%" height="100%" alt="Mentor Image" />
-        </MentorImg>
-        <MentorName>
-          Yan Budman
-        </MentorName>
-        <MentorFunction>
-          Marketing manager
-        </MentorFunction>
-        <MentorCompany>
-          Indigogo
-        </MentorCompany>
-        <MentorText>
-          Over 10 years of experience with crowdfunding platforms. Yan can help you list your startups on global platforms.
-        </MentorText>
-        <BtnWrapper>
-          <MainButton to="View more" >
-            <Link href="/mentor">
-              <BtnText>
-                View more
-              </BtnText>
-            </Link>
-          </MainButton>
-        </BtnWrapper>
-      </CardWrapper>
-
-      <CardWrapper>
-        <MentorImg>
-          <img src="/mentor_icon.svg" width="100%" height="100%" alt="Mentor Image" />
-        </MentorImg>
-        <MentorName>
-          Yan Budman
-        </MentorName>
-        <MentorFunction>
-          Marketing manager
-        </MentorFunction>
-        <MentorCompany>
-          Indigogo
-        </MentorCompany>
-        <MentorText>
-          Over 10 years of experience with crowdfunding platforms. Yan can help you list your startups on global platforms.
-        </MentorText>
-        <BtnWrapper>
-          <MainButton to="View more" >
-            <Link href="/mentor">
-              <BtnText>
-                View more
-              </BtnText>
-            </Link>
-          </MainButton>
-        </BtnWrapper>
-      </CardWrapper>
-
-      <CardWrapper>
-        <MentorImg>
-          <img src="/mentor_icon.svg" width="100%" height="100%" alt="Mentor Image" />
-        </MentorImg>
-        <MentorName>
-          Yan Budman
-        </MentorName>
-        <MentorFunction>
-          Marketing manager
-        </MentorFunction>
-        <MentorCompany>
-          Indigogo
-        </MentorCompany>
-        <MentorText>
-          Over 10 years of experience with crowdfunding platforms. Yan can help you list your startups on global platforms.
-        </MentorText>
-        <BtnWrapper>
-          <MainButton to="View more" >
-            <Link href="/mentor">
-              <BtnText>
-                View more
-              </BtnText>
-            </Link>
-          </MainButton>
-        </BtnWrapper>
-      </CardWrapper>
-
-      </Row>
-      <Row>
-      <CardWrapper>
-        <MentorImg>
-          <img src="/mentor_icon.svg" width="100%" height="100%" alt="Mentor Image" />
-        </MentorImg>
-        <MentorName>
-          Yan Budman
-        </MentorName>
-        <MentorFunction>
-          Marketing manager
-        </MentorFunction>
-        <MentorCompany>
-          Indigogo
-        </MentorCompany>
-        <MentorText>
-          Over 10 years of experience with crowdfunding platforms. Yan can help you list your startups on global platforms.
-        </MentorText>
-        <BtnWrapper>
-          <MainButton to="View more" >
-            <Link href="/mentor">
-              <BtnText>
-                View more
-              </BtnText>
-            </Link>
-          </MainButton>
-        </BtnWrapper>
-      </CardWrapper>
-
-      <CardWrapper>
-        <MentorImg>
-          <img src="/mentor_icon.svg" width="100%" height="100%" alt="Mentor Image" />
-        </MentorImg>
-        <MentorName>
-          Yan Budman
-        </MentorName>
-        <MentorFunction>
-          Marketing manager
-        </MentorFunction>
-        <MentorCompany>
-          Indigogo
-        </MentorCompany>
-        <MentorText>
-          Over 10 years of experience with crowdfunding platforms. Yan can help you list your startups on global platforms.
-        </MentorText>
-        <BtnWrapper>
-          <MainButton to="View more" >
-            <Link href="/mentor">
-              <BtnText>
-                View more
-              </BtnText>
-            </Link>
-          </MainButton>
-        </BtnWrapper>
-      </CardWrapper>
+   
 
 
-      <CardWrapper>
-        <MentorImg>
-          <img src="/mentor_icon.svg" width="100%" height="100%" alt="Mentor Image" />
-        </MentorImg>
-        <MentorName>
-          Yan Budman
-        </MentorName>
-        <MentorFunction>
-          Marketing manager
-        </MentorFunction>
-        <MentorCompany>
-          Indigogo
-        </MentorCompany>
-        <MentorText>
-          Over 10 years of experience with crowdfunding platforms. Yan can help you list your startups on global platforms.
-        </MentorText>
-        <BtnWrapper>
-          <MainButton to="View more" >
-            <Link href="/mentor">
-              <BtnText>
-                View more
-              </BtnText>
-            </Link>
-          </MainButton>
-        </BtnWrapper>
-      </CardWrapper>
-
-      <CardWrapper>
-        <MentorImg>
-          <img src="/mentor_icon.svg" width="100%" height="100%" alt="Mentor Image" />
-        </MentorImg>
-        <MentorName>
-          Yan Budman
-        </MentorName>
-        <MentorFunction>
-          Marketing manager
-        </MentorFunction>
-        <MentorCompany>
-          Indigogo
-        </MentorCompany>
-        <MentorText>
-          Over 10 years of experience with crowdfunding platforms. Yan can help you list your startups on global platforms.
-        </MentorText>
-        <BtnWrapper>
-          <MainButton to="View more" >
-            <Link href="/mentor">
-              <BtnText>
-                View more
-              </BtnText>
-            </Link>
-          </MainButton>
-        </BtnWrapper>
-      </CardWrapper>
-
-      </Row>
+       </Row>
       </Container>
     </>
 
