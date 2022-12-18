@@ -12,19 +12,19 @@ const LoadMoreButton = () => {
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet" />
       </Head>
       <Container>
-      <Row className="justify-content-center">
-        <Col xs lg='2' >
-      <BtnWrapper>
-        <MainButton to="Load more" >
-          <Link href="/mentors">
-            <BtnText>
-              Load more
-            </BtnText>
-          </Link>
-        </MainButton>
-      </BtnWrapper>
-      </Col>
-      </Row>
+        <Row className="justify-content-center">
+          <Col xs lg='2' >
+            <BtnWrapper>
+              <MainButton to="Load more" >
+                <Link href="/mentors">
+                  <BtnText>
+                    Load more
+                  </BtnText>
+                </Link>
+              </MainButton>
+            </BtnWrapper>
+          </Col>
+        </Row>
       </Container>
     </>
   )
