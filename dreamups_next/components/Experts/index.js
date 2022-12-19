@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-page-custom-font */
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -5,13 +7,25 @@ import Col from 'react-bootstrap/Col';
 import Head from 'next/head';
 import { CardWrapper, MentorImg, MentorName, MentorFunction, MentorCompany, MentorText, MainButton, BtnWrapper, BtnText } from './styles';
 
+<<<<<<< HEAD:dreamups_next/components/Experts.js/index.js
 // const splitText = (string) => {
 //   return string.
 // }
+=======
+
+const splitText = (text) => {
+  const words = text.split(" ");
+  let digest = "";
+  let i = 0;
+  while (digest.length < 100) {
+    digest += words[i] + " ";
+    i++;
+  }
+  return digest.trimEnd() + "...";
+}
+>>>>>>> 7d2209d36d3ea04d7a1e10acc14637c1f5a191b0:dreamups_next/components/Experts/index.js
 
 const MentorExpert = ({ mentors }) => {
-
-  console.log(mentors)
   return (
     <div style={{ marginTop: 150 }}>
       <Head>
@@ -27,6 +41,7 @@ const MentorExpert = ({ mentors }) => {
           {
             mentors?.map((mentor, index) => {
               return (
+<<<<<<< HEAD:dreamups_next/components/Experts.js/index.js
                 <>
                   <Head>
                     <style>
@@ -61,6 +76,38 @@ const MentorExpert = ({ mentors }) => {
                     </BtnWrapper>
                   </CardWrapper>
                 </>
+=======
+                <CardWrapper key={index}>
+                  <MentorImg>
+                    <img
+                      src={"mentors/" + mentor?._id + ".jfif"}
+                      onError={(e) => { e.target.src = "/mentor_icon.svg" }}
+                      width="100%" height="100%" alt=""
+                    />
+                  </MentorImg>
+                  <MentorName>
+                    {mentor?.firstName}  {mentor?.lastName}
+                  </MentorName>
+                  <MentorFunction>
+                    {mentor?.job}
+                  </MentorFunction>
+                  <MentorCompany>
+                    {mentor?.company}
+                  </MentorCompany>
+                  <MentorText>
+                    {splitText(mentor?.bio)}
+                  </MentorText>
+                  <BtnWrapper>
+                    <MainButton to="View more" >
+                      <Link href="/mentor">
+                        <BtnText>
+                          View more
+                        </BtnText>
+                      </Link>
+                    </MainButton>
+                  </BtnWrapper>
+                </CardWrapper>
+>>>>>>> 7d2209d36d3ea04d7a1e10acc14637c1f5a191b0:dreamups_next/components/Experts/index.js
               )
             })
           }

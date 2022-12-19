@@ -8,6 +8,9 @@ export const AskContainer = styled.div`
  margin-left: 60px;
  margin-top:100px;
  overflow: auto;
+  .nextui-input-main-container{
+    background-color: white;
+  }
 `;
 
 

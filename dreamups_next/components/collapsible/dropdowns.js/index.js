@@ -16,12 +16,15 @@ function Collabsible() {
   const [openedCollapse, setOpenedCollapse] = React.useState("");
   return (
     <>
+<<<<<<< HEAD:dreamups_next/components/collapsible.js/dropdowns.js/index.js
      <Head>
         <style>
           @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
           @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap');
         </style>
       </Head>
+=======
+>>>>>>> 7d2209d36d3ea04d7a1e10acc14637c1f5a191b0:dreamups_next/components/collapsible/dropdowns.js/index.js
       <div className="accordion-1" style={{ background: '#dfdbdb', padding: "50px 0" }}>
         <Container>
 

@@ -19,6 +19,16 @@ const Hashtag = ({ tags, onRemoveTag }) => {
             <Container>
                 <Row>
 
+<<<<<<< HEAD
+=======
+                    {/* <Col xs={{ order: 'first' }}>
+                        <Main>
+                            <Text>
+                                #marketing
+                            </Text>
+                        </Main>
+                    </Col> */}
+>>>>>>> 7d2209d36d3ea04d7a1e10acc14637c1f5a191b0
 
 
                     {
@@ -46,6 +56,16 @@ const Hashtag = ({ tags, onRemoveTag }) => {
                     }
 
 
+<<<<<<< HEAD
+=======
+                    {/* <Col xs={{ order: 'second' }}>
+                        <Main>
+                            <Text>
+                                #growth
+                            </Text>
+                        </Main>
+                    </Col> */}
+>>>>>>> 7d2209d36d3ea04d7a1e10acc14637c1f5a191b0
 
                     <Col xs={{ order: 'third' }}>
                         <Link href="">

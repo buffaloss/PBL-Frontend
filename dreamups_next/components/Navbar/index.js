@@ -3,6 +3,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Login from '../LoginPage';
 import Register from "../RegisterPage";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7d2209d36d3ea04d7a1e10acc14637c1f5a191b0
 import {
   Nav,
   NavbarContainer,

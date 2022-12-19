@@ -2,12 +2,12 @@ import MainText from '../components/MainText'
 import LearnButton from '../components/LearnButton'
 import MainImg from '../components/MainImg'
 import MainLayout from '../layouts/MainLayout'
-import Collabsible from '../components/collapsible.js/dropdowns.js'
-import Example from '../components/carousel.js'
-import MentorExpert from '../components/Experts.js'
+import Collabsible from '../components/collapsible/dropdowns.js/index.js'
+import Example from '../components/carousel/index.js'
+import MentorExpert from '../components/Experts'
 import EventsCarousel from '../components/EventsCarousel'
 import { Container } from '@nextui-org/react'
-import { getHomePageMentors } from '../services/mentors.service'
+import { getFixedNrMentors } from '../services/mentors.service'
 import { useState, useEffect } from 'react'
 import Head from "next/head";
 
@@ -17,7 +17,7 @@ export default function Home() {
 
   const getData = () => {
 
-    getHomePageMentors().then((res) => {
+    getFixedNrMentors().then((res) => {
       console.log("res data", res?.data);
       if (res?.data && res?.data?.length > 0) {
         setMentors(res?.data);
@@ -38,12 +38,21 @@ export default function Home() {
         </style>
       </Head>
       <MainLayout>
+<<<<<<< HEAD
       <MainText></MainText>
 
       <LearnButton></LearnButton>
 
       <MainImg></MainImg>
     </MainLayout>
+=======
+        <MainText></MainText>
+
+        <LearnButton></LearnButton>
+
+        <MainImg></MainImg>
+      </MainLayout>
+>>>>>>> 7d2209d36d3ea04d7a1e10acc14637c1f5a191b0
       <Collabsible>
 
       </Collabsible>
@@ -51,10 +60,6 @@ export default function Home() {
       <Container>
         <EventsCarousel />
       </Container>
-
-      {/* <Example>
-
-      </Example> */}
 
 
       {
