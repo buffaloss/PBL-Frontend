@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-page-custom-font */
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
+// import { Link } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Head from 'next/head';
@@ -54,7 +55,13 @@ const MentorCard = ({ mentors }) => {
                   </MentorText>
                   <BtnWrapper>
                     <MainButton to="View more" >
-                      <Link href="/mentor">
+                      <Link href={{
+                        pathname: "/mentor",
+                        query: {
+                          id: mentor._id,
+                        }
+                      }}
+                      >
                         <BtnText>
                           View more
                         </BtnText>

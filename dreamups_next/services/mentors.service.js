@@ -31,3 +31,12 @@ export const searchQueryMentors = async (tagsArray) => {
         return res;
     }).catch(e => console.log(e))
 }
+
+export const getMentorById = async (id) => {
+
+    return axios.get(`${API_URL}/mentors?id=${id}`).then((res) => {
+        return res;
+    }).catch(e => console.log(e))
+}
+
+

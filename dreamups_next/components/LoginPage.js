@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Modal, Button, Text, Input, Row, Checkbox } from "@nextui-org/react";
 import { signIn } from "next-auth/react";
 import { Mail } from "./Mail";
@@ -6,13 +6,13 @@ import { Password } from "./Password";
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
 
 const validationSchema = yup.object().shape({
   email: yup.string().email('Must be a valid email')
-      .required('This input is required'),
+    .required('This input is required'),
   password: yup.string()
-      .required('This input is required'),
+    .required('This input is required'),
 }).required();
 
 export default function Login() {
@@ -22,10 +22,10 @@ export default function Login() {
   const handler = () => setVisible(true);
 
 
-  const { register, handleSubmit,clearErrors,
-    setError, formState:{ errors } } = useForm({
-    resolver: yupResolver(validationSchema)
-  });
+  const { register, handleSubmit, clearErrors,
+    setError, formState: { errors } } = useForm({
+      resolver: yupResolver(validationSchema)
+    });
 
   const login = (data) => {
     console.log(data)
@@ -33,7 +33,7 @@ export default function Login() {
       username: data?.email,
       password: data?.password
     };
-    let options = {...credentials, callbackUrl: `${window.location.origin}/`, redirect: false};
+    let options = { ...credentials, callbackUrl: `${window.location.origin}/`, redirect: false };
     signIn('credentials', options).then((result) => {
       console.log(result);
       if (result?.status !== 200) {
@@ -48,6 +48,7 @@ export default function Login() {
       }
       if (result?.status === 200) {
         router.push('/');
+        window.location.reload();
       }
     });
   }
@@ -91,9 +92,9 @@ export default function Login() {
           />
           {
             errors?.email?.message &&
-              <div class="text-danger">
-                {errors?.email?.message}
-              </div>
+            <div class="text-danger">
+              {errors?.email?.message}
+            </div>
           }
 
           <Input
@@ -109,10 +110,10 @@ export default function Login() {
             contentLeft={<Password fill="currentColor" />}
           />
           {
-              errors?.password?.message &&
-              <div class="text-danger">
-                {errors?.password?.message}
-              </div>
+            errors?.password?.message &&
+            <div class="text-danger">
+              {errors?.password?.message}
+            </div>
           }
           <Row justify="space-between">
             <Checkbox>
