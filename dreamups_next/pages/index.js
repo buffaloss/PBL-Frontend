@@ -38,21 +38,12 @@ export default function Home() {
         </style>
       </Head>
       <MainLayout>
-<<<<<<< HEAD
-      <MainText></MainText>
-
-      <LearnButton></LearnButton>
-
-      <MainImg></MainImg>
-    </MainLayout>
-=======
         <MainText></MainText>
 
         <LearnButton></LearnButton>
 
         <MainImg></MainImg>
       </MainLayout>
->>>>>>> 7d2209d36d3ea04d7a1e10acc14637c1f5a191b0
       <Collabsible>
 
       </Collabsible>

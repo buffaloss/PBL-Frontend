@@ -7,11 +7,6 @@ import Col from 'react-bootstrap/Col';
 import Head from 'next/head';
 import { CardWrapper, MentorImg, MentorName, MentorFunction, MentorCompany, MentorText, MainButton, BtnWrapper, BtnText } from './styles';
 
-<<<<<<< HEAD:dreamups_next/components/Experts.js/index.js
-// const splitText = (string) => {
-//   return string.
-// }
-=======
 
 const splitText = (text) => {
   const words = text.split(" ");
@@ -23,7 +18,6 @@ const splitText = (text) => {
   }
   return digest.trimEnd() + "...";
 }
->>>>>>> 7d2209d36d3ea04d7a1e10acc14637c1f5a191b0:dreamups_next/components/Experts/index.js
 
 const MentorExpert = ({ mentors }) => {
   return (
@@ -41,42 +35,6 @@ const MentorExpert = ({ mentors }) => {
           {
             mentors?.map((mentor, index) => {
               return (
-<<<<<<< HEAD:dreamups_next/components/Experts.js/index.js
-                <>
-                  <Head>
-                    <style>
-                      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-                      @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap');
-                    </style>
-                  </Head>
-                  <CardWrapper key={index}>
-                    <MentorImg>
-                      <img src="/mentor_icon.svg" width="100%" height="100%" alt="Mentor Image" />
-                    </MentorImg>
-                    <MentorName>
-                      {mentor?.firstName}  {mentor?.lastName}
-                    </MentorName>
-                    <MentorFunction>
-                      {mentor?.job}
-                    </MentorFunction>
-                    <MentorCompany>
-                      {mentor?.company}
-                    </MentorCompany>
-                    <MentorText>
-                      {mentor?.bio}
-                    </MentorText>
-                    <BtnWrapper>
-                      <MainButton to="View more" >
-                        <Link href="/mentor">
-                          <BtnText>
-                            View more
-                          </BtnText>
-                        </Link>
-                      </MainButton>
-                    </BtnWrapper>
-                  </CardWrapper>
-                </>
-=======
                 <CardWrapper key={index}>
                   <MentorImg>
                     <img
@@ -107,7 +65,6 @@ const MentorExpert = ({ mentors }) => {
                     </MainButton>
                   </BtnWrapper>
                 </CardWrapper>
->>>>>>> 7d2209d36d3ea04d7a1e10acc14637c1f5a191b0:dreamups_next/components/Experts/index.js
               )
             })
           }
