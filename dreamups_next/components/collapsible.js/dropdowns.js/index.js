@@ -1,4 +1,4 @@
-import React from "react"; 
+import React from "react";
 // reactstrap components
 import {
   Button,
@@ -10,14 +10,21 @@ import {
   Row,
   Col,
 } from "reactstrap";
+import Head from "next/head";
 
 function Collabsible() {
   const [openedCollapse, setOpenedCollapse] = React.useState("");
   return (
     <>
-      <div className=" accordion-1">
+     <Head>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap');
+        </style>
+      </Head>
+      <div className="accordion-1" style={{ background: '#dfdbdb', padding: "50px 0" }}>
         <Container>
-      
+
           <div className="collapsible">
           <Row>
             <Col className=" ml-auto" xxl="4">
@@ -41,9 +48,9 @@ function Collabsible() {
                         }
                         className=" w-100 text-primary text-left"
                         color=""
-                        
+
                       >
-                       
+
                         view all the programs<br/>{" "}
                       </Button>
                     </h6>
@@ -69,7 +76,7 @@ function Collabsible() {
                     id="headingTwo"
                     aria-expanded={openedCollapse === "collapseTwo"}
                   > <h3 className = "mb-3 text-center">Events</h3>
-                    <h6 className=" mb-2 text-center"> 
+                    <h6 className=" mb-2 text-center">
                         Get inspired, find a co-founder <br/>
                         and potential investors <br/>
                       <Button
@@ -108,7 +115,7 @@ function Collabsible() {
                     id="headingThree"
                     aria-expanded={openedCollapse === "collapseThree"}
                   > <h3 className ="mb-3 text-center">Smart capital</h3>
-                    <h6 className=" mb-2 text-center"> 
+                    <h6 className=" mb-2 text-center">
                         Access first capitalfor your startup and connect <br/>
                         with investors <br/>
                       <Button
@@ -144,7 +151,7 @@ function Collabsible() {
                     id="headingFour"
                     aria-expanded={openedCollapse === "collapseFour"}
                   > <h3 className = "mb-3 text-center">Education</h3>
-                    <h6 className=" mb-2 text-center"> 
+                    <h6 className=" mb-2 text-center">
                         Learn and get inspired from  <br/>
                         founders and experts <br/>
                       <Button
@@ -183,7 +190,7 @@ function Collabsible() {
                     <h6 className=" mb-0 text-center">
                         Switch your entire company to <br/>
                         a product building mindset or <br/>
-                        become a product manager <br/> 
+                        become a product manager <br/>
                       <Button
                         onClick={() =>
                           setOpenedCollapse(
@@ -216,7 +223,7 @@ function Collabsible() {
                     id="headingSixth"
                     aria-expanded={openedCollapse === "collapseSixth"}
                   > <h3 className=" mb-0 text-center">Internships</h3>
-                    <h6 className=" mt-0 text-center"> 
+                    <h6 className=" mt-0 text-center">
                         Discover how startups are <br/>
                         build from the inside, find an <br/>
                         internship in a startup <br/>
@@ -247,7 +254,7 @@ function Collabsible() {
                 </Card>
                 </Col>
               {/* </div> */}
-  
+
           </Row>
       </div>
         </Container>

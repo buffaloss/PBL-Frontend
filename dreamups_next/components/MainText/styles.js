@@ -15,7 +15,7 @@ export const Main = styled.div`
 `;
 
 export const MainHeading = styled.h1`
- font-family: 'Open Sans',sans-serif;
+ font-family: 'Poppins';
  color: #000;
  height: 600px;
  font-size: 70px;
@@ -30,7 +30,7 @@ export const MainHeading = styled.h1`
 `;
 
 export const WelcomeText = styled.p`
- font-family: 'Open Sans',sans-serif;
+ font-family: 'Open Sans';
  margin-top: 5 px;
  color: #000;
  font-size: 40px;

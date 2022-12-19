@@ -19,6 +19,7 @@ export const Main = styled.div`
 
 export const Text = styled.div`
  font-family: 'Open Sans', sans-serif;
+  display: flex;
  text-align: center;
  align-items: center;
  padding: 3px 0;

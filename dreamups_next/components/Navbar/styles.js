@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
-  height: 100px
+  height: 100px;
   top: 0;
   display: flex;
   justify-content: left; //put the content(our container of Navrbar to the left)
@@ -48,9 +48,9 @@ margin-right: -22px;
 
 export const NavItem = styled.div`
   height:80px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans';
   font-weight: regular;
-  font-size: x-large;
+  font-size: 20px;
   color: #000;
   display: flex;
   align-items: right;
@@ -68,7 +68,7 @@ export const NavItem = styled.div`
 
 export const LoginItem = styled.div`
   height:80px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans';
   font-weight: regular;
   font-size: x-large;
   color: #000;

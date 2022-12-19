@@ -19,6 +19,7 @@ export const TextContainer = styled.div`
 
 export const MentorName = styled.div`
  font-size: 50px;
+ font-family: 'Open Sans';
  color: black;
  text-align: left;
  align-items: left;
@@ -27,6 +28,7 @@ export const MentorName = styled.div`
 
 export const MentorFunction = styled.div`
  font-size: 25px;
+ font-family: 'Open Sans';
  color: #ED1E79;
  text-align: left;
  align-items: left;
@@ -34,6 +36,7 @@ export const MentorFunction = styled.div`
 
 export const MentorCompany = styled.div`
  font-size: 30px;
+ font-family: 'Open Sans';
  color: black;
  text-align: left;
  align-items: left;
@@ -48,6 +51,7 @@ export const MentorText = styled.div`
 
 export const MentorLocation = styled.div`
  font-size: 20px;
+ font-family: 'Open Sans';
  color: black;
  text-align: left;
  align-items: left;
@@ -69,6 +73,7 @@ export const ExpertiseContainer = styled.div`
 
 export const DomainExpertiseText = styled.text`
  font-size:30px;
+ font-family: 'Open Sans';
  color: black;
  text-align: left;
  margin-left: 30px;
@@ -78,6 +83,7 @@ export const DomainExpertiseText = styled.text`
 
 export const MentorTag = styled.div`
  height: 40px;
+ font-family: 'Open Sans';
  display: inline-flex;
  border-radius: 25px;
  align-items: center;
@@ -89,7 +95,7 @@ export const MentorTag = styled.div`
 `;
 
 export const TagName = styled.div`
- font-family:'Open Sans', sans-serif;
+ font-family:'Open Sans';
  text-align: center;
  color: black;
  font-size: 20px;

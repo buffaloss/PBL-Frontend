@@ -13,7 +13,7 @@ export const AskContainer = styled.div`
 
 export const AskTitle = styled.div`
  font-size:45px;
- font-family: 'Open Sans',sans-serif;
+ font-family: 'Poppins';
  color: black;
  text-align: left;
  margin-left: 30px;
@@ -23,7 +23,7 @@ export const AskTitle = styled.div`
 `;
 
 export const AskText = styled.div`
-font-family: 'Open Sans', sans-serif;
+font-family: 'Open Sans';
 font-size: 23px;
 color:black;
 text-align:left;
@@ -108,7 +108,7 @@ export const MainButton = styled.div`
  padding: ${({big}) => (big ? '24px 15px' : '10px 20px')};
  color: ${({dark}) => (dark ? '#010606' : '#fff')};
  font-size: ${({fontBig}) => (fontBig ? '30px' : '25px')};
- font-family: 'Open Sans', sans-serif;
+ font-family: 'Open Sans';
  outline: none;
  border: none;
  margin-left: 375px;

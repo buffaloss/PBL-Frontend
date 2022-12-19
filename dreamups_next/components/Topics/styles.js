@@ -16,7 +16,7 @@ export const TextContainer = styled.div`
 `;
 
 export const MainHeading = styled.h1`
- font-family: 'Poppins',sans-serif;
+ font-family: 'Poppins';
  color: black;
  font-size: 50px;
  font-weight: normal;
@@ -33,7 +33,7 @@ export const MainHeading = styled.h1`
 `;
 
 export const Text = styled.p`
- font-family: 'Open Sans',sans-serif;
+ font-family: 'Open Sans';
  color: #ED1E79;
  font-size: 30px;
  padding-right: 0px;

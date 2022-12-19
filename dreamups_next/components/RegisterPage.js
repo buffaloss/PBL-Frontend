@@ -56,7 +56,7 @@ export default function Register() {
               draggable: true,
               progress: undefined,
             });
-            router.push('/')
+            router.reload()
           } else {
             toast.error('Auth error!', {
               position: "top-right",

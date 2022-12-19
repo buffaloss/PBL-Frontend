@@ -9,6 +9,7 @@ export const EventsCarouselWrapper = styled.div`
 export const EventsTextBlock = styled.div`
     height: 500px;
     display: flex;
+    font-family: 'Poppins';
     flex-direction: column;
     justify-content: space-between;
     padding-top : 15px;

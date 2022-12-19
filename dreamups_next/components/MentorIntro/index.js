@@ -3,36 +3,38 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'
 import { MainContainer, MentorImg, TextContainer, MentorLocation, LocationIcon, MentorName, MentorFunction, MentorCompany, MentorText, ExpertiseContainer, DomainExpertiseText, MentorTag, TagName, MentorSocial } from './styles';
+import Head from 'next/head';
 
+const MentorIntro = ({ mentors }) => {
 
-const MentorIntro = ({mentors}) => {
-    console.log(mentors)
     return (
-
         <>
-        {
-            mentors?.map((mentor, index) => {
-              return (
-                <MainContainer key ={index}>
+            <Head>
+                <style>
+                    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+                    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap');
+                </style>
+            </Head>
+            <MainContainer >
                 <Col xxl='3'>
                     <MentorImg>
                         <img src="/mentor_icon.svg" width="500" alt="Mentor Image" />
                     </MentorImg>
                 </Col>
-                <Col xxl='3'>
+                <Col xxl='5'>
                     <TextContainer>
-                    <MentorName>
-                    {mentor?.firstName}  {mentor?.lastName}
-                  </MentorName>
-                  <MentorFunction>
-                    {mentor?.job}
-                  </MentorFunction>
-                  <MentorCompany>
-                    {mentor?.company}
-                  </MentorCompany>
-                  <MentorText>
-                    {mentor?.bio}
-                  </MentorText>
+                        <MentorName>
+                            Yan Budamn
+                        </MentorName>
+                        <MentorFunction>
+                            Founder & Marketing Director Company
+                        </MentorFunction>
+                        <MentorCompany>
+                            NameSpark Social Solutions
+                        </MentorCompany>
+                        <MentorText>
+                            Industry marketing leader experienced in growing companies, communities and high performance teams for tech startups and large iconic brands.
+                        </MentorText>
                         <Row>
                             <Col xxl='2'>
                                 <LocationIcon>
@@ -47,7 +49,7 @@ const MentorIntro = ({mentors}) => {
                         </Row>
                     </TextContainer>
                 </Col>
-                <Col xxl='6'>
+                <Col xxl='5'>
                     <ExpertiseContainer>
                         <Row>
                             <DomainExpertiseText>
@@ -80,27 +82,15 @@ const MentorIntro = ({mentors}) => {
                     </ExpertiseContainer>
                 </Col>
 
-                <Col>
-
-                </Col>
-
                 <MentorSocial>
                     <Link href='https://www.linkedin.com/'>
                         <img src="linkedin_icon.svg" width="55" height="55" alt="linked in icon"></img>
                     </Link>
                 </MentorSocial>
             </MainContainer>
-              )
-          })
-          }
-
-           
         </>
-
-
-
-
     );
+
 }
 
 export default MentorIntro;

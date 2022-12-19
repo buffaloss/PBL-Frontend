@@ -6,46 +6,46 @@ import SearchBar from '../components/SearchBar'
 import MentorCard from '../components/MentorCard'
 import Hashtag from '../components/Hashtag'
 import LoadMoreButton from '../components/LoadMoreButton'
-import { getHomePageMentors } from '../services/mentors.service'
-import { useState, useEffect } from 'react'
+import {getAllMentors} from "../services/mentors.service";
+import {useEffect, useState} from "react";
 
 export default function Mentors() {
 
-  const [mentors, setMentors] = useState([]);
+    const [tags, setTags] = useState([]);
 
-  const getData = () => {
-
-    getHomePageMentors().then((res) => {
-      console.log("res data", res?.data);
-      if (res?.data && res?.data?.length > 0) {
-        setMentors(res?.data);
-      }
-    })
-  }
-
-  useEffect(() => {
-    getData()
-  }, [])
-
-  return (
-    <>
-      <MainLayout>
-
-        <MentorsFirstPage />
-        <MentorExplanation />
-        <Topics />
-        <SearchBar />
-        <Hashtag />
-        {
-        mentors?.length > 0 && <MentorCard mentors={mentors} />
-      }
-        <LoadMoreButton />
+    const getData = () => {
+        getAllMentors().then((res) => {
+            if(res?.data){
+                console.log(res?.data)
+            }
+        })
+    }
 
 
-      </MainLayout>
+    useEffect(() => {
+        getData();
+    },[]);
 
-      
-    </>
+    const removeTag = (tag) => {
+        const localTagsArray = tags?.filter(item => item !== tag);
+        setTags(localTagsArray);
+
+    }
+
+
+    return (
+    <MainLayout>
+
+      <MentorsFirstPage />
+      <MentorExplanation />
+      <Topics/>
+      <SearchBar propsTags={tags} onTagsChange={(tags) => setTags(tags)}/>
+      <Hashtag onRemoveTag={(tag) => removeTag(tag)} tags={tags}/>
+      <MentorCard/>
+      <LoadMoreButton/>
+
+
+    </MainLayout>
 
   )
 }

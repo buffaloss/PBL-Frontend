@@ -4,10 +4,17 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { AskContainer, AskTitle, AskText, FNameWrapper, LNameWrapper, EmailWrapper, MsgWrapper, CheckboxWrapper, MainButton, BtnWrapper } from "./styles";
 import { Input, Textarea, Text, Checkbox } from "@nextui-org/react";
+import Head from "next/head";
 
 const AskAQuestion = () => {
     return (
         <>
+        <Head>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap');
+        </style>
+      </Head>
             <AskContainer>
                 <AskTitle>
                     Ask a question
