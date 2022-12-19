@@ -8,21 +8,6 @@ import Head from 'next/head';
 const Topics = () => {
   return (
 
-<<<<<<< HEAD
-        <>
-            <Head>
-                <style>
-                    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-                    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap');
-                </style>
-            </Head>
-            <Main>
-                <Container fluid style={{ paddingLeft: 0, paddingRight: 0, marginLeft: 0, marginRight: 0 }}>
-                    <Row style={{ marginLeft: 0, marginRight: 0 }}>
-                        <Col style={{ paddingLeft: 0, paddingRight: 0, marginLeft: 0, marginRight: 0 }} >
-                            <TextContainer>
-                                <MainHeading>
-=======
     <>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,7 +20,6 @@ const Topics = () => {
             <Col style={{ paddingLeft: 0, paddingRight: 0, marginLeft: 0, marginRight: 0 }} >
               <TextContainer>
                 <MainHeading>
->>>>>>> 7d2209d36d3ea04d7a1e10acc14637c1f5a191b0
 
                   Browse by Topics
 
