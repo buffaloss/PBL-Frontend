@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'
 import { MainContainer, MentorImg, TextContainer, MentorLocation, LocationIcon, MentorName, MentorFunction, MentorCompany, MentorText, ExpertiseContainer, DomainExpertiseText, MentorTag, TagName, MentorSocial } from './styles';
+import Head from 'next/head';
 
 
 const MentorIntro = ({ mentor }) => {
@@ -80,10 +81,6 @@ const MentorIntro = ({ mentor }) => {
           </ExpertiseContainer>
         </Col>
 
-        <Col>
-
-        </Col>
-
         <MentorSocial>
           <Link href='https://www.linkedin.com/'>
             <img src="linkedin_icon.svg" width="55" height="55" alt="linked in icon"></img>
@@ -91,10 +88,6 @@ const MentorIntro = ({ mentor }) => {
         </MentorSocial>
       </MainContainer>
     </>
-
-
-
-
   );
 }
 

@@ -15,7 +15,7 @@ export const MentorImg = styled.p`
 `;
 
 export const MentorName = styled.div`
- font-family: 'Open Sans', sans-serif;
+ font-family: 'Open Sans';
  font-size: 25px;
  color: black;
  text-align: center;
@@ -24,7 +24,7 @@ export const MentorName = styled.div`
 `;
 
 export const MentorFunction = styled.div`
- font-family: 'Open Sans', sans-serif;
+ font-family: 'Open Sans';
  font-size: 15px;
  color: #ED1E79;
  text-align: center;
@@ -32,7 +32,7 @@ export const MentorFunction = styled.div`
 `;
 
 export const MentorCompany = styled.div`
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans';
 font-size: 20px;
  color: black;
  text-align: center;
@@ -40,7 +40,7 @@ font-size: 20px;
 `;
 
 export const MentorText = styled.div`
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans';
  font-size: 15px;
  color: black;
  text-align: center;
@@ -63,7 +63,7 @@ export const MainButton = styled.div`
  padding: ${({big}) => (big ? '10px 10px' : '5px 20px')};
  color: ${({dark}) => (dark ? '#010606' : '#fff')};
  font-size: ${({fontBig}) => (fontBig ? '18px' : '16px')};
- font-family: 'Open Sans', sans-serif;
+ font-family: 'Open Sans';
  outline: none;
  border: none;
  cursor: pointer;

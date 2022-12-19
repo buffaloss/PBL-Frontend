@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import {EventsCarouselWrapper, EventsTextBlock, EventsSlider, EventCard} from './styles';
 import { Col, Row } from "reactstrap";
+import Head from "next/head";
 
 const EventsCarousel = () => {
 
@@ -22,6 +23,14 @@ const EventsCarousel = () => {
     }, []);
 
     return (
+        <>
+         <Head>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap');
+        </style>
+      </Head>
+      
         <EventsCarouselWrapper>
 
             <div className="row">
@@ -67,6 +76,7 @@ const EventsCarousel = () => {
                 </Col>
             </div>
         </EventsCarouselWrapper>
+        </>
     )
 
 

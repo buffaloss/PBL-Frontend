@@ -10,6 +10,7 @@ import {
   Row,
   Col,
 } from "reactstrap";
+import Head from "next/head";
 
 function Collabsible() {
   const [openedCollapse, setOpenedCollapse] = React.useState("");

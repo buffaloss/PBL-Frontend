@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const AskedTitle = styled.div`
- font-family: 'Open Sans',sans-serif;
+ font-family: 'Poppins';
  color: black;
  font-size: 45px;
  display: flex;
@@ -9,7 +9,7 @@ export const AskedTitle = styled.div`
 `;
 
 export const Description = styled.div`
- font-family: 'Open Sans',sans-serif;
+ font-family: 'Open Sans';
  color: black;
  font-size: 20px;
  display: flex;
@@ -18,7 +18,7 @@ export const Description = styled.div`
 `;
 
 export const Answers = styled.div`
- font-family: 'Open Sans',sans-serif;
+ font-family: 'Open Sans';
  color: black;
  font-size: 25px;
  display: flex;
@@ -26,7 +26,7 @@ export const Answers = styled.div`
 `;
 
 export const Question = styled.div`
- font-family: 'Open Sans',sans-serif;
+ font-family: 'Poppins';
  color: #ED1E79;
  font-size: 25px;
  display: flex;
@@ -52,7 +52,7 @@ export const MainButton = styled.div`
  padding: ${({big}) => (big ? '14px 48px' : '13px 30px')};
  color: ${({dark}) => (dark ? '#010606' : '#fff')};
  font-size: ${({fontBig}) => (fontBig ? '20px' : '16px')};
- font-family: 'Open Sans', sans-serif;
+ font-family: 'Open Sans';
  outline: none;
  border: none;
  cursor: pointer;
