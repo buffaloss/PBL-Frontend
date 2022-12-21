@@ -5,16 +5,36 @@ import Col from 'react-bootstrap/Col';
 import { AskContainer, AskTitle, AskText, FNameWrapper, LNameWrapper, EmailWrapper, MsgWrapper, CheckboxWrapper, MainButton, BtnWrapper } from "./styles";
 import { Input, Textarea, Text, Checkbox } from "@nextui-org/react";
 import Head from "next/head";
+import { useState } from "react";
 
 const AskAQuestion = () => {
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [email, setEmail] = useState("");
+    const [msg, setMsg] = useState("");
+
+    const getQuestionInfo = () => {
+        const questionData = {
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            msg: msg
+        };
+        console.log(questionData);
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setMsg("");
+    }
+
     return (
         <>
-        <Head>
-        <style>
-          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-          @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap');
-        </style>
-      </Head>
+            <Head>
+                <style>
+                    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+                    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap');
+                </style>
+            </Head>
             <AskContainer>
                 <AskTitle>
                     Ask a question
@@ -33,6 +53,8 @@ const AskAQuestion = () => {
                                 color="#ED1E79"
                                 size="lg"
                                 placeholder="First name"
+                                onChange={e => setFirstName(e.target.value)}
+                                value={firstName}
                             />
                         </FNameWrapper>
                     </Col>
@@ -45,6 +67,8 @@ const AskAQuestion = () => {
                                 color="#ED1E79"
                                 size="lg"
                                 placeholder="Last name"
+                                onChange={e => setLastName(e.target.value)}
+                                value={lastName}
                             />
                         </LNameWrapper>
                     </Col>
@@ -59,6 +83,8 @@ const AskAQuestion = () => {
                             color="#ED1E79"
                             size="lg"
                             placeholder="Email"
+                            onChange={e => setEmail(e.target.value)}
+                            value={email}
                         />
                     </EmailWrapper>
                 </Row>
@@ -72,6 +98,8 @@ const AskAQuestion = () => {
                             color="#ED1E79"
                             size="lg"
                             placeholder="Message"
+                            onChange={e => setMsg(e.target.value)}
+                            value={msg}
                         />
                     </MsgWrapper>
                 </Row>
@@ -84,11 +112,9 @@ const AskAQuestion = () => {
                 </Row>
                 <Row>
                     <BtnWrapper>
-                        <Link href="/mentor">
-                            <MainButton to="Send" >
-                                Send
-                            </MainButton>
-                        </Link>
+                        <MainButton to="Send" onClick={getQuestionInfo}>
+                            Send
+                        </MainButton>
                     </BtnWrapper>
                 </Row>
             </AskContainer>

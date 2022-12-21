@@ -106,11 +106,11 @@ export const BtnWrapper = styled.div`
 
 export const MainButton = styled.div`
  border-radius: 10px;
- background: ${({primary}) => (primary ? '#ED1E79' : '#ED1E79')};
+ background: ${({ primary }) => (primary ? '#ED1E79' : '#ED1E79')};
  white-space: nowrap;
- padding: ${({big}) => (big ? '24px 15px' : '10px 20px')};
- color: ${({dark}) => (dark ? '#010606' : '#fff')};
- font-size: ${({fontBig}) => (fontBig ? '30px' : '25px')};
+ padding: ${({ big }) => (big ? '24px 15px' : '10px 20px')};
+ color: ${({ dark }) => (dark ? '#010606' : '#fff')};
+ font-size: ${({ fontBig }) => (fontBig ? '30px' : '25px')};
  font-family: 'Open Sans';
  outline: none;
  border: none;
@@ -120,11 +120,10 @@ export const MainButton = styled.div`
  display: flex;
  justify-content: center;
  align-items: center;
- margin-left: 0 px;
  transition: all 0.2s ease-in-out;
 
  &:hover {
     transition: all 0.2s ease-in-out;
-    background: ${({primary}) => (primary ? '#ED1E79' : '#e0126c' )};
+    background: ${({ primary }) => (primary ? '#ED1E79' : '#e0126c')};
  };
 `;
