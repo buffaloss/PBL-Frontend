@@ -10,6 +10,7 @@ import { Container } from '@nextui-org/react'
 import { getFixedNrMentors } from '../services/mentors.service'
 import { useState, useEffect } from 'react'
 import Head from "next/head";
+import Footer from '../components/Footer'
 
 export default function Home() {
 
@@ -43,7 +44,7 @@ export default function Home() {
         <LearnButton></LearnButton>
 
         <MainImg></MainImg>
-      </MainLayout>
+     
       <Collabsible>
 
       </Collabsible>
@@ -51,13 +52,11 @@ export default function Home() {
       <Container>
         <EventsCarousel />
       </Container>
-
+      </MainLayout>
 
       {
         mentors?.length > 0 && <MentorExpert mentors={mentors} />
       }
-
-
 
     </>
 
