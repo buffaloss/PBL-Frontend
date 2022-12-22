@@ -42,9 +42,9 @@ const EventsCarousel = () => {
                             <h1 className="subtitle">Check our open programs and upcoming events</h1>
                         </div>
 
-                        <div className="slider-navigation">
-                            <button onClick={() => handlePrev()}>Prev</button>
-                            <button onClick={() => handleNext()}>Next</button>
+                        <div className="arrows">
+                            <img src="previous.png" style={{width: '8%'}} onClick={() => handlePrev()}/>
+                            <img src="next.png" style={{width: '8%'}} onClick={() => handleNext()}/>
                         </div>
                     </EventsTextBlock>
                 </Col>

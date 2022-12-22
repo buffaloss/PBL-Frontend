@@ -18,6 +18,10 @@ export const EventsTextBlock = styled.div`
         font-size: 25px;
     }
 
+    .arrows{
+        display: flex;
+        flex-direction: row;
+    }
     .subtitle{
         font-size: 18px;
     }
