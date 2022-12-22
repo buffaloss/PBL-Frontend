@@ -22,9 +22,8 @@ const SearchBar = ({ onTagsChange, propsTags }) => {
   }
 
   // const removeTag = (tag) => {
-  //     const localTagsArray = tags?.filter(item => item !== tag);
-  //     setTags(localTagsArray);
-  //
+  //   const localTagsArray = tags?.filter(item => item !== tag);
+  //   setTags(localTagsArray);
   // }
 
   useEffect(() => {

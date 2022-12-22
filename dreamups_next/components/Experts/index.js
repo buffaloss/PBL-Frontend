@@ -5,21 +5,30 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Head from 'next/head';
+import LoginModal from '../LoginModal';
 import { CardWrapper, MentorImg, MentorName, MentorFunction, MentorCompany, MentorText, MainButton, BtnWrapper, BtnText } from './styles';
+import { useSession } from "next-auth/react"
+import { useState } from 'react';
 
-
-const splitText = (text) => {
-  const words = text.split(" ");
-  let digest = "";
-  let i = 0;
-  while (digest.length < 100) {
-    digest += words[i] + " ";
-    i++;
-  }
-  return digest.trimEnd() + "...";
-}
 
 const MentorExpert = ({ mentors }) => {
+  const { status } = useSession()
+  const [visible, setVisible] = useState(false);
+
+  console.log("current status");
+
+  const splitText = (text) => {
+    const words = text.split(" ");
+    let digest = "";
+    let i = 0;
+    const max = 100;
+    while (digest.length < max) {
+      digest += words[i] + " ";
+      i++;
+    }
+    return digest.trimEnd() + "...";
+  }
+
   return (
     <div style={{ marginTop: 150 }}>
       <Head>
@@ -55,15 +64,28 @@ const MentorExpert = ({ mentors }) => {
                   <MentorText>
                     {splitText(mentor?.bio)}
                   </MentorText>
-                  <BtnWrapper>
-                    <MainButton to="View more" >
-                      <Link href="/mentor">
-                        <BtnText>
-                          View more
-                        </BtnText>
-                      </Link>
-                    </MainButton>
-                  </BtnWrapper>
+                  {
+                    status === "authenticated" &&
+                    <BtnWrapper>
+                      <MainButton to="View more" >
+                        <Link href={{
+                          pathname: "/mentor",
+                          query: {
+                            id: mentor._id,
+                          }
+                        }}>
+                          <BtnText>
+                            View more
+                          </BtnText>
+                        </Link>
+                      </MainButton>
+                    </BtnWrapper>
+                  }
+
+                  {
+                    status !== "authenticated" &&
+                    <LoginModal mentorId={mentor._id} />
+                  }
                 </CardWrapper>
               )
             })
