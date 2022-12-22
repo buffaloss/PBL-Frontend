@@ -35,7 +35,6 @@ export const EventCard = styled.div`
     height: 500px;
     display: flex;
     justify-content: center;
-    background-color: #e0e0e0;
     padding: 16px;
 
     .event-location{

@@ -1,4 +1,5 @@
 import React, { useRef, useCallback } from "react";
+import Link from "next/link";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
@@ -33,7 +34,7 @@ const EventsCarousel = () => {
       
         <EventsCarouselWrapper>
 
-            <div className="row">
+            <div className="row mb-4">
                 <Col xxl="3">
                     <EventsTextBlock>
                         <div>
@@ -58,18 +59,32 @@ const EventsCarousel = () => {
                             >
                             <SwiperSlide>
                                 <EventCard>
-                                    <h2 className="event-location">Chisinau</h2>
+                                    <Link href="https://www.facebook.com/events/473750011408147" >
+                                        <img src="Hackathon Incluziune și Accesibilitate..png" style={{width: '93%'}} />
+                                        </Link>
                                 </EventCard>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <EventCard>
-
+                                    <Link href="https://www.facebook.com/events/840330217318267">
+                                        <img src="InnovationJam.png" style={{width: '87%'}}/>
+                                    </Link>
                                 </EventCard>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <EventCard></EventCard>
+                                <EventCard>
+                                    <Link href="https://www.facebook.com/events/2105619506312889/?active_tab=about">
+                                        <img src="SG Rooftop party.png" style={{width: '87%'}}/>
+                                    </Link>
+                                </EventCard>
                             </SwiperSlide>
-                            <SwiperSlide>Slide 4</SwiperSlide>
+                            <SwiperSlide>
+                                <EventCard>
+                                    <Link href="https://www.facebook.com/events/460353676115999/?ref=newsfeed">
+                                        <img src="StartupGrind cu SMatei.png" style={{width: '87%'}} />
+                                    </Link>
+                                </EventCard>
+                            </SwiperSlide>
 
                         </Swiper>
                     </EventsSlider>
