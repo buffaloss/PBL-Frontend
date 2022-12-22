@@ -23,6 +23,7 @@ export const FooterContainer = styled.div`
   width: 100%;
   padding: 0 70px;
   background-color: #F5F5F5;
+  border-top: 1px solid #D3D3D3;
 `
 
 export const TextContainer = styled.div`
