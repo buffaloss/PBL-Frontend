@@ -11,17 +11,18 @@ import {
   Col,
 } from "reactstrap";
 import Head from "next/head";
+import Link from "next/link";
 
 function Collabsible() {
   const [openedCollapse, setOpenedCollapse] = React.useState("");
   return (
     <>
-      <div className="accordion-1" style={{ background: '#dfdbdb', padding: "50px 0" }}>
+      <div className="accordion-1 mt-5" style={{ background: '#dfdbdb', padding: "50px 0" }}>
         <Container>
 
-          <div className="collapsible">
+          <div className="collapsible ">
           <Row>
-            <Col className=" ml-auto" xxl="4">
+            <Col className=" ml-auto " xxl="4">
               {/* <div className=" accordion my-3" id="accordionExample"> */}
                 <Card className="mb-4">
                   <CardHeader className="cardheader"
@@ -56,10 +57,22 @@ function Collabsible() {
                     id="collapseOne"
                   >
                     <CardBody className=" opacity-8">
-                     Startup School <img src = "/iconfinder_arrow_next_right_4829869.png"/> <br/>
-                     Dreamable <img src = "/iconfinder_arrow_next_right_4829869.png"/><br/>
-                     Upcelerator <img src = "/iconfinder_arrow_next_right_4829869.png"/><br/>
-                     UpNext <img src = "/iconfinder_arrow_next_right_4829869.png"/><br/>
+                     Startup School 
+                    <Link href="https://startupschool.md/">
+                      <img src = "/iconfinder_arrow_next_right_4829869.png"/> <br/>
+                    </Link>
+                     Dreamable 
+                    <Link href="https://dreamable.md/">
+                      <img src = "/iconfinder_arrow_next_right_4829869.png"/><br/>
+                    </Link>
+                     Upcelerator
+                    <Link href="https://upcelerator.md/">
+                      <img src = "/iconfinder_arrow_next_right_4829869.png"/><br/>
+                    </Link>
+                     UpNext 
+                    <Link href="https://upnext.md/"> 
+                      <img src = "/iconfinder_arrow_next_right_4829869.png"/><br/>
+                    </Link>
                     </CardBody>
                   </Collapse>
                 </Card>
@@ -95,10 +108,22 @@ function Collabsible() {
                     id="collapseTwo"
                   >
                     <CardBody className=" opacity-8">
-                       Catalyst Hackathons <img src = "/iconfinder_arrow_next_right_4829869.png"/> <br/>
-                       Dreamicon <img src = "/iconfinder_arrow_next_right_4829869.png"/> <br/>
-                       Startup grind Chișinău <img src = "/iconfinder_arrow_next_right_4829869.png"/> <br/>
-                       Founders Network <img src = "/iconfinder_arrow_next_right_4829869.png"/> <br/>
+                       Catalyst Hackathons
+                      <Link href="https://startupmoldova.digital/events/hackathon-inovatie-pentru-munca-la-distanta/"> 
+                        <img src = "/iconfinder_arrow_next_right_4829869.png"/> <br/>
+                      </Link>
+                       Dreamicon 
+                      <Link href="">
+                        <img src = "/iconfinder_arrow_next_right_4829869.png"/> <br/>
+                      </Link>
+                       Startup grind Chișinău 
+                      <Link href="https://www.startupgrind.com/chisinau/">
+                        <img src = "/iconfinder_arrow_next_right_4829869.png"/> <br/>
+                      </Link>
+                       Founders Network 
+                      <Link href="https://foundersnetwork.com/">
+                        <img src = "/iconfinder_arrow_next_right_4829869.png"/> <br/>
+                      </Link>
                     </CardBody>
                   </Collapse>
                 </Card>
@@ -134,7 +159,10 @@ function Collabsible() {
                     id="collapseThree"
                   >
                     <CardBody className=" opacity-8">
-                       Mozaic <img src = "/iconfinder_arrow_next_right_4829869.png"/> <br/>
+                       Mozaic 
+                      <Link href="https://mozaic.md/">
+                        <img src = "/iconfinder_arrow_next_right_4829869.png"/> <br/>
+                      </Link>
                     </CardBody>
                   </Collapse>
                 </Card>
@@ -169,8 +197,14 @@ function Collabsible() {
                     id="collapseFour"
                   >
                     <CardBody className=" opacity-8">
-                       Dreamclass <img src = "/iconfinder_arrow_next_right_4829869.png"/> <br/>
-                       Blueprint <img src = "/iconfinder_arrow_next_right_4829869.png"/> <br/>
+                       Dreamclass 
+                      <Link href="https://dreamclass.md/">
+                        <img src = "/iconfinder_arrow_next_right_4829869.png"/> <br/>
+                      </Link>
+                       Blueprint 
+                      <Link href="https://blueprint.md/">
+                        <img src = "/iconfinder_arrow_next_right_4829869.png"/> <br/>
+                      </Link>
                     </CardBody>
                   </Collapse>
                 </Card>
@@ -206,7 +240,10 @@ function Collabsible() {
                     id="collapseFifth"
                   >
                     <CardBody className=" opacity-8">
-                      Product School <img src = "/iconfinder_arrow_next_right_4829869.png"/> <br/>
+                      Product School 
+                    <Link href="">
+                      <img src = "/iconfinder_arrow_next_right_4829869.png"/> <br/>
+                    </Link>
                     </CardBody>
                   </Collapse>
                 </Card>
@@ -242,7 +279,10 @@ function Collabsible() {
                     id="collapseSixth"
                   >
                     <CardBody className=" opacity-8">
-                      Starships <img src = "/iconfinder_arrow_next_right_4829869.png"/> <br/>
+                      Starships 
+                      <Link href="">
+                        <img src = "/iconfinder_arrow_next_right_4829869.png"/> <br/>
+                      </Link>
                     </CardBody>
                   </Collapse>
                 </Card>
