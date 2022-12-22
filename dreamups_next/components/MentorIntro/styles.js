@@ -9,7 +9,8 @@ export const MainContainer = styled.p`
 export const MentorImg = styled.p`
  align-items: left;
  position: relative;
- margin-left:  60px;
+ width:400px;
+ height:400px;
 `;
 
 export const TextContainer = styled.div`
@@ -66,8 +67,8 @@ export const ExpertiseContainer = styled.div`
  background-color: #E0E0E0;
  width: 500px;
  height: 500px;
- margin-right:60px;
  margin-top: 50px;
+ margin-right:60px;
  overflow: hidden;
 `;
 
@@ -102,6 +103,6 @@ export const TagName = styled.div`
 `;
 
 export const MentorSocial = styled.div`
- margin-top: -35px;
+ margin-top: 100px;
  margin-left: 60px;
 `;

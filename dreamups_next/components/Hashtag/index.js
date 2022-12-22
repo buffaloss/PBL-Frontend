@@ -61,14 +61,7 @@ const Hashtag = ({ tags, onRemoveTag }) => {
                         </Main>
                     </Col> */}
 
-                    <Col xs={{ order: 'third' }}>
-                        <Link href="">
-                            <OptionsText>
-                                View All
-                            </OptionsText>
-                        </Link>
-                    </Col>
-
+               
 
                     <Col xs={{ order: 'last' }}>
                         <Link href="">

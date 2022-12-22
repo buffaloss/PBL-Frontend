@@ -34,13 +34,6 @@ export const OptionsText = styled.p`
  font-family: 'Open Sans',sans-serif;
  color: #ED1E79;
  font-size: 25px;
- padding-right: 0px;
  display: flex;
 
- @media screen and (max-width: 768px){
-    font-size: 24px;
- }
- @media screen and (max-width: 480px){
-    font-size: 18px;
- }
 `;

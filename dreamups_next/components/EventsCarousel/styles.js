@@ -18,6 +18,10 @@ export const EventsTextBlock = styled.div`
         font-size: 25px;
     }
 
+    .arrows{
+        display: flex;
+        flex-direction: row;
+    }
     .subtitle{
         font-size: 18px;
     }
@@ -35,7 +39,6 @@ export const EventCard = styled.div`
     height: 500px;
     display: flex;
     justify-content: center;
-    background-color: #e0e0e0;
     padding: 16px;
 
     .event-location{
