@@ -42,11 +42,10 @@ function Collabsible() {
                           )
                         }
                         className=" w-100 text-primary text-left"
-                        color=""
-
-                      >
-
-                        view all the programs<br/>{" "}
+                        color="">
+                        <div className="color">
+                          view all the programs<br/>{" "}
+                        </div>
                       </Button>
                     </h6>
                   </CardHeader>
@@ -94,10 +93,12 @@ function Collabsible() {
                               : "collapseTwo"
                           )
                         }
-                        className=" w-100 text-primary text-left collapsed"
-                        color="#d41750"
+                        className=" w-100 text-primary text-left collapsed #d41750"
+                        color=""
                       >
+                        <div className="color">
                         view all events {" "}
+                        </div>
                       </Button>
                     </h6>
                   </CardHeader>
@@ -148,7 +149,9 @@ function Collabsible() {
                         className=" w-100 text-primary text-left collapsed"
                         color="#fff"
                       >
+                      <div className="color">
                          Learn more{" "}
+                      </div>
                       </Button>
                     </h6>
                   </CardHeader>
@@ -186,7 +189,10 @@ function Collabsible() {
                         }
                         className=" w-100 text-primary text-left"
                         color="#fff"
-                      > view all the programs {" "}
+                      > 
+                      <div className="color">
+                      view all the programs {" "}
+                      </div>
                       </Button>
                     </h6>
                   </CardHeader>
@@ -229,7 +235,10 @@ function Collabsible() {
                         }
                         className=" w-100 text-primary text-left"
                         color=""
-                      >Product School{" "}
+                      >
+                      <div className="color">
+                        Learn more{" "}
+                      </div>
                       </Button>
                     </h6>
                   </CardHeader>
@@ -268,7 +277,10 @@ function Collabsible() {
                         }
                         className=" w-100 text-primary text-left"
                         color=""
-                      > Starships{" "}
+                      > 
+                      <div className="color">
+                      Learn more{" "}
+                      </div>
                       </Button>
                     </h6>
                   </CardHeader>
