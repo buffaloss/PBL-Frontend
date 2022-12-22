@@ -7,7 +7,7 @@ export const BtnWrapper = styled.div`
  flex-direction: column;
  align-items: center;
  padding-top: 10px;
- 
+ padding-bottom: 50px;
 `;
 
 export const MainButton = styled.div`
