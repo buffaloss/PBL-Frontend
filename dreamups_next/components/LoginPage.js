@@ -61,7 +61,7 @@ export default function Login() {
 
   return (
     <div>
-      <Button color="primary" auto shadow onClick={handler}>
+      <Button color="error" auto shadow onClick={handler}>
         Login
       </Button>
       <Modal

@@ -91,7 +91,7 @@ export default function Register() {
 
   return (
     <div>
-      <Button auto shadow onClick={handler}>
+      <Button color="error" auto shadow onClick={handler}>
         Register
       </Button>
       <Modal
