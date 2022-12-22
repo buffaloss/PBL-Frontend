@@ -46,3 +46,7 @@ a {
   .color{
     color : #ED1E79
   }
+
+  .login{
+    background-color: #ED1E79 !important;
+  }
