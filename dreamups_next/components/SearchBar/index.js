@@ -1,7 +1,7 @@
-import { SearchWrapper, Searchtag } from "./styles"
+import { SearchWrapper } from "./styles"
 import React, { useEffect, useState } from "react";
 import { Input } from "@nextui-org/react";
-
+import { Container,Row, Col } from "react-bootstrap";
 
 
 const SearchBar = ({ onTagsChange, propsTags }) => {
@@ -22,9 +22,8 @@ const SearchBar = ({ onTagsChange, propsTags }) => {
   }
 
   // const removeTag = (tag) => {
-  //     const localTagsArray = tags?.filter(item => item !== tag);
-  //     setTags(localTagsArray);
-  //
+  //   const localTagsArray = tags?.filter(item => item !== tag);
+  //   setTags(localTagsArray);
   // }
 
   useEffect(() => {
@@ -32,9 +31,10 @@ const SearchBar = ({ onTagsChange, propsTags }) => {
   }, [tags]);
 
   return (
+    <Container >
+      <Row className="justify-content-md-center">
+        <Col md="auto">
     <SearchWrapper >
-
-
       <Input
         clearable
         bordered
@@ -46,8 +46,7 @@ const SearchBar = ({ onTagsChange, propsTags }) => {
         size="lg"
         contentClickable
         placeholder="Search"
-
-        contentRight={<img onClick={() => addTag()} src="/search_icon.svg" alt="search icon" ></img>}
+        contentRight={<img onClick={() => addTag()} src="/search_icon.svg" alt="search icon" width="100%" height="100%" ></img>}
       />
       {/*<div class={"d-flex"}>*/}
       {/*    {*/}
@@ -71,6 +70,9 @@ const SearchBar = ({ onTagsChange, propsTags }) => {
       {/*    }*/}
       {/*</div>*/}
     </SearchWrapper>
+    </Col>
+    </Row>
+    </Container>
   );
 }
 

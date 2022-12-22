@@ -1,8 +1,8 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import {JWT_SECRET} from "../../../config/config";
+import { JWT_SECRET } from "../../../config/config";
 
-import {login, getAuthenticatedUser} from "../../../services/auth.service";
+import { login, getAuthenticatedUser } from "../../../services/auth.service";
 
 export default NextAuth({
     providers: [
@@ -10,7 +10,7 @@ export default NextAuth({
             name: 'Credentials',
             credentials: {
                 username: { label: "Username", type: "text", placeholder: "jsmith" },
-                password: {  label: "Password", type: "password" }
+                password: { label: "Password", type: "password" }
             },
             async authorize(credentials, req) {
                 try {
@@ -36,10 +36,10 @@ export default NextAuth({
 
     session: {
 
-        strategy: 'jwt'
+        strategy: 'jwt',
 
         // Seconds - How long until an idle session expires and is no longer valid.
-        // maxAge: 30 * 24 * 60 * 60, // 30 days
+        maxAge: 60 * 60, // 1 hour
 
     },
 
@@ -62,17 +62,17 @@ export default NextAuth({
         //     return true;
         // },
         // async redirect({ url, baseUrl }) { return baseUrl },
-        async session({ session,user, token }) {
+        async session({ session, user, token }) {
             const response = await getAuthenticatedUser(String(token?.accessToken));
-            if(token && response?.data) {
+            if (token && response?.data) {
                 session.accessToken = token.accessToken;
                 // @ts-ignore
                 session.user = response?.data;
             }
             return session
         },
-        async jwt({ token, user,account }) {
-            if(user) {
+        async jwt({ token, user, account }) {
+            if (user) {
                 token.accessToken = user?.token;
                 token.user = user?.user;
             }
@@ -83,7 +83,7 @@ export default NextAuth({
     // Events are useful for logging
     // https://next-auth.js.org/configuration/events
     events: {
-        async linkAccount({user, account}){
+        async linkAccount({ user, account }) {
             console.log()
         }
     },

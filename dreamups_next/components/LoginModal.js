@@ -7,6 +7,8 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import { useRouter } from "next/router";
+import { MainButton, BtnWrapper, BtnText } from './Experts/styles';
+
 
 const validationSchema = yup.object().shape({
   email: yup.string().email('Must be a valid email')
@@ -15,10 +17,11 @@ const validationSchema = yup.object().shape({
     .required('This input is required'),
 }).required();
 
-export default function Login() {
+export default function LoginModal({ mentorId }) {
 
   const router = useRouter()
   const [visible, setVisible] = React.useState(false);
+  const [loginSuccess, setLoginSuccess] = React.useState(false);
   const handler = () => setVisible(true);
 
 
@@ -35,11 +38,10 @@ export default function Login() {
     };
     let options = {
       ...credentials,
-      callbackUrl: `${window.location.origin}/`,
+      // callbackUrl: `${window.location.origin}/`,
       redirect: false,
     };
     signIn('credentials', options).then((result) => {
-      // console.log(result);
       if (result?.status !== 200) {
         setError('email', {
           type: 'manual',
@@ -51,8 +53,8 @@ export default function Login() {
         });
       }
       if (result?.status === 200) {
-        router.push('/');
-        // window.location.reload();
+        window.location.reload(`/mentor?id=${mentorId}`);
+        // router.push('/');
       }
     });
   }
@@ -65,9 +67,17 @@ export default function Login() {
 
   return (
     <div>
-      <Button color="error" auto  onClick={handler}>
+      {/* <Button auto shadow onClick={handler}>
         Login
-      </Button>
+      </Button> */}
+      <BtnWrapper>
+        <MainButton to="View more" onClick={handler}>
+          <BtnText>
+            View more
+          </BtnText>
+        </MainButton>
+      </BtnWrapper>
+
       <Modal
         closeButton
         aria-labelledby="modal-title"

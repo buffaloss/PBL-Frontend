@@ -42,3 +42,11 @@ a {
 .custom-input input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #ffff!important;
   }
+
+  .color{
+    color : #ED1E79
+  }
+
+  .login{
+    background-color: #ED1E79 !important;
+  }
