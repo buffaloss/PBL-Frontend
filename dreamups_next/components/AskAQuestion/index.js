@@ -5,8 +5,32 @@ import Col from 'react-bootstrap/Col';
 import { AskContainer, AskTitle, AskText, FNameWrapper, LNameWrapper, EmailWrapper, MsgWrapper, CheckboxWrapper, MainButton, BtnWrapper } from "./styles";
 import { Input, Textarea, Text, Checkbox } from "@nextui-org/react";
 import Head from "next/head";
+import { sendUserQuestion } from "../../services/mail.service";
+import { useState } from "react";
 
 const AskAQuestion = () => {
+
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [email, setEmail] = useState("");
+    const [msg, setMsg] = useState("");
+
+    const getQuestionInfo = () => {
+        const questionData = {
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            msg: msg
+        };
+        console.log(questionData);
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setMsg("");
+
+        sendUserQuestion(questionData);
+    }
+
     return (
         <>
         <Head>
@@ -33,6 +57,8 @@ const AskAQuestion = () => {
                                 color="#ED1E79"
                                 size="lg"
                                 placeholder="First name"
+                                onChange={e => setFirstName(e.target.value)}
+                                value={firstName}
                             />
                         </FNameWrapper>
                     </Col>
@@ -45,6 +71,8 @@ const AskAQuestion = () => {
                                 color="#ED1E79"
                                 size="lg"
                                 placeholder="Last name"
+                                onChange={e => setLastName(e.target.value)}
+                                value={lastName}
                             />
                         </LNameWrapper>
                     </Col>
@@ -59,6 +87,8 @@ const AskAQuestion = () => {
                             color="#ED1E79"
                             size="lg"
                             placeholder="Email"
+                            onChange={e => setEmail(e.target.value)}
+                            value={email}
                         />
                     </EmailWrapper>
                 </Row>
@@ -72,6 +102,8 @@ const AskAQuestion = () => {
                             color="#ED1E79"
                             size="lg"
                             placeholder="Message"
+                            onChange={e => setMsg(e.target.value)}
+                            value={msg}
                         />
                     </MsgWrapper>
                 </Row>
@@ -84,11 +116,9 @@ const AskAQuestion = () => {
                 </Row>
                 <Row>
                     <BtnWrapper>
-                        <Link href="/mentor">
-                            <MainButton to="Send" >
+                            <MainButton to="Send" onClick={getQuestionInfo} >
                                 Send
                             </MainButton>
-                        </Link>
                     </BtnWrapper>
                 </Row>
             </AskContainer>
