@@ -52,11 +52,13 @@ export default function Home() {
       <Container>
         <EventsCarousel />
       </Container>
-      </MainLayout>
-
       {
         mentors?.length > 0 && <MentorExpert mentors={mentors} />
       }
+
+      </MainLayout>
+
+    
 
     </>
 
