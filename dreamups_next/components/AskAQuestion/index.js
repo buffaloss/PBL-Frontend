@@ -5,9 +5,11 @@ import Col from 'react-bootstrap/Col';
 import { AskContainer, AskTitle, AskText, FNameWrapper, LNameWrapper, EmailWrapper, MsgWrapper, CheckboxWrapper, MainButton, BtnWrapper } from "./styles";
 import { Input, Textarea, Text, Checkbox } from "@nextui-org/react";
 import Head from "next/head";
+import { sendUserQuestion } from "../../services/mail.service";
 import { useState } from "react";
 
 const AskAQuestion = () => {
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -25,6 +27,8 @@ const AskAQuestion = () => {
     setLastName("");
     setEmail("");
     setMsg("");
+
+    sendUserQuestion(questionData);
   }
 
   return (
@@ -112,7 +116,7 @@ const AskAQuestion = () => {
         </Row>
         <Row>
           <BtnWrapper>
-            <MainButton to="Send" onClick={getQuestionInfo}>
+            <MainButton to="Send" onClick={getQuestionInfo} >
               Send
             </MainButton>
           </BtnWrapper>
