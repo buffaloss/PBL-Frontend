@@ -12,15 +12,16 @@ import {
   LoginItem,
   LoginIcon
 } from './styles';
-import { useSession, signOut } from "next-auth/react"
+import { useSession, signOut } from "next-auth/react";
 import Head from 'next/head';
+import { useRouter } from "next/router";
 
 
 const Navbar = () => {
+  const router = useRouter()
+  const { status } = useSession()
 
-  const { data: session, status } = useSession()
-
-  console.log(session)
+  // console.log(session)
 
   return (
     <>
@@ -75,7 +76,7 @@ const Navbar = () => {
             }
 
             {status === "authenticated" &&
-              <LoginIcon onClick={() => signOut()}>
+              <LoginIcon onClick={() => { router.push('/'); signOut() }}>
                 <img src="/login.png" width="30" height="25" />
               </LoginIcon>
             }

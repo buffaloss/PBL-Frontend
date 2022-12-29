@@ -90,12 +90,11 @@ export default function Register() {
 
   const closeHandler = () => {
     setVisible(false);
-    console.log("closed");
   };
 
   return (
     <div>
-      <Button color="error" auto  onClick={handler}>
+      <Button css={{ background: "#ED1E79", fontSize: "16px" }} auto onClick={handler}>
         Register
       </Button>
       <Modal

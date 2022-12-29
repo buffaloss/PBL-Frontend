@@ -6,17 +6,21 @@ import SearchBar from '../components/SearchBar'
 import MentorCard from '../components/MentorCard'
 import Hashtag from '../components/Hashtag'
 import LoadMoreButton from '../components/LoadMoreButton'
-import { getAllMentors } from "../services/mentors.service";
 import { useEffect, useState } from "react";
-import { searchMentors } from "../services/mentors.service";
+import { searchMentors, getFixedNrMentors } from "../services/mentors.service"
+import { Container, Row, Col } from "react-bootstrap"
+import { MainButton, SearchWrapper, DefaultWrapper } from '../components/SearchBar/styles'
+import { useSession } from "next-auth/react";
 
 export default function Mentors() {
   const [mentors, setMentors] = useState([]);
   const [tags, setTags] = useState([]);
+  const { status } = useSession();
+  const [limitedMentorsData, setLimitedMentorsData] = useState([]);
 
   useEffect(() => {
-    // getAllMentorsData();
     getMentorData();
+    getLimitedMentorData();
   }, [])
 
   useEffect(() => {
@@ -30,34 +34,34 @@ export default function Mentors() {
         setMentors(res?.data);
       }
     })
-    // getFixedNrMentors().then((res) => {
-    //   console.log("res data", res?.data);
-    //   if (res?.data && res?.data?.length > 0) {
-    //     setMentors(res?.data);
-    //   }
-    // })
   }
 
-  const getAllMentorsData = () => {
-    getAllMentors().then((res) => {
-      console.log("getAllMentorsData ", res?.data);
-      if (res?.data) {
-        console.log("getAllMentorsData ", res?.data);
+  const getLimitedMentorData = () => {
+    getFixedNrMentors().then((res) => {
+      if (res?.data && res?.data?.length > 0) {
+        setLimitedMentorsData(res?.data);
       }
-    })
+    });
+    console.log("limited data ", limitedMentorsData);
   }
 
   const removeTag = (tag) => {
     const localTagsArray = tags?.filter(item => item !== tag);
-    setTags(localTagsArray);
+    setTags([...localTagsArray]);
   }
 
 
   const search = () => {
     searchMentors(tags).then((res) => {
-      console.log("search mentors ", res?.data)
+      console.log("search mentors ", res?.data);
       setMentors(res?.data);
     })
+  }
+
+  const sortByTime = () => {
+    let batch = [...mentors];
+    batch.sort((a, b) => new Date(b.timestampAdded) - new Date(a.timestampAdded));
+    setMentors(batch);
   }
 
   return (
@@ -65,15 +69,42 @@ export default function Mentors() {
 
       <MentorsFirstPage />
       <MentorExplanation />
-      <Topics />
-      <SearchBar propsTags={tags} onTagsChange={(tags) => setTags(tags)} />
-      <Hashtag onRemoveTag={(tag) => removeTag(tag)} tags={tags} />
-      <MentorCard mentors={mentors} />
+      <Topics propsTags={tags} onTagsChange={(tags) => setTags(tags)} />
 
-      <LoadMoreButton />
+      {
+        status === 'authenticated' &&
+        <>
+          <Container >
+            <Row className="justify-content-md-center">
+              <Col>
+                <SearchWrapper >
+                  <SearchBar propsTags={tags} onTagsChange={(tags) => setTags(tags)} />
+                </SearchWrapper>
+              </Col>
+              <Col style={{ margin: "auto" }}>
+                <MainButton onClick={sortByTime}>
+                  New
+                </MainButton>
+              </Col>
+            </Row>
+          </Container>
 
+          <Hashtag onRemoveTag={removeTag} tags={tags} />
+          <MentorCard mentors={mentors} />
+          <LoadMoreButton content={"Load more"} />
+        </>
+      }
+
+      {
+        status === 'unauthenticated' &&
+        <>
+          <DefaultWrapper >
+            <SearchBar propsTags={tags} onTagsChange={(tags) => setTags(tags)} />
+          </DefaultWrapper>
+          <MentorCard mentors={limitedMentorsData} />
+        </>
+      }
 
     </MainLayout>
-
   )
 }

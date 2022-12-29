@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Modal, Button, Text, Input, Row, Checkbox } from "@nextui-org/react";
 import { signIn } from "next-auth/react";
 import { Mail } from "./Mail";
@@ -8,7 +8,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import { useRouter } from "next/router";
 import { MainButton, BtnWrapper, BtnText } from './Experts/styles';
-
+import Link from "next/link";
+import { recoverPass } from "../services/auth.service";
 
 const validationSchema = yup.object().shape({
   email: yup.string().email('Must be a valid email')
@@ -21,28 +22,29 @@ export default function LoginModal({ mentorId }) {
 
   const router = useRouter()
   const [visible, setVisible] = React.useState(false);
-  const [loginSuccess, setLoginSuccess] = React.useState(false);
+  const [forgot, setForgot] = React.useState(false);
   const handler = () => setVisible(true);
 
-
-  const { register, handleSubmit, clearErrors,
-    setError, formState: { errors } } = useForm({
-      resolver: yupResolver(validationSchema)
-    });
+  const {
+    register,
+    handleSubmit,
+    setError,
+    formState: { errors }
+  } = useForm({
+    resolver: yupResolver(validationSchema)
+  });
 
   const login = (data) => {
-    // console.log(data)
     let credentials = {
       username: data?.email,
       password: data?.password
     };
-    let options = {
-      ...credentials,
-      // callbackUrl: `${window.location.origin}/`,
-      redirect: false,
-    };
+    let options = { ...credentials, redirect: false };
+
     signIn('credentials', options).then((result) => {
-      if (result?.status !== 200) {
+      if (result?.status === 200) {
+        router.push(`/mentor?id=${mentorId}`);
+      } else if (result?.status !== 200) {
         setError('email', {
           type: 'manual',
           message: '    ',
@@ -52,24 +54,42 @@ export default function LoginModal({ mentorId }) {
           message: 'Email or password is wrong!',
         });
       }
-      if (result?.status === 200) {
-        window.location.reload(`/mentor?id=${mentorId}`);
-        // router.push('/');
-      }
     });
   }
 
 
+  const forgotPassLogin = async (data) => {
+    const res = await recoverPass({ email: data?.email, password: data?.password })
+    console.log(res);
+
+    if (res?.status === 200) {
+      closeForgotPass();
+      login(data);
+    } else {
+      setError('password', {
+        type: 'manual',
+        message: 'Password is wrong!',
+      });
+    }
+  }
+
   const closeHandler = () => {
     setVisible(false);
-    console.log("closed");
   };
 
+  const forgotPassHandler = () => {
+    closeHandler();
+    setForgot(true);
+    setValue('password', "");
+    setError('password', "");
+  }
+
+  const closeForgotPass = () => {
+    setForgot(false);
+  }
+
   return (
-    <div>
-      {/* <Button auto shadow onClick={handler}>
-        Login
-      </Button> */}
+    <>
       <BtnWrapper>
         <MainButton to="View more" onClick={handler}>
           <BtnText>
@@ -94,7 +114,6 @@ export default function LoginModal({ mentorId }) {
         <Modal.Body>
 
           <Input
-            // onChange={(e) => setEmail(e.target.value)}
             clearable
             bordered
             fullWidth
@@ -111,11 +130,10 @@ export default function LoginModal({ mentorId }) {
             </div>
           }
 
-          <Input
+          <Input.Password
             clearable
             bordered
             fullWidth
-            // onChange={(e) => setPassword(e.target.value)}
             color="primary"
             size="lg"
             type={"password"}
@@ -129,12 +147,14 @@ export default function LoginModal({ mentorId }) {
               {errors?.password?.message}
             </div>
           }
-          <Row justify="space-between">
+          {/* <Row justify="space-between">
             <Checkbox>
-              <Text size={14}>Remember me</Text>
+              <Text size={15}>Remember me</Text>
             </Checkbox>
-            <Text size={14}>Forgot password?</Text>
-          </Row>
+            <Link href="" onClick={forgotPassHandler}>
+              Forgot password?
+            </Link>
+          </Row> */}
         </Modal.Body>
         <Modal.Footer>
           <Button auto flat color="error" onClick={closeHandler}>
@@ -145,6 +165,6 @@ export default function LoginModal({ mentorId }) {
           </Button>
         </Modal.Footer>
       </Modal>
-    </div>
+    </>
   );
 }

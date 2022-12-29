@@ -1,11 +1,29 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import { Main, TextContainer, MainHeading, Text } from "./styles";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Link from "next/link";
 import Head from 'next/head';
+import { useState, useEffect } from "react";
+import { useSession } from "next-auth/react";
 
-const Topics = () => {
+const Topics = ({ onTagsChange, propsTags }) => {
+  const [tags, setTags] = useState([...propsTags]);
+
+  const addTag = (topic) => {
+    console.log("before add Topics", propsTags);
+    if (topic) {
+      const localTagsArray = [...propsTags];
+      localTagsArray.push(topic);
+      setTags(localTagsArray);
+    }
+  }
+
+  useEffect(() => {
+    onTagsChange(tags);
+  }, [tags]);
+
   return (
 
     <>
@@ -20,9 +38,7 @@ const Topics = () => {
             <Col style={{ paddingLeft: 0, paddingRight: 0, marginLeft: 0, marginRight: 0 }} >
               <TextContainer>
                 <MainHeading>
-
                   Browse by Topics
-
                 </MainHeading>
               </TextContainer>
             </Col>
@@ -31,7 +47,7 @@ const Topics = () => {
           <Container>
             <Row>
               <Col xs={{ order: 'first' }}>
-                <Link href="">
+                <Link href="#" onClick={() => addTag("productmanagement")}>
                   <Text>
                     Product Management
                   </Text>
@@ -57,7 +73,7 @@ const Topics = () => {
           <Container>
             <Row>
               <Col xs={{ order: 'first' }}>
-                <Link href="">
+                <Link href="" onClick={() => addTag("customerdevelopment")}>
                   <Text>
                     Customer Development
                   </Text>

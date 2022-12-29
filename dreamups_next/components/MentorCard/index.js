@@ -6,6 +6,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Head from 'next/head';
 import { CardWrapper, MentorImg, MentorName, MentorFunction, MentorCompany, MentorText, MainButton, BtnWrapper, BtnText } from './styles';
+import { useSession } from "next-auth/react";
+import LoginModal from '../LoginModal';
 
 const splitText = (text) => {
   const words = text.split(" ");
@@ -19,7 +21,7 @@ const splitText = (text) => {
 }
 
 const MentorCard = ({ mentors }) => {
-
+  const { status } = useSession();
   return (
     <>
       <Head>
@@ -53,21 +55,28 @@ const MentorCard = ({ mentors }) => {
                   <MentorText>
                     {splitText(mentor?.bio)}
                   </MentorText>
-                  <BtnWrapper>
-                    <MainButton to="View more" >
-                      <Link href={{
-                        pathname: "/mentor",
-                        query: {
-                          id: mentor._id,
-                        }
-                      }}
-                      >
-                        <BtnText>
-                          View more
-                        </BtnText>
-                      </Link>
-                    </MainButton>
-                  </BtnWrapper>
+                  {
+                    status === "authenticated" &&
+                    <BtnWrapper>
+                      <MainButton to="View more" >
+                        <Link href={{
+                          pathname: "/mentor",
+                          query: {
+                            id: mentor._id,
+                          }
+                        }}>
+                          <BtnText>
+                            View more
+                          </BtnText>
+                        </Link>
+                      </MainButton>
+                    </BtnWrapper>
+                  }
+
+                  {
+                    status !== "authenticated" &&
+                    <LoginModal mentorId={mentor._id} />
+                  }
                 </CardWrapper>
               )
             })

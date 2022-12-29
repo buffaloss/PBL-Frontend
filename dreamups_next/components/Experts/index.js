@@ -3,19 +3,14 @@
 import Link from 'next/link';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Head from 'next/head';
 import LoginModal from '../LoginModal';
 import { CardWrapper, MentorImg, MentorName, MentorFunction, MentorCompany, MentorText, MainButton, BtnWrapper, BtnText } from './styles';
 import { useSession } from "next-auth/react"
-import { useState } from 'react';
 
 
 const MentorExpert = ({ mentors }) => {
   const { status } = useSession()
-  const [visible, setVisible] = useState(false);
-
-  console.log("current status");
 
   const splitText = (text) => {
     const words = text.split(" ");
@@ -83,7 +78,7 @@ const MentorExpert = ({ mentors }) => {
                   }
 
                   {
-                    status !== "authenticated" &&
+                    status === "unauthenticated" &&
                     <LoginModal mentorId={mentor._id} />
                   }
                 </CardWrapper>

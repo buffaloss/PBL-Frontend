@@ -1,11 +1,9 @@
-import React from "react";
-import Link from 'next/link';
 import Head from 'next/head';
-import { BtnWrapper, MainButton, WelcomeImg } from "./styles";
+import Link from 'next/link';
+import { HeaderContainer, MainButton, WelcomeImg } from "./styles";
 
-const LearnButton = () => {
+export default function HeaderImg() {
   return (
-
     <>
       <Head>
         <style>
@@ -13,14 +11,16 @@ const LearnButton = () => {
           @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap');
         </style>
       </Head>
-      <BtnWrapper>
+      <HeaderContainer>
+        <WelcomeImg>
+          <img src="/unicornheader.jpg" />
+        </WelcomeImg>
         <Link href="/about">
           <MainButton to="Learn more" >
             Learn more
           </MainButton>
         </Link>
-      </BtnWrapper>
+      </HeaderContainer>
     </>
   )
 }
-export default LearnButton;

@@ -10,6 +10,7 @@ import { Container } from '@nextui-org/react'
 import { getFixedNrMentors } from '../services/mentors.service'
 import { useState, useEffect } from 'react'
 import Head from "next/head";
+import HeaderImg from '../components/HeaderImg'
 import Footer from '../components/Footer'
 
 export default function Home() {
@@ -19,7 +20,6 @@ export default function Home() {
   const getData = () => {
 
     getFixedNrMentors().then((res) => {
-      console.log("res data", res?.data);
       if (res?.data && res?.data?.length > 0) {
         setMentors(res?.data);
       }
@@ -39,28 +39,18 @@ export default function Home() {
         </style>
       </Head>
       <MainLayout>
-        <MainText></MainText>
-
-        <LearnButton></LearnButton>
-
-        <MainImg></MainImg>
-     
-      <Collabsible>
-
-      </Collabsible>
-
-      <Container>
-        <EventsCarousel />
-      </Container>
-      {
-        mentors?.length > 0 && <MentorExpert mentors={mentors} />
-      }
-
+        {/* <MainText /> */}
+        {/* <MainImg />
+        <LearnButton /> */}
+        <HeaderImg />
+        <Collabsible />
+        <Container>
+          <EventsCarousel />
+        </Container>
+        {
+          mentors?.length > 0 && <MentorExpert mentors={mentors} />
+        }
       </MainLayout>
-
-    
-
     </>
-
   )
 }
