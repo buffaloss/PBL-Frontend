@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import { HeaderContainer, MainButton, WelcomeImg } from "./styles";
 
 export default function HeaderImg() {

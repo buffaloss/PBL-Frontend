@@ -5,7 +5,7 @@ export const HeaderContainer = styled.div`
   width: 50 %;
 `
 
-export const WelcomeImg = styled.image`
+export const WelcomeImg = styled.div`
   width: 100 %;
   height: auto;
 `
