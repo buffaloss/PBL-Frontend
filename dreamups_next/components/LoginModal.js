@@ -44,7 +44,8 @@ export default function LoginModal({ mentorId }) {
     signIn('credentials', options).then((result) => {
       if (result?.status === 200) {
         // router.push(`/mentor?id=${mentorId}`);
-        window.location.href = `http://localhost:3000/mentor?id=${mentorId}`;
+        localStorage.setItem("mentorId", mentorId)
+        window.location.href = `http://localhost:3000/mentor`;
       } else if (result?.status !== 200) {
         setError('email', {
           type: 'manual',

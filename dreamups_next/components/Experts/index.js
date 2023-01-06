@@ -62,12 +62,9 @@ const MentorExpert = ({ mentors }) => {
                   {
                     status === "authenticated" &&
                     <BtnWrapper>
-                      <MainButton to="View more" >
+                      <MainButton to="View more" onClick={() => { localStorage.setItem("mentorId", mentor._id) }}>
                         <Link href={{
-                          pathname: "/mentor",
-                          query: {
-                            id: mentor._id,
-                          }
+                          pathname: "/mentor"
                         }}>
                           <BtnText>
                             View more
