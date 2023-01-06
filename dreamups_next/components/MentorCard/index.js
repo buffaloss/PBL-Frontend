@@ -20,7 +20,7 @@ const splitText = (text) => {
   return digest.trimEnd() + "...";
 }
 
-const MentorCard = ({ mentors }) => {
+const MentorCard = ({ mentors, setMentorId }) => {
   const { status } = useSession();
   return (
     <>
@@ -58,12 +58,15 @@ const MentorCard = ({ mentors }) => {
                   {
                     status === "authenticated" &&
                     <BtnWrapper>
-                      <MainButton to="View more" >
-                        <Link href={{
+                      <MainButton to="View more" onClick={() => { localStorage.setItem("mentorId", mentor._id) }}>
+                        {/* <Link href={{
                           pathname: "/mentor",
                           query: {
                             id: mentor._id,
                           }
+                        }}> */}
+                        <Link href={{
+                          pathname: "/mentor"
                         }}>
                           <BtnText>
                             View more
@@ -74,7 +77,7 @@ const MentorCard = ({ mentors }) => {
                   }
 
                   {
-                    status !== "authenticated" &&
+                    status === "unauthenticated" &&
                     <LoginModal mentorId={mentor._id} />
                   }
                 </CardWrapper>

@@ -6,8 +6,9 @@ export const HeaderContainer = styled.div`
 `
 
 export const WelcomeImg = styled.div`
-  width: 100 %;
+  max-width: 100 %;
   height: auto;
+  position: flex;
 `
 export const MainButton = styled.button`
   position: absolute;

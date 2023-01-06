@@ -15,6 +15,7 @@ import { useSession } from "next-auth/react";
 export default function Mentors() {
   const [mentors, setMentors] = useState([]);
   const [tags, setTags] = useState([]);
+  const [clicked, setClicked] = useState(false);
   const { status } = useSession();
   const [limitedMentorsData, setLimitedMentorsData] = useState([]);
 
@@ -28,12 +29,14 @@ export default function Mentors() {
   }, [tags]);
 
   const getMentorData = () => {
-    searchMentors(tags).then((res) => {
-      console.log("search data", res?.data);
-      if (res?.data && res?.data?.length > 0) {
-        setMentors(res?.data);
-      }
-    })
+    if (status === 'authenticated') {
+      searchMentors(tags).then((res) => {
+        console.log("search data", res?.data);
+        if (res?.data && res?.data?.length > 0) {
+          setMentors(res?.data);
+        }
+      })
+    }
   }
 
   const getLimitedMentorData = () => {
@@ -52,10 +55,12 @@ export default function Mentors() {
 
 
   const search = () => {
-    searchMentors(tags).then((res) => {
-      console.log("search mentors ", res?.data);
-      setMentors(res?.data);
-    })
+    if (status === 'authenticated') {
+      searchMentors(tags).then((res) => {
+        console.log("search mentors ", res?.data);
+        setMentors(res?.data);
+      })
+    }
   }
 
   const sortByTime = () => {
@@ -83,15 +88,16 @@ export default function Mentors() {
               </Col>
               <Col style={{ margin: "auto" }}>
                 <MainButton onClick={sortByTime}>
-                  New
+                  Latest
                 </MainButton>
               </Col>
             </Row>
           </Container>
 
           <Hashtag onRemoveTag={removeTag} tags={tags} />
-          <MentorCard mentors={mentors} />
-          <LoadMoreButton content={"Load more"} />
+          <MentorCard mentors={clicked ? mentors.slice(0, 8) : mentors} />
+          {mentors?.length >= 8 && <LoadMoreButton content={clicked ? "Load more" : "Show less"} showAllMentors={() => setClicked(!clicked)} />}
+
         </>
       }
 

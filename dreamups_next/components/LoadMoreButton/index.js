@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { Container, Col, Row } from 'react-bootstrap';
 import { BtnWrapper, MainButton, BtnText } from "./styles";
 
-const LoadMoreButton = () => {
+const LoadMoreButton = ({ content, showAllMentors }) => {
   return (
     <>
       <Head>
@@ -16,12 +16,10 @@ const LoadMoreButton = () => {
         <Row className="justify-content-center">
           <Col xs lg='2' >
             <BtnWrapper>
-              <MainButton to="Load more" >
-                <Link href="/mentors">
-                  <BtnText>
-                    Load more
-                  </BtnText>
-                </Link>
+              <MainButton to="Load more" onClick={showAllMentors}>
+                <BtnText>
+                  {content}
+                </BtnText>
               </MainButton>
             </BtnWrapper>
           </Col>

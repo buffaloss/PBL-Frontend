@@ -34,7 +34,7 @@ const SearchBar = ({ onTagsChange, propsTags }) => {
       size="lg"
       contentClickable
       placeholder="Search"
-      contentRight={<Image onClick={() => addTag()} src="/search_icon.svg" alt="search icon" weight={10} height={10} />}
+      contentRight={<Image onClick={() => addTag()} src="/search_icon.svg" alt="search icon" />}
     />
   );
 }

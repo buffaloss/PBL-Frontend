@@ -10,7 +10,7 @@ export const Main = styled.div`
  position: left;
  display: inline-flex;
  flex-direction: column;
- padding-right: 10px;
+//  padding-right: 10px;
  padding-left: 10px;
  margin-left: 60px; 
  background-color: #E0E0E0;
@@ -19,10 +19,10 @@ export const Main = styled.div`
 
 export const Text = styled.div`
  font-family: 'Open Sans', sans-serif;
-  display: flex;
+ display: flex;
  text-align: center;
  align-items: center;
- padding: 3px 0;
+//  padding: 3px 0;
  font-size: 20px;
 `;
 

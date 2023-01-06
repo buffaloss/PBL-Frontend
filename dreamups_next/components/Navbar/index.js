@@ -1,5 +1,3 @@
-import styled from 'styled-components';
-import Image from 'next/image';
 import Link from 'next/link';
 import Login from '../LoginPage';
 import Register from "../RegisterPage";
@@ -35,7 +33,7 @@ const Navbar = () => {
         <NavbarContainer>
           <NavLogo>
             <Link href="/">
-              <img src="/dreamup_logo.png" style={{ width: 190 }} alt="Dreamup" />
+              <img src="/dreamup_logo.png" style={{ width: 190 }} alt="Dreamups" />
             </Link>
           </NavLogo>
           <NavMenu>
@@ -76,7 +74,7 @@ const Navbar = () => {
             }
 
             {status === "authenticated" &&
-              <LoginIcon onClick={() => { router.push('/'); signOut() }}>
+              <LoginIcon onClick={() => { signOut() }}>
                 <img src="/login.png" width="30" height="25" />
               </LoginIcon>
             }

@@ -47,21 +47,21 @@ const Topics = ({ onTagsChange, propsTags }) => {
           <Container>
             <Row>
               <Col xs={{ order: 'first' }}>
-                <Link href="#" onClick={() => addTag("productmanagement")}>
+                <Link href="#" onClick={() => addTag("productmanagement")} scroll={false}>
                   <Text>
                     Product Management
                   </Text>
                 </Link>
               </Col>
               <Col xs={{ order: 'second' }}>
-                <Link href="">
+                <Link href="#" onClick={() => addTag("productmanagement")} scroll={false}>
                   <Text>
                     Product Management
                   </Text>
                 </Link>
               </Col>
               <Col xs={{ order: 'last' }}>
-                <Link href="">
+                <Link href="#" onClick={() => addTag("productmanagement")} scroll={false}>
                   <Text>
                     Product Management
                   </Text>
@@ -73,21 +73,21 @@ const Topics = ({ onTagsChange, propsTags }) => {
           <Container>
             <Row>
               <Col xs={{ order: 'first' }}>
-                <Link href="" onClick={() => addTag("customerdevelopment")}>
+                <Link href="" onClick={() => addTag("customerdevelopment")} scroll={false}>
                   <Text>
                     Customer Development
                   </Text>
                 </Link>
               </Col>
               <Col xs={{ order: 'second' }}>
-                <Link href="">
+                <Link href="" onClick={() => addTag("customerdevelopment")} scroll={false}>
                   <Text>
                     Customer Development
                   </Text>
                 </Link>
               </Col>
               <Col xs={{ order: 'last' }}>
-                <Link href="">
+                <Link href="" onClick={() => addTag("customerdevelopment")} scroll={false}>
                   <Text>
                     Customer Development
                   </Text>
@@ -102,21 +102,21 @@ const Topics = ({ onTagsChange, propsTags }) => {
           <Container>
             <Row>
               <Col xs={{ order: 'first' }}>
-                <Link href="">
+                <Link href="#" onClick={() => addTag("productmanagement")} scroll={false}>
                   <Text>
                     Product Management
                   </Text>
                 </Link>
               </Col>
               <Col xs={{ order: 'second' }}>
-                <Link href="">
+                <Link href="#" onClick={() => addTag("productmanagement")} scroll={false}>
                   <Text>
                     Product Management
                   </Text>
                 </Link>
               </Col>
               <Col xs={{ order: 'last' }}>
-                <Link href="">
+                <Link href="#" onClick={() => addTag("productmanagement")} scroll={false}>
                   <Text>
                     Product Management
                   </Text>
@@ -129,21 +129,21 @@ const Topics = ({ onTagsChange, propsTags }) => {
           <Container>
             <Row>
               <Col xs={{ order: 'first' }}>
-                <Link href="">
+                <Link href="" onClick={() => addTag("customerdevelopment")} scroll={false}>
                   <Text>
                     Customer Development
                   </Text>
                 </Link>
               </Col>
               <Col xs={{ order: 'second' }}>
-                <Link href="">
+                <Link href="" onClick={() => addTag("customerdevelopment")} scroll={false}>
                   <Text>
                     Customer Development
                   </Text>
                 </Link>
               </Col>
               <Col xs={{ order: 'last' }}>
-                <Link href="">
+                <Link href="" onClick={() => addTag("customerdevelopment")} scroll={false}>
                   <Text>
                     Customer Development
                   </Text>

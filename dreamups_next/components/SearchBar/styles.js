@@ -6,7 +6,7 @@ export const SearchWrapper = styled.div`
  display: flex;
  padding-top: 10px;
  margin-bottom: 25px;
- margin-left: 350px;
+ margin-left: 345px;
 `;
 
 export const MainButton = styled.button`
@@ -29,3 +29,16 @@ export const DefaultWrapper = styled.div`
   margin-left: 500px;
   margin-right: 500px;
 `
+
+// export const Wrapper = styled.div`
+//   margin-top: 15px;
+//   display: relative;
+//   padding-top: 10px;
+//   margin-bottom: 25px;
+//   margin-left: 32.913%;
+//   margin-right: 500px;
+//   allign: center;
+//   flexFlow: row nowrap,
+//   justifySelf: center,
+//   alignSelf: center
+// `

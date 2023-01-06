@@ -43,7 +43,8 @@ export default function LoginModal({ mentorId }) {
 
     signIn('credentials', options).then((result) => {
       if (result?.status === 200) {
-        router.push(`/mentor?id=${mentorId}`);
+        // router.push(`/mentor?id=${mentorId}`);
+        window.location.href = `http://localhost:3000/mentor?id=${mentorId}`;
       } else if (result?.status !== 200) {
         setError('email', {
           type: 'manual',
@@ -58,35 +59,35 @@ export default function LoginModal({ mentorId }) {
   }
 
 
-  const forgotPassLogin = async (data) => {
-    const res = await recoverPass({ email: data?.email, password: data?.password })
-    console.log(res);
+  // const forgotPassLogin = async (data) => {
+  //   const res = await recoverPass({ email: data?.email, password: data?.password })
+  //   console.log(res);
 
-    if (res?.status === 200) {
-      closeForgotPass();
-      login(data);
-    } else {
-      setError('password', {
-        type: 'manual',
-        message: 'Password is wrong!',
-      });
-    }
-  }
+  //   if (res?.status === 200) {
+  //     closeForgotPass();
+  //     login(data);
+  //   } else {
+  //     setError('password', {
+  //       type: 'manual',
+  //       message: 'Password is wrong!',
+  //     });
+  //   }
+  // }
 
   const closeHandler = () => {
     setVisible(false);
   };
 
-  const forgotPassHandler = () => {
-    closeHandler();
-    setForgot(true);
-    setValue('password', "");
-    setError('password', "");
-  }
+  // const forgotPassHandler = () => {
+  //   closeHandler();
+  //   setForgot(true);
+  //   setValue('password', "");
+  //   setError('password', "");
+  // }
 
-  const closeForgotPass = () => {
-    setForgot(false);
-  }
+  // const closeForgotPass = () => {
+  //   setForgot(false);
+  // }
 
   return (
     <>

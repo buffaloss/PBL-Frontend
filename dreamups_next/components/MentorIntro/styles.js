@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export const MainContainer = styled.p`
+export const MainContainer = styled.div`
  display:flex;
  align-items: center;
  align-content:right;
  width:100%;
 `;
-export const MentorImg = styled.p`
+export const MentorImg = styled.div`
  align-items: left;
  position: relative;
  width:400px;
@@ -58,7 +58,7 @@ export const MentorLocation = styled.div`
  align-items: left;
  margin-top: 20px;
 `;
- 
+
 export const LocationIcon = styled.div`
 
 `;
@@ -72,7 +72,7 @@ export const ExpertiseContainer = styled.div`
  overflow: hidden;
 `;
 
-export const DomainExpertiseText = styled.text`
+export const DomainExpertiseText = styled.div`
  font-size:30px;
  font-family: 'Open Sans';
  color: black;
