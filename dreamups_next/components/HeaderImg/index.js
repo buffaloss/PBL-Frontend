@@ -14,7 +14,7 @@ export default function HeaderImg() {
       </Head>
       <HeaderContainer>
         <WelcomeImg>
-          <img src="/unicornheader.jpg" />
+          <img src="/unicornheader1.jpg" />
         </WelcomeImg>
         <Link href="/about">
           <MainButton to="Learn more" >
