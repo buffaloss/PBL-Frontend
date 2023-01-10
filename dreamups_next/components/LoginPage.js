@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { css, Modal, Button, Text, Input, Row, Checkbox } from "@nextui-org/react";
 import { signIn } from "next-auth/react";
 import { Mail } from "./Mail";
@@ -24,6 +24,8 @@ export default function Login() {
   const [forgot, setForgot] = React.useState(false);
   const handler = () => setVisible(true);
 
+  const [activeBlock, setActiveBlock] = useState('login');
+
   const {
     register,
     handleSubmit,
@@ -47,7 +49,8 @@ export default function Login() {
     signIn('credentials', options).then((result) => {
       if (result?.status === 200) {
         // router.push('/');
-        window.location.reload();
+        router.reload(router.asPath);
+        // window.location.reload();
       } else if (result?.status !== 200) {
         setError('email', {
           type: 'manual',
@@ -77,14 +80,16 @@ export default function Login() {
   }
 
   const closeHandler = () => {
+    setActiveBlock("login");
     setVisible(false);
   };
 
   const forgotPassHandler = () => {
-    closeHandler();
-    setForgot(true);
-    setValue('password', "");
-    setError('password', "");
+    // closeHandler();
+    // setForgot(true);
+    setActiveBlock("forgot-password");
+    // setValue('password', "");
+    // setError('password', "");
   }
 
   const closeForgotPass = () => {
@@ -113,72 +118,140 @@ export default function Login() {
         open={visible}
         onClose={closeHandler}
       >
-        <Modal.Header>
-          <Text id="modal-title" size={18}>
-            <Text b size={18}>
-              Login
-            </Text>
-          </Text>
-        </Modal.Header>
-        <Modal.Body>
+        {
+          activeBlock == 'login' &&
+          <>
+            <Modal.Header>
+              <Text id="modal-title" size={18}>
+                <Text b size={18}>
+                  Login
+                </Text>
+              </Text>
+            </Modal.Header>
+            <Modal.Body>
 
-          <Input
-            // onChange={(e) => setEmail(e.target.value)}
-            clearable
-            bordered
-            fullWidth
-            color="primary"
-            size="lg"
-            {...register("email")}
-            placeholder="Email"
-            contentLeft={<Mail fill="currentColor" />}
-          />
-          {
-            errors?.email?.message &&
-            <div class="text-danger">
-              {errors?.email?.message}
-            </div>
-          }
+              <Input
+                // onChange={(e) => setEmail(e.target.value)}
+                clearable
+                bordered
+                fullWidth
+                color="primary"
+                size="lg"
+                {...register("email")}
+                placeholder="Email"
+                contentLeft={<Mail fill="currentColor" />}
+              />
+              {
+                errors?.email?.message &&
+                <div class="text-danger">
+                  {errors?.email?.message}
+                </div>
+              }
 
-          <Input.Password
-            clearable
-            bordered
-            fullWidth
-            color="primary"
-            size="lg"
-            type={"password"}
-            {...register("password")}
-            placeholder="Password"
-            contentLeft={<Password fill="currentColor" />}
-          />
-          {
-            errors?.password?.message &&
-            <div class="text-danger">
-              {errors?.password?.message}
-            </div>
-          }
-          <Row justify="space-between">
-            <Checkbox>
-              <Text size={15}>Remember me</Text>
-            </Checkbox>
-            <Link href="" onClick={forgotPassHandler}>
-              Forgot password?
-            </Link>
-          </Row>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button auto flat color="error" onClick={closeHandler}>
-            Close
-          </Button>
-          <Button auto onClick={handleSubmit(login)}>
-            Log in
-          </Button>
-        </Modal.Footer>
+              <Input.Password
+                clearable
+                bordered
+                fullWidth
+                color="primary"
+                size="lg"
+                type={"password"}
+                {...register("password")}
+                placeholder="Password"
+                contentLeft={<Password fill="currentColor" />}
+              />
+              {
+                errors?.password?.message &&
+                <div class="text-danger">
+                  {errors?.password?.message}
+                </div>
+              }
+              <Row justify="space-between">
+                <Checkbox>
+                  <Text size={15}>Remember me</Text>
+                </Checkbox>
+                <span onClick={forgotPassHandler}>
+                  Forgot password?
+                </span>
+              </Row>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button auto flat color="error" onClick={closeHandler}>
+                Close
+              </Button>
+              <Button auto onClick={handleSubmit(login)}>
+                Log in
+              </Button>
+            </Modal.Footer>
+          
+          </>
+        }
+
+        {
+          activeBlock == 'forgot-password' &&
+          <>
+            <Modal.Header>
+              <Text id="modal-title" size={18}>
+                <Text b size={18}>
+                  Recover Password
+                </Text>
+              </Text>
+            </Modal.Header>
+            <Modal.Body>
+
+              <Input
+                clearable
+                bordered
+                fullWidth
+                color="primary"
+                size="lg"
+                {...register("email")}
+                placeholder="Email"
+                contentLeft={<Mail fill="currentColor" />}
+              // onChange={(e) => setEmail(e.target.value)}
+              />
+              {
+                errors?.email?.message &&
+                <div class="text-danger">
+                  {errors?.email?.message}
+                </div>
+              }
+
+              <Input.Password
+                clearable
+                bordered
+                fullWidth
+                color="primary"
+                size="lg"
+                type={"password"}
+                {...register("password")}
+                placeholder="New Password"
+                contentLeft={<Password fill="currentColor" />}
+              // onChange={(e) => setPassword(e.target.value)}
+              />
+              {
+                errors?.password?.message &&
+                <div class="text-danger">
+                  {errors?.password?.message}
+                </div>
+              }
+            </Modal.Body>
+            <Modal.Footer>
+              <Button auto flat color="error" onClick={closeHandler}>
+                Close
+              </Button>
+              <Button auto onClick={handleSubmit(forgotPassLogin)}>
+                Recover
+              </Button>
+            </Modal.Footer>
+          </>
+
+        }
+        
       </Modal>
 
 
 
-      <Modal
+      {/* <Modal
         closeButton
         aria-labelledby="modal-title"
         open={forgot}
@@ -238,7 +311,7 @@ export default function Login() {
             Recover
           </Button>
         </Modal.Footer>
-      </Modal>
+      </Modal> */}
     </>
   );
 }

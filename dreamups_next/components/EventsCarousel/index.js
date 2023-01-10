@@ -51,7 +51,7 @@ const EventsCarousel = () => {
                 <Col xxl="9">
                     <EventsSlider>
                         <Swiper
-                            spaceBetween={15}
+                            spaceBetween={0}
                             slidesPerView={2.3}
                             onSlideChange={() => console.log('slide change')}
                             ref={swiperRef}
