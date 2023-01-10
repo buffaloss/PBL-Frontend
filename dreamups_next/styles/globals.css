@@ -50,3 +50,8 @@ a {
   .login{
     background-color: #ED1E79 !important;
   }
+
+  .product{
+    display: flex;
+    flex-direction: column;
+  }
