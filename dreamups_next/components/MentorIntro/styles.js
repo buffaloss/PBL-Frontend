@@ -6,16 +6,22 @@ export const MainContainer = styled.div`
  align-content:right;
  width:100%;
 `;
+
+export const MentorImgContainer = styled.div`
+align-items: right;
+position: relative;
+padding: 70px 15px 70px 60px;
+
+`;
 export const MentorImg = styled.div`
- align-items: left;
- position: relative;
+
  width:400px;
  height:400px;
+ 
 `;
 
 export const TextContainer = styled.div`
- margin-top:0px;
- margin-left:40px;
+ margin-top:25px;
 `;
 
 export const MentorName = styled.div`
@@ -24,7 +30,7 @@ export const MentorName = styled.div`
  color: black;
  text-align: left;
  align-items: left;
- margin-top: 10px;
+ margin-top: 50px;
 `;
 
 export const MentorFunction = styled.div`
@@ -57,6 +63,7 @@ export const MentorLocation = styled.div`
  text-align: left;
  align-items: left;
  margin-top: 20px;
+
 `;
 
 export const LocationIcon = styled.div`
@@ -68,7 +75,6 @@ export const ExpertiseContainer = styled.div`
  width: 500px;
  height: 500px;
  margin-top: 50px;
- margin-right:60px;
  overflow: hidden;
 `;
 
@@ -103,6 +109,6 @@ export const TagName = styled.div`
 `;
 
 export const MentorSocial = styled.div`
- margin-top: 100px;
+ margin-top: 0px;
  margin-left: 60px;
 `;

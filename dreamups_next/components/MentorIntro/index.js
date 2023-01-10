@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'
-import { MainContainer, MentorImg, TextContainer, MentorLocation, LocationIcon, MentorName, MentorFunction, MentorCompany, MentorText, ExpertiseContainer, DomainExpertiseText, MentorTag, TagName, MentorSocial } from './styles';
+import { MainContainer, MentorImg,MentorImgContainer, TextContainer, MentorLocation, LocationIcon, MentorName, MentorFunction, MentorCompany, MentorText, ExpertiseContainer, DomainExpertiseText, MentorTag, TagName, MentorSocial } from './styles';
 import Head from 'next/head';
 import { useEffect } from 'react';
 import { useSession } from "next-auth/react";
@@ -24,17 +24,19 @@ const MentorIntro = ({ mentor }) => {
   return (
     <>
       <MainContainer>
-        <Container>
+        <Container fluid>
           <Row>
-            <Col xs='3'>
+            <Col >
+            <MentorImgContainer>
               <MentorImg>
                 <img
                   src={"mentors/" + mentor?._id + ".jfif"}
                   onError={(e) => { e.target.src = "/mentor_icon.svg"; }}
                   width="100%" height="100%" alt=""></img>
               </MentorImg>
+              </MentorImgContainer>
             </Col>
-            <Col xs='3'>
+            <Col>
               <TextContainer>
                 <MentorName>
                   {mentor?.firstName}  {mentor?.lastName}
@@ -62,9 +64,8 @@ const MentorIntro = ({ mentor }) => {
                 </Row>
               </TextContainer>
             </Col>
-            <Col xs='3'>
-            </Col>
-            <Col xs='2'>
+           
+            <Col >
               <ExpertiseContainer>
                 <Row>
                   <DomainExpertiseText>
@@ -96,14 +97,17 @@ const MentorIntro = ({ mentor }) => {
               </ExpertiseContainer>
             </Col>
           </Row>
-        </Container>
-      </MainContainer>
-
-      <MentorSocial>
+          <Row>
+          <MentorSocial>
         <Link href="https://www.linkedin.com/">
           <img src="linkedin_icon.svg" width="50" height="50" alt="linked in profile"></img>
         </Link>
       </MentorSocial>
+          </Row>
+        </Container>
+      </MainContainer>
+
+      
     </>
   )
 }

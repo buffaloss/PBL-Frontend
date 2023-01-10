@@ -56,8 +56,8 @@ export const MainButton = styled.div`
  outline: none;
  border: none;
  cursor: pointer;
- width: 180px;
- height:55px;
+ width: 120px;
+ height:40px;
  display: flex;
  justify-content: center;
  align-items: center;

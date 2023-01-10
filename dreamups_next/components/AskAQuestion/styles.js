@@ -97,10 +97,8 @@ export const CheckboxWrapper = styled.div`
 export const BtnWrapper = styled.div`
  margin-top: 0px;
  align-items: right;
-  max-width: 100px;
- display: flex;
- flex-direction: column;
  padding-top: 10px;
+ padding-left:75%;
  
 `;
 
@@ -110,12 +108,12 @@ export const MainButton = styled.div`
  white-space: nowrap;
  padding: ${({ big }) => (big ? '24px 15px' : '10px 20px')};
  color: ${({ dark }) => (dark ? '#010606' : '#fff')};
- font-size: ${({ fontBig }) => (fontBig ? '30px' : '25px')};
+ font-size: ${({ fontBig }) => (fontBig ? '18px' : '18px')};
  font-family: 'Open Sans';
  outline: none;
- border: none;
- margin-left: 375px;
- width: 180px;
+ border: none;;
+ width: 90px;
+ height:40px;
  cursor: pointer;
  display: flex;
  justify-content: center;
