@@ -1,15 +1,15 @@
 import { Container } from 'reactstrap'
+import ContactComponent from '../components/contactcomponents'
 import MainLayout from '../layouts/MainLayout'
 
 export default function Contact() {
   return (
     <MainLayout>
-      <Container>
-        <div className='d-flex bg-primary'>
-          <h1>wfwr</h1>
-          <h1>wfwr</h1>
-        </div>
-      </Container>
+      <ContactComponent>
+        
+      </ContactComponent>
+        
+      
     </MainLayout>
 
   )

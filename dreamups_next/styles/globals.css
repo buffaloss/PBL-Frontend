@@ -101,3 +101,13 @@ a {
   .bcolor{
     color: black;
   }
+
+  .contact{
+    width: 100%;
+    height: 80%;
+    background-color: #dfdbdb;
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+
+  }
