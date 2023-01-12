@@ -63,16 +63,27 @@ a {
   }
 
   .content{
-    width: 500px;
-    height: 400px;
+    width: 540px;
+    height: 440px;
     background-color: #ffffff;
     opacity: 90%;
     font-size: 15px;
     font-weight: bold;
-    align-items: flex-start;
     padding-left: 20px;
+    padding-right: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .child1{
+    width: 50%;
+    
+    
+  }
+
+  .child2{
+    width: 50%;
   }
 
   .item{
@@ -85,4 +96,8 @@ a {
 
   .header{
     margin-top: 15px;
+  }
+
+  .bcolor{
+    color: black;
   }
