@@ -55,3 +55,34 @@ a {
     display: flex;
     flex-direction: column;
   }
+
+  .trigger{
+    border: none;
+    appearance: none;
+    background-color: #ffffff;
+  }
+
+  .content{
+    width: 500px;
+    height: 400px;
+    background-color: #ffffff;
+    opacity: 90%;
+    font-size: 15px;
+    font-weight: bold;
+    align-items: flex-start;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item{
+    margin-top: 5px;
+  }
+
+  .align{
+    margin-bottom: 40px;
+  }
+
+  .header{
+    margin-top: 15px;
+  }
