@@ -15,7 +15,7 @@ import { useSession } from "next-auth/react";
 export default function Mentors() {
   const [mentors, setMentors] = useState([]);
   const [tags, setTags] = useState([]);
-  const [clicked, setClicked] = useState(false);
+  const [clicked, setClicked] = useState(true);
   const { status } = useSession();
   const [limitedMentorsData, setLimitedMentorsData] = useState([]);
 

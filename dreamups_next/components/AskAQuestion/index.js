@@ -1,5 +1,3 @@
-import Link from "next/link";
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { AskContainer, AskTitle, AskText, FNameWrapper, LNameWrapper, EmailWrapper, MsgWrapper, CheckboxWrapper, MainButton, BtnWrapper } from "./styles";
@@ -7,6 +5,7 @@ import { Input, Textarea, Text, Checkbox } from "@nextui-org/react";
 import Head from "next/head";
 import { sendUserQuestion } from "../../services/mail.service";
 import { useState } from "react";
+import Swal from 'sweetalert2';
 
 const AskAQuestion = () => {
 
@@ -16,19 +15,35 @@ const AskAQuestion = () => {
   const [msg, setMsg] = useState("");
 
   const getQuestionInfo = () => {
+    // if (!firstName || !lastName || !email || !msg) return;
     const questionData = {
       firstName: firstName,
       lastName: lastName,
       email: email,
       msg: msg
     };
-    console.log(questionData);
     setFirstName("");
     setLastName("");
     setEmail("");
     setMsg("");
 
-    sendUserQuestion(questionData);
+    sendUserQuestion(questionData).then(() => {
+      Swal.fire({
+        title: 'Done!',
+        text: "Your question was sent successfully.\n The mentor will reply soon ;)",
+        icon: 'success',
+        // width: 600,
+        // padding: '3em',
+        // color: '#716add',
+        background: '#fff',
+        backdrop: `
+          rgba(0,0,123,0.4)
+          url("PYh.gif")
+          left top
+          no-repeat
+        `
+      })
+    });
   }
 
   return (
