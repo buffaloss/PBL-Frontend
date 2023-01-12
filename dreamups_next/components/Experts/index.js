@@ -25,7 +25,7 @@ const MentorExpert = ({ mentors }) => {
   }
 
   return (
-    <div style={{ marginTop: 150 }}>
+    <div>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

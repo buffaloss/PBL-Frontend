@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Login from '../LoginPage';
 import Register from "../RegisterPage";
+import Product from '../Productdropdown';
 import {
   Nav,
   NavbarContainer,
@@ -44,11 +45,13 @@ const Navbar = () => {
               </NavItem>
             </Link>
 
-            <Link href="/products">
+            
               <NavItem>
-                Products
+                <Product>
+                  
+                </Product>
               </NavItem>
-            </Link>
+            
 
             <Link href="/mentors">
               <NavItem>

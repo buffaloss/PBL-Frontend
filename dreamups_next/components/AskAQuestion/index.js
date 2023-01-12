@@ -61,7 +61,7 @@ const AskAQuestion = () => {
         <AskText>
           Ask a question or send a message. If your choose, your question can be answered publicly for other founders to see it.
         </AskText>
-        <Row>
+        <Row style={{ width: '100%' }}>
           <Col>
             <FNameWrapper>
               <Input
@@ -93,7 +93,7 @@ const AskAQuestion = () => {
           </Col>
 
         </Row>
-        <Row>
+        <Row style={{ width: '100%' }}>
           <EmailWrapper>
             <Input
               clearable
@@ -107,7 +107,7 @@ const AskAQuestion = () => {
             />
           </EmailWrapper>
         </Row>
-        <Row>
+        <Row style={{ width: '100%' }}>
           <MsgWrapper>
             <Textarea
               clearable
@@ -122,14 +122,14 @@ const AskAQuestion = () => {
             />
           </MsgWrapper>
         </Row>
-        <Row >
+        <Row style={{ width: '100%' }}>
           <CheckboxWrapper>
             <Checkbox>
               <Text size={18}>I agree to publish the question and answer</Text>
             </Checkbox>
           </CheckboxWrapper>
         </Row>
-        <Row>
+        <Row style={{ width: '100%' }}>
           <BtnWrapper>
             <MainButton to="Send" onClick={getQuestionInfo} >
               Send

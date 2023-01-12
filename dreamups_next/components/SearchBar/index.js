@@ -22,6 +22,13 @@ const SearchBar = ({ onTagsChange, propsTags }) => {
     }
   }
 
+  const onKeypress = (e) => {
+    console.log(e.key)
+    if(e.key === "Enter"){
+      addTag()
+    }
+  }
+
   return (
     <Input
       clearable
@@ -33,8 +40,10 @@ const SearchBar = ({ onTagsChange, propsTags }) => {
       onChange={(e) => setSearchQuery(e.target.value)}
       size="lg"
       contentClickable
+      onKeyPress={onKeypress}
       placeholder="Search"
-      contentRight={<Image onClick={() => addTag()} style={{ width: "20px" }} src="/search_icon.svg" alt="search icon" />}
+      contentRightStyling={{ width: 100 }}
+      contentRight={<Image onClick={() => addTag()} style={{ width: "40px" }} src="/search_icon.svg" alt="search icon" />}
     />
   );
 }
