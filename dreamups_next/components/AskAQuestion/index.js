@@ -15,27 +15,27 @@ const AskAQuestion = () => {
   const [msg, setMsg] = useState("");
 
   const getQuestionInfo = () => {
-    // if (!firstName || !lastName || !email || !msg) return;
+    if (!firstName || !lastName || !email || !msg) return;
     const questionData = {
       firstName: firstName,
       lastName: lastName,
       email: email,
       msg: msg
     };
-    setFirstName("");
-    setLastName("");
-    setEmail("");
-    setMsg("");
+    // setFirstName("");
+    // setLastName("");
+    // setEmail("");
+    // setMsg("");
 
     sendUserQuestion(questionData).then(() => {
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setMsg("");
       Swal.fire({
         title: 'Done!',
-        text: "Your question was sent successfully.\n The mentor will reply soon ;)",
+        text: "The mentor will reply as soon as possible ;)",
         icon: 'success',
-        // width: 600,
-        // padding: '3em',
-        // color: '#716add',
-        background: '#fff',
         backdrop: `
           rgba(0,0,123,0.4)
           url("PYh.gif")
@@ -123,11 +123,11 @@ const AskAQuestion = () => {
           </MsgWrapper>
         </Row>
         <Row style={{ width: '100%' }}>
-          <CheckboxWrapper>
-            <Checkbox>
-              <Text size={18}>I agree to publish the question and answer</Text>
-            </Checkbox>
-          </CheckboxWrapper>
+          {/* <CheckboxWrapper> */}
+          <Checkbox>
+            <Text size={16}>I agree my question to be processed by Dreamups team and published together with answer</Text>
+          </Checkbox>
+          {/* </CheckboxWrapper> */}
         </Row>
         <Row style={{ width: '100%' }}>
           <BtnWrapper>

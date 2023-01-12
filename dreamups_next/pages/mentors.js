@@ -95,7 +95,7 @@ export default function Mentors() {
           </Container>
 
           <Hashtag onRemoveTag={removeTag} tags={tags} />
-          <MentorCard mentors={clicked ? mentors.slice(0, 8) : mentors} />
+          <MentorCard mentors={clicked ? mentors?.slice(0, 8) : mentors} />
           {mentors?.length >= 8 && <LoadMoreButton content={clicked ? "Load more" : "Show less"} showAllMentors={() => setClicked(!clicked)} />}
 
         </>
