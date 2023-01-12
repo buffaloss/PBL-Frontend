@@ -1,5 +1,3 @@
-import Link from "next/link";
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { AskContainer, AskTitle, AskText, FNameWrapper, LNameWrapper, EmailWrapper, MsgWrapper, CheckboxWrapper, MainButton, BtnWrapper } from "./styles";
@@ -7,6 +5,7 @@ import { Input, Textarea, Text, Checkbox } from "@nextui-org/react";
 import Head from "next/head";
 import { sendUserQuestion } from "../../services/mail.service";
 import { useState } from "react";
+import Swal from 'sweetalert2';
 
 const AskAQuestion = () => {
 
@@ -16,19 +15,35 @@ const AskAQuestion = () => {
   const [msg, setMsg] = useState("");
 
   const getQuestionInfo = () => {
+    if (!firstName || !lastName || !email || !msg) return;
     const questionData = {
       firstName: firstName,
       lastName: lastName,
       email: email,
       msg: msg
     };
-    console.log(questionData);
-    setFirstName("");
-    setLastName("");
-    setEmail("");
-    setMsg("");
+    // setFirstName("");
+    // setLastName("");
+    // setEmail("");
+    // setMsg("");
 
-    sendUserQuestion(questionData);
+    sendUserQuestion(questionData).then(() => {
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setMsg("");
+      Swal.fire({
+        title: 'Done!',
+        text: "The mentor will reply as soon as possible ;)",
+        icon: 'success',
+        backdrop: `
+          rgba(0,0,123,0.4)
+          url("PYh.gif")
+          left top
+          no-repeat
+        `
+      })
+    });
   }
 
   return (
@@ -108,11 +123,11 @@ const AskAQuestion = () => {
           </MsgWrapper>
         </Row>
         <Row style={{ width: '100%' }}>
-          <CheckboxWrapper>
-            <Checkbox>
-              <Text size={18}>I agree to publish the question and answer</Text>
-            </Checkbox>
-          </CheckboxWrapper>
+          {/* <CheckboxWrapper> */}
+          <Checkbox>
+            <Text size={16}>I agree my question to be processed by Dreamups team and published together with answer</Text>
+          </Checkbox>
+          {/* </CheckboxWrapper> */}
         </Row>
         <Row style={{ width: '100%' }}>
           <BtnWrapper>
