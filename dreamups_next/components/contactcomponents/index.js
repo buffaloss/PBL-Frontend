@@ -1,7 +1,9 @@
 import React from "react";
-import { ContactContainer, ContactInfo, ContactItem, ContactQuestion } from "./styles";
+import { ContactContainer, ContactInfo, ContactItem, ContactQuestion, EmailItem, FirstName, LastName, TextContainer} from "./styles";
 import Head from "next/head";
 import Link from "next/link";
+import { Col, Input, Row } from "reactstrap";
+
 
 export default function ContactComponent () {
 
@@ -31,7 +33,63 @@ export default function ContactComponent () {
                         </ContactItem>
                     </ContactInfo>
                     <ContactQuestion>
-                        alsjfbakmascsak
+                        <Row style={{width: "100%"}}>
+                            <Col>
+                        <FirstName>
+                            <Input type="text"
+                                clearable
+                                bordered
+                                fullWidth
+                                color="#ED1E79"
+                                size="lg"
+                                placeholder="First name">
+                                
+                            </Input>
+                        </FirstName>
+                        </Col>
+                        <Col>
+                        <LastName>
+                            <Input type="text"
+                                clearable
+                                bordered
+                                fullWidth
+                                color="#ED1E79"
+                                size="lg"
+                                placeholder="Last name">
+                            
+                            </Input>    
+                        </LastName>
+                        </Col>
+                        </Row>
+                        <Row style={{width: "100%"}}>
+                        <EmailItem>
+                            <Input type="text"
+                                clearable
+                                bordered
+                                fullWidth
+                                color="#ED1E79"
+                                size="lg"
+                                placeholder="Email">
+                            
+                            </Input>    
+                        </EmailItem>
+                        </Row> 
+                        <Row style={{width: "100%"}}>
+                            <TextContainer>
+                                <Input 
+                                className="input"
+                                
+                                clearable
+                                bordered
+                                fullWidth
+                                resize = "none"
+                                color="#ED1E79"
+                                size="lg"
+                                placeholder="Message">
+
+                                </Input>
+                            </TextContainer>
+                        </Row>                     
                     </ContactQuestion>
                 </ContactContainer>
             </div>   
