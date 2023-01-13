@@ -1,8 +1,9 @@
 import React from "react";
-import { ContactContainer, ContactInfo, ContactItem, ContactQuestion, EmailItem, FirstName, LastName, TextContainer} from "./styles";
+import { BtnWrapper, ContactContainer, ContactInfo, ContactItem, ContactQuestion, EmailItem, FirstName, LastName, MainButton, TextContainer} from "./styles";
 import Head from "next/head";
 import Link from "next/link";
 import { Col, Input, Row } from "reactstrap";
+import { Textarea } from "@nextui-org/react";
 
 
 export default function ContactComponent () {
@@ -35,50 +36,48 @@ export default function ContactComponent () {
                     <ContactQuestion>
                         <Row style={{width: "100%"}}>
                             <Col>
-                        <FirstName>
-                            <Input type="text"
+                            <Textarea type="text"
+                                className="textarea"
                                 clearable
                                 bordered
                                 fullWidth
                                 color="#ED1E79"
                                 size="lg"
                                 placeholder="First name">
-                                
-                            </Input>
-                        </FirstName>
+                        
+                        </Textarea>
                         </Col>
                         <Col>
-                        <LastName>
-                            <Input type="text"
+                        <Textarea type="text"
+                                className="textarea"
                                 clearable
                                 bordered
                                 fullWidth
                                 color="#ED1E79"
                                 size="lg"
                                 placeholder="Last name">
-                            
-                            </Input>    
-                        </LastName>
+
+                        </Textarea>
                         </Col>
                         </Row>
                         <Row style={{width: "100%"}}>
-                        <EmailItem>
-                            <Input type="text"
+                        
+                        <Textarea 
+                                className="textarea"
+                                type="text"
                                 clearable
                                 bordered
                                 fullWidth
                                 color="#ED1E79"
                                 size="lg"
                                 placeholder="Email">
-                            
-                            </Input>    
-                        </EmailItem>
+
+                        </Textarea>
                         </Row> 
                         <Row style={{width: "100%"}}>
-                            <TextContainer>
-                                <Input 
-                                className="input"
+                            <Textarea 
                                 
+                                className="input textarea"
                                 clearable
                                 bordered
                                 fullWidth
@@ -87,9 +86,15 @@ export default function ContactComponent () {
                                 size="lg"
                                 placeholder="Message">
 
-                                </Input>
-                            </TextContainer>
-                        </Row>                     
+                            </Textarea>
+                        </Row> 
+                        <Row>
+                            <BtnWrapper>
+                                <MainButton>
+                                    Send Message    
+                                </MainButton>    
+                            </BtnWrapper>    
+                        </Row>                    
                     </ContactQuestion>
                 </ContactContainer>
             </div>   
