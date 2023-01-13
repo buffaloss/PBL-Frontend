@@ -19,7 +19,7 @@ export default function ContactComponent () {
             <div className="contact">
                 <ContactContainer>
                     <ContactInfo>
-                        <h3>Contacți-ne pe :</h3><br/>
+                        <h3>Contactați-ne pe :</h3><br/>
                         <ContactItem>
                             <img src="/Call.svg"/> +373 60988355
                         </ContactItem>

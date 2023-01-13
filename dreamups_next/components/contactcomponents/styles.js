@@ -13,6 +13,7 @@ export const ContactContainer = styled.div`
 
 export const ContactInfo = styled.div`
     width: 100%;
+    padding-top: 75px;
     display: flex;
     flex-direction: column;
     align-items: center;  
