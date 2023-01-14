@@ -5,16 +5,16 @@ export const HeaderContainer = styled.div`
   width: 50 %;
 `
 
-export const WelcomeImg = styled.div`
-  max-width: 100%;
-  height: 770px;
-  position: flex;
-  img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-`
+// export const WelcomeImg = styled.div`
+//   max-width: 100%;
+//   height: 770px;
+//   position: flex;
+//   img{
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//   }
+// `
 export const MainButton = styled.button`
   position: absolute;
   top: 85%;
@@ -30,4 +30,9 @@ export const MainButton = styled.button`
   border-radius: 10px;
   font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
   font-family: 'Open Sans';
+`
+
+export const WelcomeImg = styled.div`
+  width: 100 %;
+  height: auto;
 `

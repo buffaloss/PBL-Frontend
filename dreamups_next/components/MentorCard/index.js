@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-page-custom-font */
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
-// import { Link } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Head from 'next/head';
@@ -20,7 +19,7 @@ const splitText = (text) => {
   return digest.trimEnd() + "...";
 }
 
-const MentorCard = ({ mentors, setMentorId }) => {
+const MentorCard = ({ mentors }) => {
   const { status } = useSession();
   return (
     <>
@@ -59,12 +58,6 @@ const MentorCard = ({ mentors, setMentorId }) => {
                     status === "authenticated" &&
                     <BtnWrapper>
                       <MainButton to="View more" onClick={() => { localStorage.setItem("mentorId", mentor._id) }}>
-                        {/* <Link href={{
-                          pathname: "/mentor",
-                          query: {
-                            id: mentor._id,
-                          }
-                        }}> */}
                         <Link href={{
                           pathname: "/mentor"
                         }}>

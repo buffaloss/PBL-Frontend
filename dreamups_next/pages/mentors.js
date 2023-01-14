@@ -45,7 +45,6 @@ export default function Mentors() {
         setLimitedMentorsData(res?.data);
       }
     });
-    console.log("limited data ", limitedMentorsData);
   }
 
   const removeTag = (tag) => {
@@ -57,7 +56,6 @@ export default function Mentors() {
   const search = () => {
     if (status === 'authenticated') {
       searchMentors(tags).then((res) => {
-        console.log("search mentors ", res?.data);
         setMentors(res?.data);
       })
     }

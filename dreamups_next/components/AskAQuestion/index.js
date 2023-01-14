@@ -14,6 +14,8 @@ const AskAQuestion = () => {
   const [email, setEmail] = useState("");
   const [msg, setMsg] = useState("");
 
+  // const sendUserQuestion = async (questionData) => { };
+
   const getQuestionInfo = () => {
     if (!firstName || !lastName || !email || !msg) return;
     const questionData = {
@@ -22,27 +24,27 @@ const AskAQuestion = () => {
       email: email,
       msg: msg
     };
-    // setFirstName("");
-    // setLastName("");
-    // setEmail("");
-    // setMsg("");
 
     sendUserQuestion(questionData).then(() => {
-      setFirstName("");
-      setLastName("");
-      setEmail("");
-      setMsg("");
-      Swal.fire({
-        title: 'Done!',
-        text: "The mentor will reply as soon as possible ;)",
-        icon: 'success',
-        backdrop: `
-          rgba(0,0,123,0.4)
-          url("PYh.gif")
-          left top
-          no-repeat
-        `
-      })
+      setTimeout(() => {
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setMsg("");
+        Swal.fire({
+          title: 'Done!',
+          text: "The mentor will reply as soon as possible ;)",
+          icon: 'success',
+          showCloseButton: true,
+          // backdrop: `
+          //   url("PYh.gif")
+          //   rgba(0,0,0,0.4)
+          //   left top
+          //   no-repeat
+          //   overlay-y auto
+          // `
+        })
+      }, "2000")
     });
   }
 

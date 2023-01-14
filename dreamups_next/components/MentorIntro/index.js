@@ -3,23 +3,25 @@ import Link from 'next/link';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'
-import { MainContainer, MentorImg,MentorImgContainer, TextContainer, MentorLocation, LocationIcon, MentorName, MentorFunction, MentorCompany, MentorText, ExpertiseContainer, DomainExpertiseText, MentorTag, TagName, MentorSocial } from './styles';
-import Head from 'next/head';
-import { useEffect } from 'react';
-import { useSession } from "next-auth/react";
+import {
+  MainContainer,
+  MentorImg,
+  MentorImgContainer,
+  TextContainer,
+  MentorLocation,
+  LocationIcon,
+  MentorName,
+  MentorFunction,
+  MentorCompany,
+  MentorText,
+  ExpertiseContainer,
+  DomainExpertiseText,
+  MentorTag,
+  TagName,
+  MentorSocial
+} from './styles';
 
 const MentorIntro = ({ mentor }) => {
-  // useEffect(() => {
-  //   if (!mentor) {
-  //     window.location.href = "http://localhost:3000/";
-  //     return;
-  //   }
-  // }, [mentor])
-  const { status } = useSession();
-
-  useEffect(() => {
-    console.log("current status ", status);
-  }, [])
 
   return (
     <>
@@ -27,13 +29,13 @@ const MentorIntro = ({ mentor }) => {
         <Container fluid>
           <Row>
             <Col >
-            <MentorImgContainer>
-              <MentorImg>
-                <img
-                  src={"mentors/" + mentor?._id + ".jfif"}
-                  onError={(e) => { e.target.src = "/mentor_icon.svg"; }}
-                  width="100%" height="100%" alt=""></img>
-              </MentorImg>
+              <MentorImgContainer>
+                <MentorImg>
+                  <img
+                    src={"mentors/" + mentor?._id + ".jfif"}
+                    onError={(e) => { e.target.src = "/mentor_icon.svg"; }}
+                    width="100%" height="100%" alt=""></img>
+                </MentorImg>
               </MentorImgContainer>
             </Col>
             <Col>
@@ -58,13 +60,13 @@ const MentorIntro = ({ mentor }) => {
                   </Col>
                   <Col>
                     <MentorLocation>
-                      San Francisco, United States
+                      {mentor?.origin}
                     </MentorLocation>
                   </Col>
                 </Row>
               </TextContainer>
             </Col>
-           
+
             <Col >
               <ExpertiseContainer>
                 <Row>
@@ -98,16 +100,16 @@ const MentorIntro = ({ mentor }) => {
             </Col>
           </Row>
           <Row>
-          <MentorSocial>
-        <Link href="https://www.linkedin.com/">
-          <img src="linkedin_icon.svg" width="50" height="50" alt="linked in profile"></img>
-        </Link>
-      </MentorSocial>
+            <MentorSocial>
+              <Link href={`${mentor?.linkedinURL}`}>
+                <img src="linkedin_icon.svg" width="50" height="50" alt="linked in profile"></img>
+              </Link>
+            </MentorSocial>
           </Row>
         </Container>
       </MainContainer>
 
-      
+
     </>
   )
 }

@@ -54,16 +54,16 @@ const Topics = ({ onTagsChange, propsTags }) => {
                 </Link>
               </Col>
               <Col xs={{ order: 'second' }}>
-                <Link href="#" onClick={() => addTag("productmanagement")} scroll={false}>
+                <Link href="#" onClick={() => addTag("marketing")} scroll={false}>
                   <Text>
-                    Product Management
+                    Marketing
                   </Text>
                 </Link>
               </Col>
               <Col xs={{ order: 'last' }}>
-                <Link href="#" onClick={() => addTag("productmanagement")} scroll={false}>
+                <Link href="#" onClick={() => addTag("leadership")} scroll={false}>
                   <Text>
-                    Product Management
+                    Leadership
                   </Text>
                 </Link>
               </Col>
@@ -80,16 +80,16 @@ const Topics = ({ onTagsChange, propsTags }) => {
                 </Link>
               </Col>
               <Col xs={{ order: 'second' }}>
-                <Link href="" onClick={() => addTag("customerdevelopment")} scroll={false}>
+                <Link href="" onClick={() => addTag("internationaldevelopment")} scroll={false}>
                   <Text>
-                    Customer Development
+                    International Development
                   </Text>
                 </Link>
               </Col>
               <Col xs={{ order: 'last' }}>
-                <Link href="" onClick={() => addTag("customerdevelopment")} scroll={false}>
+                <Link href="" onClick={() => addTag("cybersecurity")} scroll={false}>
                   <Text>
-                    Customer Development
+                    Cybersecurity
                   </Text>
                 </Link>
               </Col>
@@ -102,23 +102,23 @@ const Topics = ({ onTagsChange, propsTags }) => {
           <Container>
             <Row>
               <Col xs={{ order: 'first' }}>
-                <Link href="#" onClick={() => addTag("productmanagement")} scroll={false}>
+                <Link href="#" onClick={() => addTag("venturecapitals")} scroll={false}>
                   <Text>
-                    Product Management
+                    Venture Capitals
                   </Text>
                 </Link>
               </Col>
               <Col xs={{ order: 'second' }}>
-                <Link href="#" onClick={() => addTag("productmanagement")} scroll={false}>
+                <Link href="#" onClick={() => addTag("venturefunds")} scroll={false}>
                   <Text>
-                    Product Management
+                    Venture Funds
                   </Text>
                 </Link>
               </Col>
               <Col xs={{ order: 'last' }}>
-                <Link href="#" onClick={() => addTag("productmanagement")} scroll={false}>
+                <Link href="#" onClick={() => addTag("businessconsulting")} scroll={false}>
                   <Text>
-                    Product Management
+                    Business Consulting
                   </Text>
                 </Link>
               </Col>
@@ -129,23 +129,23 @@ const Topics = ({ onTagsChange, propsTags }) => {
           <Container>
             <Row>
               <Col xs={{ order: 'first' }}>
-                <Link href="" onClick={() => addTag("customerdevelopment")} scroll={false}>
+                <Link href="" onClick={() => addTag("teamdevelopment")} scroll={false}>
                   <Text>
-                    Customer Development
+                    Team Development
                   </Text>
                 </Link>
               </Col>
               <Col xs={{ order: 'second' }}>
-                <Link href="" onClick={() => addTag("customerdevelopment")} scroll={false}>
+                <Link href="" onClick={() => addTag("scrum")} scroll={false}>
                   <Text>
-                    Customer Development
+                    SCRUM
                   </Text>
                 </Link>
               </Col>
               <Col xs={{ order: 'last' }}>
-                <Link href="" onClick={() => addTag("customerdevelopment")} scroll={false}>
+                <Link href="" onClick={() => addTag("uxdesign")} scroll={false}>
                   <Text>
-                    Customer Development
+                    UX Design
                   </Text>
                 </Link>
               </Col>

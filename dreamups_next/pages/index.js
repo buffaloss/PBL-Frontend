@@ -1,9 +1,5 @@
-import MainText from '../components/MainText'
-import LearnButton from '../components/LearnButton'
-import MainImg from '../components/MainImg'
 import MainLayout from '../layouts/MainLayout'
 import Collabsible from '../components/collapsible/dropdowns.js/index.js'
-import Example from '../components/carousel/index.js'
 import MentorExpert from '../components/Experts'
 import EventsCarousel from '../components/EventsCarousel'
 import { Container } from '@nextui-org/react'
@@ -11,7 +7,6 @@ import { getFixedNrMentors } from '../services/mentors.service'
 import { useState, useEffect } from 'react'
 import Head from "next/head";
 import HeaderImg from '../components/HeaderImg'
-import Footer from '../components/Footer'
 
 export default function Home() {
 
@@ -39,9 +34,6 @@ export default function Home() {
         </style>
       </Head>
       <MainLayout>
-        {/* <MainText /> */}
-        {/* <MainImg />
-        <LearnButton /> */}
         <HeaderImg />
         <Collabsible />
         <Container>

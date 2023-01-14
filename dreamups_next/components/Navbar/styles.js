@@ -10,8 +10,6 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 9999;
-  
-
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
   }
@@ -26,7 +24,6 @@ export const NavbarContainer = styled.div`
   width: 100%;
   padding: 0 70px;
   background: #ffffff;
- 
 `
 // the dreamups logo
 export const NavLogo = styled.div` 

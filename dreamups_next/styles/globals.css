@@ -6,6 +6,12 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+html.swal2-shown,
+body.swal2-shown {
+  overflow-y: hidden !important;
+  height: auto !important;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -16,18 +22,18 @@ a {
 }
 
 
-.test{
+.test {
   display: flex;
   background-color: azure;
 }
 
-.collapsible{
+.collapsible {
   background-color: #dfdbdb;
   /*height: 500px;*/
 
 }
 
-.cardheader{
+.cardheader {
 
   height: 235px;
   text-align: center;
@@ -39,50 +45,51 @@ a {
 }
 
 
-.custom-input input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #ffff!important;
-  }
+.custom-input input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ffff !important;
+}
 
-  .color{
-    color : #ED1E79
-  }
+.color {
+  color: #ED1E79
+}
 
-  .login{
-    background-color: #ED1E79 !important;
-  }
+.login {
+  background-color: #ED1E79 !important;
+}
 
-  .product{
-    display: flex;
-    flex-direction: column;
-  }
+.product {
+  display: flex;
+  flex-direction: column;
+}
 
-  .trigger{
-    border: none;
-    appearance: none;
-    background-color: #ffffff;
-  }
+.trigger {
+  border: none;
+  appearance: none;
+  background-color: #ffffff;
+}
 
-  .content{
-    width: 500px;
-    height: 400px;
-    background-color: #ffffff;
-    opacity: 90%;
-    font-size: 15px;
-    font-weight: bold;
-    align-items: flex-start;
-    padding-left: 20px;
-    display: flex;
-    flex-direction: column;
-  }
+.content {
+  width: 500px;
+  height: 400px;
+  background-color: #ffffff;
+  opacity: 90%;
+  font-size: 15px;
+  font-weight: bold;
+  align-items: flex-start;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
 
-  .item{
-    margin-top: 5px;
-  }
+.item {
+  margin-top: 5px;
+}
 
-  .align{
-    margin-bottom: 40px;
-  }
+.align {
+  margin-bottom: 40px;
+}
 
-  .header{
-    margin-top: 15px;
-  }
+.header {
+  margin-top: 15px;
+}
