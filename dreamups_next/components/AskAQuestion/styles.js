@@ -38,7 +38,7 @@ margin-right: 30px;
 export const FNameWrapper = styled.div`
  margin-top: 15px;
  margin-left:30px;
- max-width: 250px;
+ width: 250px;
  height: 30px;
  display: flex;
  flex-direction: column;
@@ -50,7 +50,7 @@ export const FNameWrapper = styled.div`
 export const LNameWrapper = styled.div`
  margin-top: 15px;
  margin-left:0px;
- max-width: 250px;
+ width: 255px;
  height: 30px;
  display: flex;
  flex-direction: column;
@@ -91,15 +91,18 @@ export const CheckboxWrapper = styled.div`
  flex-direction: column;
  align-items: left;
  padding-top: 10px;
- margin-bottom: 25px;
+ margin-bottom: 10px;
+ width:555px;
 `;
 
 export const BtnWrapper = styled.div`
  margin-top: 0px;
- align-items: right;
+ display:flex;
+ justify-content: right;
  padding-top: 10px;
  padding-left:75%;
- 
+ padding-bottom:25px;
+ padding-right: 30px;
 `;
 
 export const MainButton = styled.div`

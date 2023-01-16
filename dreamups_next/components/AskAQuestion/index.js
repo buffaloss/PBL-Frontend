@@ -125,11 +125,11 @@ const AskAQuestion = () => {
           </MsgWrapper>
         </Row>
         <Row style={{ width: '100%' }}>
-          {/* <CheckboxWrapper> */}
+           <CheckboxWrapper> 
           <Checkbox>
-            <Text size={16}>I agree my question to be processed by Dreamups team and published together with answer</Text>
+            <Text size={16}>I agree my question to be processed by Dreamups team and published together with answer.</Text>
           </Checkbox>
-          {/* </CheckboxWrapper> */}
+         </CheckboxWrapper> 
         </Row>
         <Row style={{ width: '100%' }}>
           <BtnWrapper>
