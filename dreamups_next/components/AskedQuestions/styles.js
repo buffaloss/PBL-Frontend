@@ -5,7 +5,7 @@ export const AskedTitle = styled.div`
  color: black;
  font-size: 45px;
  display: flex;
- margin-top:90px;
+ margin-top:20px;
 `;
 
 export const Description = styled.div`

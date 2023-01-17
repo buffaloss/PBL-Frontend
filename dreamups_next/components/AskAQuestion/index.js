@@ -60,7 +60,7 @@ const AskAQuestion = () => {
           Ask a question
         </AskTitle>
         <AskText>
-          Ask a question or send a message. If your choose, your question can be answered publicly for other founders to see it.
+          Ask a question or send a message. If you choose, your question can be answered publicly for other founders to see it.
         </AskText>
         <Row style={{ width: '100%' }}>
           <Col>

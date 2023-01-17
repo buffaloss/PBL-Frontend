@@ -6,7 +6,7 @@ export const AskContainer = styled.div`
  height:flex;
  background-color: #E0E0E0;
  margin-left: 60px;
- margin-top:100px;
+ margin-top:30px;
  overflow: hidden;
   .nextui-input-main-container{
     background-color: white;
