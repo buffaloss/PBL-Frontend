@@ -38,7 +38,7 @@ margin-right: 30px;
 export const FNameWrapper = styled.div`
  margin-top: 15px;
  margin-left:30px;
- max-width: 250px;
+ width: 250px;
  height: 30px;
  display: flex;
  flex-direction: column;
@@ -50,7 +50,7 @@ export const FNameWrapper = styled.div`
 export const LNameWrapper = styled.div`
  margin-top: 15px;
  margin-left:0px;
- max-width: 250px;
+ width: 255px;
  height: 30px;
  display: flex;
  flex-direction: column;

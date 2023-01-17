@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const FooterMain = styled.nav`
-  padding-top: 50px;
   top: 0;
   display: flex;
   justify-content: left; //put the content(our container of Navrbar to the left)

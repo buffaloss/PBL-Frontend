@@ -43,12 +43,12 @@ export const SecondContainer = styled.div`
 export const Heading = styled.div`
 font-family: 'Poppins',sans-serif;
 color: #1B1464;
-font-size: 35px;
+font-size: 45px;
 margin-top:100px;
 font-weight: normal;;
 margin-left:15px;
-align-items: left;
-text-align: left;
+align-items: center;
+text-align: center;
 @media screen and (max-width: 768px){
    font-size: 40px;
 }
@@ -61,8 +61,8 @@ export const TextInfo = styled.div`
 font-family: 'Open Sans',sans-serif;
 color: #ED1E79;
 margin-top:100px;
-font-size: 20px;
-font-weight: bold;
+font-size: 25px;
+font-weight: normal;
 margin-left:15px;
 align-items: center;
 text-align: left;
@@ -80,24 +80,40 @@ export const ThirdContainer = styled.div`
  display: flex;
  flex-direction: column;
  padding: 5 5 px;
- background-color: #ED1E79 ;
+ background-color: #ED1E79;
+ //border-top: 1px solid #ED1E79;
 `;
 
 export const IconImg = styled.div`
- align-items: left;
+ align-items: center;
  position: relative;
- margin-top: 25%;
+ margin-top:25px;
 `;
 
 export const Info = styled.div`
 font-family: 'Open Sans',sans-serif;
-color: #ED1E79;
-margin-top:100px;
-font-size: 20px;
-font-weight: bold;
+margin-top:25px;
+color: black;
+font-size: 19px;
+font-weight: normal;
 margin-left:15px;
 align-items: center;
 text-align: left;
+@media screen and (max-width: 768px){
+   font-size: 40px;
+}
+@media screen and (max-width: 480px){
+   font-size: 32px;
+}
+`;
+export const TextInfo2 = styled.div`
+font-family: 'Open Sans',sans-serif;
+color: #ED1E79;
+font-size: 25px;
+font-weight: normal;
+margin-left:15px;
+align-items: center;
+text-align: center;
 @media screen and (max-width: 768px){
    font-size: 40px;
 }
