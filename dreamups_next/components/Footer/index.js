@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import styled from 'styled-components';
 import Head from 'next/head';
 import Link from 'next/link';
 import { FooterMain, FooterContainer, TextContainer, TextInfo, ContactInfoContainer, FacebookContact, LinkedinContact, InstagramContact } from './styles';

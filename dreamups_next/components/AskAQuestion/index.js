@@ -1,7 +1,7 @@
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { AskContainer, AskTitle, AskText, FNameWrapper, LNameWrapper, EmailWrapper, MsgWrapper, CheckboxWrapper, MainButton, BtnWrapper } from "./styles";
-import { Input, Textarea, Text, Checkbox } from "@nextui-org/react";
+import { Input, Textarea, Checkbox } from "@nextui-org/react";
 import Head from "next/head";
 import { sendUserQuestion } from "../../services/mail.service";
 import { useState } from "react";
@@ -14,15 +14,14 @@ const AskAQuestion = () => {
   const [email, setEmail] = useState("");
   const [msg, setMsg] = useState("");
 
-  // const sendUserQuestion = async (questionData) => { };
-
   const getQuestionInfo = () => {
     if (!firstName || !lastName || !email || !msg) return;
     const questionData = {
       firstName: firstName,
       lastName: lastName,
       email: email,
-      msg: msg
+      msg: msg,
+      topic: "Ask a Question"
     };
 
     sendUserQuestion(questionData).then(() => {
@@ -125,11 +124,11 @@ const AskAQuestion = () => {
           </MsgWrapper>
         </Row>
         <Row style={{ width: '100%' }}>
-          {/* <CheckboxWrapper> */}
-          <Checkbox>
-            <Text size={16}>I agree my question to be processed by Dreamups team and published together with answer</Text>
-          </Checkbox>
-          {/* </CheckboxWrapper> */}
+          <CheckboxWrapper>
+            <Checkbox size="xs" css={{ marginLeft: "30px" }}>
+              I agree my question to be processed by Dreamups team and published together with answer
+            </Checkbox>
+          </CheckboxWrapper>
         </Row>
         <Row style={{ width: '100%' }}>
           <BtnWrapper>

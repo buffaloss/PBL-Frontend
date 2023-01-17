@@ -6,7 +6,6 @@ import Col from 'react-bootstrap/Col';
 import Link from "next/link";
 import Head from 'next/head';
 import { useState, useEffect } from "react";
-import { useSession } from "next-auth/react";
 
 const Topics = ({ onTagsChange, propsTags }) => {
   const [tags, setTags] = useState([...propsTags]);

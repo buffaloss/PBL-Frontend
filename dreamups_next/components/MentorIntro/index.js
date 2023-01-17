@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col'
+import Col from 'react-bootstrap/Col';
 import {
   MainContainer,
   MentorImg,
@@ -18,7 +18,6 @@ import {
   DomainExpertiseText,
   MentorTag,
   TagName,
-  MentorSocial
 } from './styles';
 
 const MentorIntro = ({ mentor }) => {
@@ -36,6 +35,9 @@ const MentorIntro = ({ mentor }) => {
                     onError={(e) => { e.target.src = "/mentor_icon.svg"; }}
                     width="100%" height="100%" alt=""></img>
                 </MentorImg>
+                <Link href={`${mentor?.linkedinURL}`}>
+                  <img src="linkedin_icon.svg" width="50" height="50" alt="linked in profile"></img>
+                </Link>
               </MentorImgContainer>
             </Col>
             <Col>
@@ -79,10 +81,10 @@ const MentorIntro = ({ mentor }) => {
                     <Col xxl='4'>
                       <MentorTag><TagName>startups</TagName></MentorTag>
                     </Col>
-                    <Col xxl='4'>
+                    <Col xxl='3'>
                       <MentorTag><TagName>legal</TagName></MentorTag>
                     </Col>
-                    <Col xxl='4'>
+                    <Col xxl='3'>
                       <MentorTag><TagName>business</TagName></MentorTag>
                     </Col>
                   </Row>
@@ -98,13 +100,6 @@ const MentorIntro = ({ mentor }) => {
                 </Row>
               </ExpertiseContainer>
             </Col>
-          </Row>
-          <Row>
-            <MentorSocial>
-              <Link href={`${mentor?.linkedinURL}`}>
-                <img src="linkedin_icon.svg" width="50" height="50" alt="linked in profile"></img>
-              </Link>
-            </MentorSocial>
           </Row>
         </Container>
       </MainContainer>

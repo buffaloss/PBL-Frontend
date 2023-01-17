@@ -20,7 +20,7 @@ export const Description = styled.div`
 export const Answers = styled.div`
  font-family: 'Open Sans';
  color: black;
- font-size: 25px;
+ font-size: 20px;
  display: flex;
  margin-top:10px;
 `;
@@ -35,7 +35,7 @@ export const Question = styled.div`
 `;
 
 export const BtnWrapper = styled.div`
- margin-top: 100px;
+ margin-top: 50px;
  margin-left: 0px;
  max-width: 140px;
  display: flex;
@@ -47,11 +47,11 @@ export const BtnWrapper = styled.div`
 
 export const MainButton = styled.div`
  border-radius: 10px;
- background: ${({primary}) => (primary ? '#ED1E79' : '#ED1E79')};
+ background: ${({ primary }) => (primary ? '#ED1E79' : '#ED1E79')};
  white-space: nowrap;
- padding: ${({big}) => (big ? '14px 48px' : '13px 30px')};
- color: ${({dark}) => (dark ? '#010606' : '#fff')};
- font-size: ${({fontBig}) => (fontBig ? '20px' : '16px')};
+ padding: ${({ big }) => (big ? '14px 48px' : '13px 30px')};
+ color: ${({ dark }) => (dark ? '#010606' : '#fff')};
+ font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
  font-family: 'Open Sans';
  outline: none;
  border: none;
@@ -67,7 +67,7 @@ export const MainButton = styled.div`
 
  &:hover {
     transition: all 0.2s ease-in-out;
-    background: ${({primary}) => (primary ? '#ED1E79' : '#e0126c' )};
+    background: ${({ primary }) => (primary ? '#ED1E79' : '#e0126c')};
  };
 `
 export const BtnText = styled.div`

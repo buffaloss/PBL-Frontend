@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Head from 'next/head';
 import { Container, Col, Row } from 'react-bootstrap';
 import { BtnWrapper, MainButton, BtnText } from "./styles";

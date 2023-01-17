@@ -14,10 +14,9 @@ padding: 70px 15px 70px 60px;
 
 `;
 export const MentorImg = styled.div`
-
  width:400px;
  height:400px;
- 
+ margin-bottom: 10px;
 `;
 
 export const TextContainer = styled.div`
@@ -72,7 +71,7 @@ export const LocationIcon = styled.div`
 
 export const ExpertiseContainer = styled.div`
  background-color: #E0E0E0;
- width: 500px;
+ width: 450px;
  height: 500px;
  margin-top: 50px;
  overflow: hidden;

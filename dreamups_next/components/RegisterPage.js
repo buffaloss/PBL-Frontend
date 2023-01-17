@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Modal, Button, Text, Input, Row, Checkbox } from "@nextui-org/react";
+import React from "react";
+import { Modal, Button, Text, Input } from "@nextui-org/react";
 import { signIn } from "next-auth/react";
 import { Mail } from "./Mail";
 import { Password } from "./Password";
@@ -113,7 +113,6 @@ export default function Register() {
         <Modal.Body>
 
           <Input
-            // onChange={(e) => setEmail(e.target.value)}
             clearable
             bordered
             fullWidth
@@ -131,7 +130,6 @@ export default function Register() {
           }
 
           <Input
-            // onChange={(e) => setEmail(e.target.value)}
             clearable
             bordered
             fullWidth
@@ -149,7 +147,6 @@ export default function Register() {
           }
 
           <Input
-            // onChange={(e) => setEmail(e.target.value)}
             clearable
             bordered
             fullWidth
@@ -170,7 +167,6 @@ export default function Register() {
             clearable
             bordered
             fullWidth
-            // onChange={(e) => setPassword(e.target.value)}
             color="primary"
             size="lg"
             type={"password"}
@@ -188,7 +184,6 @@ export default function Register() {
             clearable
             bordered
             fullWidth
-            // onChange={(e) => setPassword(e.target.value)}
             color="primary"
             size="lg"
             type={"password"}

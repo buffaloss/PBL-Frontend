@@ -7,7 +7,7 @@ export const AskContainer = styled.div`
  background-color: #E0E0E0;
  margin-left: 60px;
  margin-top:100px;
- overflow: auto;
+ overflow: hidden;
   .nextui-input-main-container{
     background-color: white;
   }
@@ -27,7 +27,7 @@ export const AskTitle = styled.div`
 
 export const AskText = styled.div`
 font-family: 'Open Sans';
-font-size: 23px;
+font-size: 20px;
 color:black;
 text-align:left;
 margin-left:30px;
@@ -85,21 +85,18 @@ export const MsgWrapper = styled.div`
 `;
 
 export const CheckboxWrapper = styled.div`
- margin-top: 0px;
- margin-left:30px;
  display: flex;
  flex-direction: column;
  align-items: left;
- padding-top: 10px;
- margin-bottom: 25px;
 `;
 
 export const BtnWrapper = styled.div`
  margin-top: 0px;
+ margin-bottom: 20px;
  align-items: right;
  padding-top: 10px;
- padding-left:75%;
- 
+ padding-left:80%;
+
 `;
 
 export const MainButton = styled.div`

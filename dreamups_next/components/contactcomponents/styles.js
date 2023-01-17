@@ -24,7 +24,7 @@ export const ContactQuestion = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;  
+    margin-top: 50px;  
 `
 
 export const ContactItem = styled.p`

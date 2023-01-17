@@ -43,12 +43,10 @@ export default function Login() {
     };
     let options = {
       ...credentials,
-      // callbackUrl: `${window.location.origin}/`,
       redirect: false,
     };
     signIn('credentials', options).then((result) => {
       if (result?.status === 200) {
-        // router.push('/');
         router.reload(router.asPath);
         // window.location.reload();
       } else if (result?.status !== 200) {
@@ -182,7 +180,7 @@ export default function Login() {
                 Log in
               </Button>
             </Modal.Footer>
-          
+
           </>
         }
 
@@ -246,7 +244,7 @@ export default function Login() {
           </>
 
         }
-        
+
       </Modal>
 
 

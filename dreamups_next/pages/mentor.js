@@ -4,7 +4,6 @@ import AskAQuestion from '../components/AskAQuestion'
 import AskedQuestions from '../components/AskedQuestions'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { useRouter } from "next/router";
 import { getMentorById } from "../services/mentors.service";
 import { useEffect, useState } from 'react';
 import { useSession } from "next-auth/react";

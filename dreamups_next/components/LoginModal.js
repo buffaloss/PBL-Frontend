@@ -1,15 +1,12 @@
 import React from "react";
-import { Modal, Button, Text, Input, Row, Checkbox } from "@nextui-org/react";
+import { Modal, Button, Text, Input } from "@nextui-org/react";
 import { signIn } from "next-auth/react";
 import { Mail } from "./Mail";
 import { Password } from "./Password";
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
-import { useRouter } from "next/router";
 import { MainButton, BtnWrapper, BtnText } from './Experts/styles';
-import Link from "next/link";
-import { recoverPass } from "../services/auth.service";
 
 const validationSchema = yup.object().shape({
   email: yup.string().email('Must be a valid email')
@@ -20,9 +17,7 @@ const validationSchema = yup.object().shape({
 
 export default function LoginModal({ mentorId }) {
 
-  const router = useRouter()
   const [visible, setVisible] = React.useState(false);
-  const [forgot, setForgot] = React.useState(false);
   const handler = () => setVisible(true);
 
   const {
@@ -43,7 +38,6 @@ export default function LoginModal({ mentorId }) {
 
     signIn('credentials', options).then((result) => {
       if (result?.status === 200) {
-        // router.push(`/mentor?id=${mentorId}`);
         localStorage.setItem("mentorId", mentorId)
         window.location.href = `http://localhost:3000/mentor`;
       } else if (result?.status !== 200) {
@@ -59,36 +53,9 @@ export default function LoginModal({ mentorId }) {
     });
   }
 
-
-  // const forgotPassLogin = async (data) => {
-  //   const res = await recoverPass({ email: data?.email, password: data?.password })
-  //   console.log(res);
-
-  //   if (res?.status === 200) {
-  //     closeForgotPass();
-  //     login(data);
-  //   } else {
-  //     setError('password', {
-  //       type: 'manual',
-  //       message: 'Password is wrong!',
-  //     });
-  //   }
-  // }
-
   const closeHandler = () => {
     setVisible(false);
   };
-
-  // const forgotPassHandler = () => {
-  //   closeHandler();
-  //   setForgot(true);
-  //   setValue('password', "");
-  //   setError('password', "");
-  // }
-
-  // const closeForgotPass = () => {
-  //   setForgot(false);
-  // }
 
   return (
     <>
@@ -149,14 +116,7 @@ export default function LoginModal({ mentorId }) {
               {errors?.password?.message}
             </div>
           }
-          {/* <Row justify="space-between">
-            <Checkbox>
-              <Text size={15}>Remember me</Text>
-            </Checkbox>
-            <Link href="" onClick={forgotPassHandler}>
-              Forgot password?
-            </Link>
-          </Row> */}
+
         </Modal.Body>
         <Modal.Footer>
           <Button auto flat color="error" onClick={closeHandler}>

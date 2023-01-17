@@ -1,7 +1,7 @@
 import React from "react";
 import Link from 'next/link';
 import Head from 'next/head';
-import { BtnWrapper, MainButton, WelcomeImg } from "./styles";
+import { BtnWrapper, MainButton } from "./styles";
 
 const LearnButton = () => {
   return (
