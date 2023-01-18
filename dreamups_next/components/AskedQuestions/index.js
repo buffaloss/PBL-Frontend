@@ -16,10 +16,7 @@ const AskedQuestions = () => {
     return (
         <>
             <Head>
-                <style>
-                    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-                    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap');
-                </style>
+
             </Head>
             <Container>
                 <AskedTitle>
@@ -35,9 +32,9 @@ const AskedQuestions = () => {
                     How much traction should a startup have before being losted on Indigogo?
                 </Question>
                 <Answers>
-                    Be careful! The vast majority of founders and those who advise founders attempt to solve this problem with fundamentally flawed logic. The primary mistake is basing the equity split on unknowable, future events such as a founder's expected commitment to the company or the creation of future value.<br />
+                    Be careful! The vast majority of founders and those who advise founders attempt to solve this problem with fundamentally flawed logic. The primary mistake is basing the equity split on unknowable, future events such as a {`founder's`} expected commitment to the company or the creation of future value.<br />
                     There is, however, a way to get this right every time.<br />
-                    Startips are unique in that they don't pay for inputs that more established companies are expected to pay for, such as salaries and expenses. The amount that most companies are expected to pay is known as the fair market value. <br />
+                    Startips are unique in that they {`don't`} pay for inputs that more established companies are expected to pay for, such as salaries and expenses. The amount that most companies are expected to pay is known as the fair market value. <br />
                 </Answers>
                 {clicked &&
                     <>
@@ -45,17 +42,17 @@ const AskedQuestions = () => {
                             How much traction should a startup have before being losted on Indigogo?
                         </Question>
                         <Answers>
-                            Be careful! The vast majority of founders and those who advise founders attempt to solve this problem with fundamentally flawed logic. The primary mistake is basing the equity split on unknowable, future events such as a founder's expected commitment to the company or the creation of future value.<br />
+                            Be careful! The vast majority of founders and those who advise founders attempt to solve this problem with fundamentally flawed logic. The primary mistake is basing the equity split on unknowable, future events such as a {`founder's`} expected commitment to the company or the creation of future value.<br />
                             There is, however, a way to get this right every time.<br />
-                            Startips are unique in that they don't pay for inputs that more established companies are expected to pay for, such as salaries and expenses. The amount that most companies are expected to pay is known as the fair market value. <br />
+                            Startips are unique in that they {`don't`} pay for inputs that more established companies are expected to pay for, such as salaries and expenses. The amount that most companies are expected to pay is known as the fair market value. <br />
                         </Answers>
                         <Question>
                             How much traction should a startup have before being losted on Indigogo?
                         </Question>
                         <Answers>
-                            Be careful! The vast majority of founders and those who advise founders attempt to solve this problem with fundamentally flawed logic. The primary mistake is basing the equity split on unknowable, future events such as a founder's expected commitment to the company or the creation of future value.<br />
+                            Be careful! The vast majority of founders and those who advise founders attempt to solve this problem with fundamentally flawed logic. The primary mistake is basing the equity split on unknowable, future events such as a {`founder's`} expected commitment to the company or the creation of future value.<br />
                             There is, however, a way to get this right every time.<br />
-                            Startips are unique in that they don't pay for inputs that more established companies are expected to pay for, such as salaries and expenses. The amount that most companies are expected to pay is known as the fair market value. <br />
+                            Startips are unique in that they {`don't`} pay for inputs that more established companies are expected to pay for, such as salaries and expenses. The amount that most companies are expected to pay is known as the fair market value. <br />
                         </Answers>
 
                     </>

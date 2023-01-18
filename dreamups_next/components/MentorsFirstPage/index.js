@@ -9,10 +9,7 @@ const MentorsFirstPage = () => {
 
     <>
       <Head>
-        <style>
-          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-          @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap');
-        </style>
+         
       </Head>
       <Container fluid style={{ paddingLeft: 0, paddingRight: 0, marginLeft: 0, marginRight: 0 }}>
         <Row style={{ marginLeft: 0, marginRight: 0 }}>

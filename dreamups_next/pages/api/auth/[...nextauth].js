@@ -19,6 +19,8 @@ export default NextAuth({
             email: credentials?.username ?? ''
           });
 
+          console.log(res.data)
+
           if (res.data) {
             return res.data;
           } else {
