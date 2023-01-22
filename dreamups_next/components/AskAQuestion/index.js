@@ -2,7 +2,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { AskContainer, AskTitle, AskText, FNameWrapper, LNameWrapper, EmailWrapper, MsgWrapper, CheckboxWrapper, MainButton, BtnWrapper } from "./styles";
 import { Input, Textarea, Checkbox } from "@nextui-org/react";
-import Head from "next/head";
 import { sendUserQuestion } from "../../services/mail.service";
 import { useState } from "react";
 import Swal from 'sweetalert2';
@@ -49,9 +48,6 @@ const AskAQuestion = () => {
 
   return (
     <>
-      <Head>
-         
-      </Head>
       <AskContainer>
         <AskTitle>
           Ask a question

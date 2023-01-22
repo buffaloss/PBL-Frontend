@@ -19,7 +19,6 @@ export default NextAuth({
             email: credentials?.username ?? ''
           });
 
-          console.log(res.data)
 
           if (res.data) {
             return res.data;
@@ -85,7 +84,7 @@ export default NextAuth({
   // https://next-auth.js.org/configuration/events
   events: {
     async linkAccount({ user, account }) {
-      console.log()
+      // console.log()
     }
   },
 

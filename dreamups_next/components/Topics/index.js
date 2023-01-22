@@ -11,7 +11,7 @@ const Topics = ({ onTagsChange, propsTags }) => {
   const [tags, setTags] = useState([...propsTags]);
 
   const addTag = (topic) => {
-    console.log("before add Topics", propsTags);
+    // console.log("before add Topics", propsTags);
     if (topic) {
       const localTagsArray = [...propsTags];
       localTagsArray.push(topic);

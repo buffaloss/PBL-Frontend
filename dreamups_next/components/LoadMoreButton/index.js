@@ -1,21 +1,27 @@
-import Head from 'next/head';
 import { Container, Col, Row } from 'react-bootstrap';
 import { BtnWrapper, MainButton, BtnText } from "./styles";
+import Link from 'next/link';
 
-const LoadMoreButton = ({ content, showAllMentors }) => {
+const LoadMoreButton = ({ content, showAllMentors, isRedirect }) => {
   return (
     <>
-      <Head>
-         
-      </Head>
       <Container>
         <Row className="justify-content-center">
           <Col xs lg='2' >
             <BtnWrapper>
               <MainButton to="Load more" onClick={showAllMentors}>
-                <BtnText>
-                  {content}
-                </BtnText>
+                {isRedirect &&
+                  <Link href={"/mentors"}>
+                    <BtnText>
+                      {content}
+                    </BtnText>
+                  </Link>
+                }
+                {!isRedirect &&
+                  < BtnText >
+                    {content}
+                  </BtnText>
+                }
               </MainButton>
             </BtnWrapper>
           </Col>

@@ -6,10 +6,7 @@ export default function Contact() {
   return (
     <MainLayout>
       <ContactComponent>
-        
       </ContactComponent>
-        
-      
     </MainLayout>
 
   )

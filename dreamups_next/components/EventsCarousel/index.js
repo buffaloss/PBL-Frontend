@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { EventsCarouselWrapper, EventsTextBlock, EventsSlider, EventCard } from './styles';
 import { Col } from "reactstrap";
-import Head from "next/head";
 
 const EventsCarousel = () => {
 
@@ -24,17 +23,13 @@ const EventsCarousel = () => {
 
     return (
         <>
-            <Head>
-               
-            </Head>
-
             <EventsCarouselWrapper>
 
                 <div className="row mb-4">
                     <Col xxl="3">
                         <EventsTextBlock>
                             <div>
-                                <h1 className="title">Lattest</h1>
+                                <h1 className="title">Latest</h1>
                                 <h1 className="subtitle">Check our open programs and upcoming events</h1>
                             </div>
 
@@ -49,7 +44,7 @@ const EventsCarousel = () => {
                             <Swiper
                                 spaceBetween={0}
                                 slidesPerView={2.3}
-                                onSlideChange={() => console.log('slide change')}
+                                // onSlideChange={() => console.log('slide change')}
                                 ref={swiperRef}
                                 loop={true}
                             >

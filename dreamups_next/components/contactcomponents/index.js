@@ -1,6 +1,5 @@
 import React from "react";
 import { BtnWrapper, ContactContainer, ContactInfo, ContactItem, ContactQuestion, MainButton } from "./styles";
-import Head from "next/head";
 import Link from "next/link";
 import { Col, Row } from "reactstrap";
 import { Textarea } from "@nextui-org/react";
@@ -49,9 +48,6 @@ export default function ContactComponent() {
     return (
 
         <>
-            <Head>
-                
-            </Head>
             <div className="contact">
                 <ContactContainer>
                     <ContactInfo>

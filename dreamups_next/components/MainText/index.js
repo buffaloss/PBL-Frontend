@@ -1,13 +1,10 @@
 import { Main, MainHeading, WelcomeText } from './styles';
 // import head component
-import Head from 'next/head';
+
 const MainText = () => {
   return (
 
     <>
-       <Head>
-         
-      </Head>
       <Main>
         <MainHeading>
           From zero <br />

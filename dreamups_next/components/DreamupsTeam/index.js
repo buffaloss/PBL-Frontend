@@ -5,19 +5,13 @@ import {
     TeamMemberImg,
     HeadingTeam
 } from "./styles";
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Head from 'next/head';
 
 const DreamupsTeam = () => {
     return (
 
         <>
-            <Head>
-                
-            </Head>
-
             <TeamContainer>
                 <Row>
                     <HeadingTeam>
@@ -91,7 +85,7 @@ const DreamupsTeam = () => {
                 <Row>
                     <Col xs={2}></Col>
                     <Col>
-                    <Row>
+                        <Row>
                             <TeamMemberImg>
                                 <img src="/dmitri_namashco.jpeg" width="250px" height="250px" />
                             </TeamMemberImg>
@@ -106,7 +100,7 @@ const DreamupsTeam = () => {
                         </Row>
                     </Col>
                     <Col>
-                    <Row>
+                        <Row>
                             <TeamMemberImg>
                                 <img src="/irina_potinga.jpeg" width="250px" height="250px" />
                             </TeamMemberImg>
@@ -121,7 +115,7 @@ const DreamupsTeam = () => {
                         </Row>
                     </Col>
                     <Col>
-                    <Row>
+                        <Row>
                             <TeamMemberImg>
                                 <img src="/mihai_stipanov.jpeg" width="250px" height="250px" />
                             </TeamMemberImg>

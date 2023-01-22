@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.div`
- height: 600px;
+ height: 550px;
  position: relative;
  display: flex;
  flex-direction: column;
@@ -9,7 +9,7 @@ export const MainContainer = styled.div`
 
  background-color: #ED1E79;
 `;
- 
+
 export const MainImg = styled.p`
  align-items: left;
  position: relative;
@@ -33,7 +33,15 @@ align-items: center;
 `;
 
 export const SecondContainer = styled.div`
- height: 400px;
+ height: 380px;
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ padding: 5 5 px;
+`;
+
+export const FourthContainer = styled.div`
+ height: 480px;
  position: relative;
  display: flex;
  flex-direction: column;
@@ -44,7 +52,7 @@ export const Heading = styled.div`
 font-family: 'Poppins',sans-serif;
 color: #1B1464;
 font-size: 45px;
-margin-top:100px;
+margin-top:50px;
 font-weight: normal;;
 margin-left:15px;
 align-items: center;
@@ -60,10 +68,12 @@ text-align: center;
 export const TextInfo = styled.div`
 font-family: 'Open Sans',sans-serif;
 color: #ED1E79;
-margin-top:100px;
+margin-top: 60px;
+padding-bottom: 100px;
 font-size: 25px;
 font-weight: normal;
-margin-left:15px;
+margin-left: 15px;
+margin-right: 200px;
 align-items: center;
 text-align: left;
 @media screen and (max-width: 768px){
@@ -75,7 +85,7 @@ text-align: left;
 `;
 
 export const ThirdContainer = styled.div`
- height: 400px;
+ height: 480px;
  position: relative;
  display: flex;
  flex-direction: column;

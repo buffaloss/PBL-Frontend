@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Head from 'next/head';
 import Link from 'next/link';
 import { FooterMain, FooterContainer, TextContainer, TextInfo, ContactInfoContainer, FacebookContact, LinkedinContact, InstagramContact } from './styles';
 import { Container, Row, Col } from 'react-bootstrap';
@@ -8,9 +7,6 @@ const Footer = () => {
 
   return (
     <>
-      <Head>
-         
-      </Head>
       <FooterMain>
         <FooterContainer>
           <TextContainer>

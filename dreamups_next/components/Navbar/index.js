@@ -12,21 +12,13 @@ import {
   LoginIcon
 } from './styles';
 import { useSession, signOut } from "next-auth/react";
-import Head from 'next/head';
-import { useRouter } from "next/router";
 
 
 const Navbar = () => {
-  const router = useRouter()
   const { status } = useSession()
-
-  // console.log(session)
 
   return (
     <>
-      <Head>
-         
-      </Head>
       <Nav>
         <NavbarContainer>
           <NavLogo>
@@ -42,13 +34,13 @@ const Navbar = () => {
               </NavItem>
             </Link>
 
-            
-              <NavItem>
-                <Product>
-                  
-                </Product>
-              </NavItem>
-            
+
+            <NavItem>
+              <Product>
+
+              </Product>
+            </NavItem>
+
 
             <Link href="/mentors">
               <NavItem>

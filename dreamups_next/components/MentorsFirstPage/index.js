@@ -2,15 +2,11 @@ import { Main, MainHeading, WelcomeText, MentorImg } from "./styles";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Head from 'next/head';
 
 const MentorsFirstPage = () => {
   return (
 
     <>
-      <Head>
-         
-      </Head>
       <Container fluid style={{ paddingLeft: 0, paddingRight: 0, marginLeft: 0, marginRight: 0 }}>
         <Row style={{ marginLeft: 0, marginRight: 0 }}>
           <Col style={{ paddingLeft: 0, paddingRight: 0, marginLeft: 0, marginRight: 0 }} >

@@ -32,7 +32,7 @@ export default function Mentor() {
   const getMentorData = () => {
     if (!id) return;
     getMentorById(id).then((res) => {
-      console.log('dsf', res?.data);
+      // console.log('dsf', res?.data);
       if (res?.data) {
         setMentorInfo(res?.data);
       }

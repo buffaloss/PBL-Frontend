@@ -12,7 +12,7 @@ const validationSchema = yup.object().shape({
   email: yup.string().email('Must be a valid email')
     .required('This input is required'),
   password: yup.string()
-    .required('This input is required'),
+    .required('This input is required')
 }).required();
 
 export default function LoginModal({ mentorId }) {

@@ -10,7 +10,8 @@ import { useEffect, useState } from "react";
 import { searchMentors, getFixedNrMentors } from "../services/mentors.service"
 import { Container, Row, Col } from "react-bootstrap"
 import { MainButton, SearchWrapper, DefaultWrapper } from '../components/SearchBar/styles'
-import { useSession } from "next-auth/react";
+import { useSession } from "next-auth/react"
+import { Spacer } from '@nextui-org/react'
 
 export default function Mentors() {
   const [mentors, setMentors] = useState([]);
@@ -31,7 +32,7 @@ export default function Mentors() {
   const getMentorData = () => {
     if (status === 'authenticated') {
       searchMentors(tags).then((res) => {
-        console.log("search data", res?.data);
+        // console.log("search data", res?.data);
         if (res?.data && res?.data?.length > 0) {
           setMentors(res?.data);
         }
@@ -106,6 +107,7 @@ export default function Mentors() {
             <SearchBar propsTags={tags} onTagsChange={(tags) => setTags(tags)} />
           </DefaultWrapper>
           <MentorCard mentors={limitedMentorsData} />
+          <Spacer y={2} />
         </>
       }
 

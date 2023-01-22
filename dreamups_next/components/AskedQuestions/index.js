@@ -8,16 +8,12 @@ import {
     MainButton,
     BtnText
 } from "./styles";
-import Head from "next/head";
 import { useState } from "react";
 
 const AskedQuestions = () => {
     const [clicked, setClicked] = useState(false);
     return (
         <>
-            <Head>
-
-            </Head>
             <Container>
                 <AskedTitle>
                     Asked Questions

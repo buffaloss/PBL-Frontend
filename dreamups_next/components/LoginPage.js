@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { css, Modal, Button, Text, Input, Row, Checkbox } from "@nextui-org/react";
+import { Modal, Button, Text, Input, Row, Checkbox } from "@nextui-org/react";
 import { signIn } from "next-auth/react";
 import { Mail } from "./Mail";
 import { Password } from "./Password";
@@ -7,21 +7,19 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import { useRouter } from "next/router";
-import Link from "next/link";
-import { recoverPass } from "../services/auth.service";
+import ForgotPassword from "./ForgotPassword";
 
 const validationSchema = yup.object().shape({
   email: yup.string().email('Must be a valid email')
     .required('This input is required'),
   password: yup.string()
-    .required('This input is required'),
+    .required('This input is required')
 }).required();
 
-export default function Login() {
 
+export default function Login() {
   const router = useRouter()
   const [visible, setVisible] = React.useState(false);
-  const [forgot, setForgot] = React.useState(false);
   const handler = () => setVisible(true);
 
   const [activeBlock, setActiveBlock] = useState('login');
@@ -62,36 +60,14 @@ export default function Login() {
     });
   }
 
-  const forgotPassLogin = async (data) => {
-    const res = await recoverPass({ email: data?.email, password: data?.password })
-    console.log(res);
-
-    if (res?.status === 200) {
-      closeForgotPass();
-      login(data);
-    } else {
-      setError('password', {
-        type: 'manual',
-        message: 'Password is wrong!',
-      });
-    }
-  }
-
   const closeHandler = () => {
     setActiveBlock("login");
-    setVisible(false);
   };
 
   const forgotPassHandler = () => {
-    // closeHandler();
-    // setForgot(true);
     setActiveBlock("forgot-password");
-    // setValue('password', "");
-    // setError('password', "");
-  }
-
-  const closeForgotPass = () => {
-    setForgot(false);
+    setValue('password', "");
+    setError('password', "");
   }
 
   return (
@@ -129,7 +105,6 @@ export default function Login() {
             <Modal.Body>
 
               <Input
-                // onChange={(e) => setEmail(e.target.value)}
                 clearable
                 bordered
                 fullWidth
@@ -180,136 +155,13 @@ export default function Login() {
                 Log in
               </Button>
             </Modal.Footer>
-
           </>
         }
 
         {
-          activeBlock == 'forgot-password' &&
-          <>
-            <Modal.Header>
-              <Text id="modal-title" size={18}>
-                <Text b size={18}>
-                  Recover Password
-                </Text>
-              </Text>
-            </Modal.Header>
-            <Modal.Body>
-
-              <Input
-                clearable
-                bordered
-                fullWidth
-                color="primary"
-                size="lg"
-                {...register("email")}
-                placeholder="Email"
-                contentLeft={<Mail fill="currentColor" />}
-              // onChange={(e) => setEmail(e.target.value)}
-              />
-              {
-                errors?.email?.message &&
-                <div class="text-danger">
-                  {errors?.email?.message}
-                </div>
-              }
-
-              <Input.Password
-                clearable
-                bordered
-                fullWidth
-                color="primary"
-                size="lg"
-                type={"password"}
-                {...register("password")}
-                placeholder="New Password"
-                contentLeft={<Password fill="currentColor" />}
-              // onChange={(e) => setPassword(e.target.value)}
-              />
-              {
-                errors?.password?.message &&
-                <div class="text-danger">
-                  {errors?.password?.message}
-                </div>
-              }
-            </Modal.Body>
-            <Modal.Footer>
-              <Button auto flat color="error" onClick={closeHandler}>
-                Close
-              </Button>
-              <Button auto onClick={handleSubmit(forgotPassLogin)}>
-                Recover
-              </Button>
-            </Modal.Footer>
-          </>
-
+          activeBlock == 'forgot-password' && <ForgotPassword loginHandler={() => setActiveBlock("login")} />
         }
-
       </Modal>
-
-
-
-      {/* <Modal
-        closeButton
-        aria-labelledby="modal-title"
-        open={forgot}
-        onClose={closeForgotPass}
-      >
-        <Modal.Header>
-          <Text id="modal-title" size={18}>
-            <Text b size={18}>
-              Recover Password
-            </Text>
-          </Text>
-        </Modal.Header>
-        <Modal.Body>
-
-          <Input
-            clearable
-            bordered
-            fullWidth
-            color="primary"
-            size="lg"
-            {...register("email")}
-            placeholder="Email"
-            contentLeft={<Mail fill="currentColor" />}
-          // onChange={(e) => setEmail(e.target.value)}
-          />
-          {
-            errors?.email?.message &&
-            <div class="text-danger">
-              {errors?.email?.message}
-            </div>
-          }
-
-          <Input.Password
-            clearable
-            bordered
-            fullWidth
-            color="primary"
-            size="lg"
-            type={"password"}
-            {...register("password")}
-            placeholder="New Password"
-            contentLeft={<Password fill="currentColor" />}
-          // onChange={(e) => setPassword(e.target.value)}
-          />
-          {
-            errors?.password?.message &&
-            <div class="text-danger">
-              {errors?.password?.message}
-            </div>
-          }
-        </Modal.Body>
-        <Modal.Footer>
-          <Button auto flat color="error" onClick={() => setForgot(false)}>
-            Close
-          </Button>
-          <Button auto onClick={handleSubmit(forgotPassLogin)}>
-            Recover
-          </Button>
-        </Modal.Footer>
-      </Modal> */}
     </>
   );
 }

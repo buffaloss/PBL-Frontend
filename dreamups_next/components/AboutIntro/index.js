@@ -9,23 +9,15 @@ import {
   ThirdContainer,
   Info,
   TextInfo2,
-  TeamContainer,
-  TeamMemberFunction,
-  TeamMemberName,
-  TeamMemberImg,
-  HeadingTeam
+  FourthContainer
 } from "./styles";
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Head from 'next/head';
+
 const AboutIntro = () => {
   return (
 
     <>
-      <Head>
-         
-      </Head>
       <MainContainer>
         <Row>
           <Col xs={1}></Col>
@@ -53,7 +45,7 @@ const AboutIntro = () => {
           </Col>
           <Col xs={7}>
             <TextInfo>
-              Dreamups’ goal is to work on capacity building to increase the number of companies, especially tech startups, by developing programs and authentic content with practical knowledge from the best experts, and also to increase and develop the absorption of venture capital invested into technological startups from Moldova.
+              Dreamups&apos; goal is to work on capacity building to increase the number of companies, especially tech startups, by developing programs and authentic content with practical knowledge from the best experts, and also to increase and develop the absorption of venture capital invested into technological startups from Moldova.
             </TextInfo>
           </Col>
           <Col xs={2}>
@@ -66,18 +58,18 @@ const AboutIntro = () => {
           <Col>
             <IconImg>
               <img src="/event_img.jpg" width="550px" height="350px" alt="Dreamups" />
-
             </IconImg>
           </Col>
           <Col>
             <Info>
-              The necessity of the projects developed and organized by Dreamups comes from the undeveloped startup ecosystem and poor business culture in Moldova, as well as the lack of entrepreneurial spirit and drive among the local youth. The success of previous experience and a large number of youth who benefited from Dreamups activities, emphasizes the need of sharing quality experiences with entrepreneurs who come from developed entrepreneurial ecosystems and have a global business experience as well as local entrepreneurs that can bring more credibility, having the same cultural and educational background. We strive to create a fair and competitive business environment in Moldova and in the region.          </Info>
+              The necessity of the projects developed and organized by Dreamups comes from the undeveloped startup ecosystem and poor business culture in Moldova, as well as the lack of entrepreneurial spirit and drive among the local youth. The success of previous experience and a large number of youth who benefited from Dreamups activities, emphasizes the need of sharing quality experiences with entrepreneurs who come from developed entrepreneurial ecosystems and have a global business experience as well as local entrepreneurs that can bring more credibility, having the same cultural and educational background. We strive to create a fair and competitive business environment in Moldova and in the region.
+            </Info>
           </Col>
           <Col xs={2}></Col>
         </Row>
       </ThirdContainer>
 
-      <SecondContainer>
+      <FourthContainer>
         <Row>
           <Col xs={2}></Col>
           <Col>
@@ -98,7 +90,7 @@ const AboutIntro = () => {
           <Col xs={2}>
           </Col>
         </Row>
-      </SecondContainer>
+      </FourthContainer>
 
     </>
   )

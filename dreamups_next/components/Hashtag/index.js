@@ -2,16 +2,12 @@ import React from "react";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Head from 'next/head';
 import { Main, Text } from "./styles"
 
 const Hashtag = ({ tags, onRemoveTag }) => {
 
   return (
     <>
-      <Head>
-         
-      </Head>
       <Container>
         <Row>
 
